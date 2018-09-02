@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[imageDataGenerator]]></title>
+    <url>%2F2018%2F09%2F02%2FimageDataGenerator%2F</url>
+    <content type="text"><![CDATA[在深度学习中，我们在trian我们的模型时，往往在数据方面很难找到足够的数据。而在keras中，提供了imageDataGenerator iamgeDataGenerator是一个生成器类，可以将我们输入的原始数据自动经过平移、旋转等操作，生成无限的差异性图片。在这里有意思的是在官方文档中，是用的无限（infinite）这个形容词。 方法如下： 1、实例一个生成器 12345678910111213datagen = ImageDataGenerator( featurewise_center=True, featurewise_std_normalization=True, rotation_range=20, width_shift_range=0.2, height_shift_range=0.2, horizontal_flip=True) 2、.fit方法 该方法用来计算各种操作的统计信息。 在笔者看来是类似于生成随机数，我们要生成一个seed datagen.fit(x_train) 3、 .flow方法 该方法用来生成无限的图片 datagen.flow(x_train, y_train, batch_size=32) 4、接着就可以用生成的数据进行愉快的训练啦 对于这些实时产生的数据，我们可以调用fit_generator接口，实时的利用这些数据进行训练我们的模型 1fit_generator(self, generator, steps_per_epoch, epochs=1, verbose=1, callbacks=None, validation_data=None, validation_steps=None, class_weight=None, max_q_size=10, workers=1, pickle_safe=False, initial_epoch=0) 利用的Python的生成器，逐个生成数据的批次并进行训练。生成器与模型将并行执行以提高效率。例如，该函数允许我们在CPU上进行实时的数据提升，同时在GPU上进行模型训练 函数的参数是： 发电机：生成器函数，生成器的输出应该为： 一个形如（输入，目标）的元组 一个形如（inputs，targets，sample_weight）的元组。所有的返回值都应该包含相同数目的样本。生成器将无限在数据集上循环。每个epoch以经过模型的样本数达到samples_per_epoch时，记一个epoch结束 steps_per_epoch：整数，生成当器报道查看steps_per_epoch次数据时计一个历元结束，执行下一个历元 epochs：整数，数据迭代的轮数 verbose：日志显示，0为不在标准输出流输出日志信息，1为输出进度条记录，2为每个历元输出一行记录 validation_data：具有以下三种形式之一 生成验证集的生成器 一个形如（输入，目标）的元组 一个形如（输入，目标，sample_weights）的元组 validation_steps：当validation_data为生成器时，本参数指定验证集的生成器返回次数 class_weight：规定类别权重的字典，将类别映射为权重，常用于处理样本不均衡问题。 sample_weight：权值的numpy数组，用于在训练时调整损失函数（仅用于训练）。可以传递一个1D的与样本等长的向量用于对样本进行1对1的加权，或者在面对时序数据时，传递一个的形式为（样本，sequence_length）的矩阵来为每个时间步上的样本赋不同的权。这种情况下请确定在编译模型时添加了sample_weight_mode=’temporal’。 wokers：最大进程数 max_q_size：生成器队列的最大容量 pickle_safe：若为真，则使用基于进程的线程。由于该实现依赖多进程，不能传递non picklable（无法被pickle序列化）的参数到生成器中，因为无法轻易将它们传入子进程中。 initial_epoch：从该参数指定的epoch开始训练，在继续之前的训练时有用。 同样的，我们有evaluate_generator 1evaluate_generator(self, generator, steps, max_q_size=10, workers=1, pickle_safe=False) 本函数使用一个生成器作为数据源评估模型，器生成应报道查看与test_on_batch的输入侧数据相同类型的数据。函数该参数的与fit_generator同名参数含义相同，步骤是生成器要返回数据的轮数。 同样的，我们有predict_generator 1predict_generator(self, generator, steps, max_q_size=10, workers=1, pickle_safe=False, verbose=0) 本函数使用一个生成器作为数据源预测模型，器生成应报道查看与test_on_batch的输入侧数据相同类型的数据。函数该参数的与fit_generator同名参数含义相同，步骤是生成器要返回数据的轮数。 5、我们也有另外一种训练模型的方法： 12345678910111213141516171819for e in range(epochs):print('Epoch', e)batches = 0for x_batch, y_batch in datagen.flow(x_train, y_train, batch_size=32):loss = model.fit(x_batch, y_batch)batches += 1if batches &gt;= len(x_train) / 32:# we need to break the loop by hand because# the generator loops indefinitelybreak]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>keras</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[苟有恒，何必三更睡五更起。最无益，莫过一日曝十日寒]]></title>
     <url>%2F2018%2F09%2F02%2F%E6%AD%A3%E8%83%BD%E9%87%8F%2F</url>
     <content type="text"><![CDATA[#看到的好的句子就记下来激励自己]]></content>
