@@ -105,7 +105,7 @@
 </nav>
 
     <div class="view intro-2" id="background"
-         style="background: url('https://images.cnblogs.com/cnblogs_com/jason233wang/1598461/o_191217142742o_o_wallhaven-698904.jpg')no-repeat center center;
+         style="background: url('/img/bg0.jpg')no-repeat center center;
            background-size: cover;
            background-attachment: fixed;">
       <div class="full-bg-img">
@@ -143,41 +143,116 @@
     
     
       <div class="col-12 col-md-4 m-auto">
-        <a href="/2020/01/16/hello-world/" target="_self">
-          <img src="/img/bg2.jpg" srcset="/img/loading.gif" alt="Hello World" class="img-fluid rounded z-depth-3 index-thumbnails">
+        <a href="/2020/01/27/hello-world/" target="_self">
+          <img src="/img/bg2.jpg" srcset="/img/loading.gif" alt="blog自定义教程" class="img-fluid rounded z-depth-3 index-thumbnails">
         </a>
       </div>
     
     <div class="col-12 col-md-8 m-auto">
-      <a href="/2020/01/16/hello-world/">
-        <p class="h4 index-header">Hello World</p>
+      <a href="/2020/01/27/hello-world/">
+        <p class="h4 index-header">blog自定义教程</p>
         
         
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post$ hexo new &quot;My New Post&quot;
-
-More info: Writing
-Run server$ hexo server
-
-More info: Server
-Generate static files$ hexo generate
-
-More info: Generating
-Deploy to remote sites$ hexo deploy
-
-More info: Deployment
-</div>
+          <div class="index-text mb-1">远程部署ssh-keygen -t rsa -C &#39;862722353@qq.com‘   #将公钥拷贝到远程端
+ssh  -T git@github.com   #测试连接
+hexo s 本地查看
+hexo g
+hexo d
+建立标签页hexo n page tags
+index文件 加入
+type： “tags”
+启用社交主题配置文件搜索social
+加新文章hexo n  名字
+加入打赏主题配置文件搜索reward
+计入公众号主题配置文件搜索wechat
+圆头像/themes/next/source/css/_common/components/sidebar目录下
+sidebar-author.style
+.site-author-image {
+  display: block;
+  margin: 0 auto;
+  padding: $site-author-image-padding;
+  max-width: $site-author-image-width;
+  height: $site-author-image-height;
+  border: $si</div>
         </div>
       </a>
 
       <div>
         
-          <i class="iconfont icon-riqi2"></i>&nbsp;2020-01-16&nbsp;&nbsp;
+          <i class="iconfont icon-riqi2"></i>&nbsp;2020-01-27&nbsp;&nbsp;
         
         
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+      <div class="col-12 col-md-4 m-auto">
+        <a href="/2020/01/27/Django笔记2/" target="_self">
+          <img src="/img/bg5.jpg" srcset="/img/loading.gif" alt="Django笔记2" class="img-fluid rounded z-depth-3 index-thumbnails">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 m-auto">
+      <a href="/2020/01/27/Django笔记2/">
+        <p class="h4 index-header">Django笔记2</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">#Django笔记2
+
+2020年正月初三小记
+今天早晨传来消息，篮球传奇球员科比意外去世。虽然我不是什么篮球迷，但也熟悉他的传奇人生。2020年刚开始，它似乎就开始小孩似地，不顾他人感受地、不停地宣告它的不平凡。让本应该全国欢庆的春节变得沉默起来。先有武汉肺炎肆虐搞得全国闭门不出，人心惶惶（尤其是笔者我在武汉上学）；后有紫金王朝球迷的默哀；
+可是怎么办了？生活还是得继续；做好自己的；灾难终究汇过去；
+
+2day 模型搬轮子过程
+1、在setting.py里修改数据库名
+2、在setting.py里修改数据库密码
+3、删除迁移文件
+4、在数据库中创建对应第一步的数据库
+5、执行生成迁移文件
+6、执行迁移
+7、启动服务，浏览器测试
+
+Django对各种数据库提供了很好的支持，Django为这些数据库提供了统一的调用API，可以根据不同的业务需求选择不同的数据库
+
+开发流程
+配置数据库
+定义模型类（一个模型类都在数据库中对应一张数据表）
+生成迁移文件
+执行迁移生成数据表
+使用模型类进行增删改查
+
+配置数据库
+修改工程目录下的__init__.py文件
+import pymysql
+pymy</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2020-01-27&nbsp;&nbsp;
+        
+        
+          <i class="iconfont icon-inbox"></i>
+          
+            <a href="/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4">好记性不如烂笔头</a>&nbsp;
+          &nbsp;
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Django">Django</a>&nbsp;
+          
         
       </div>
     </div>
@@ -265,7 +340,7 @@ wsgi.py 项目与wsgi兼容的web服务入口
         
           <i class="iconfont icon-inbox"></i>
           
-            <a href="/categories/web">web</a>&nbsp;
+            <a href="/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4%EF%BC%8Cweb">好记性不如烂笔头，web</a>&nbsp;
           &nbsp;
         
         

@@ -16,7 +16,7 @@
   <meta name="description" content="花些无聊的时间；做点有趣的事">
   <meta name="author" content="Jason">
   <meta name="keywords" content="I came,I saw,I conquered.">
-  <title>Hello World ~ Jason&#39;s修禅房</title>
+  <title>blog自定义教程 ~ Jason&#39;s修禅房</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
@@ -105,7 +105,7 @@
 </nav>
 
     <div class="view intro-2" id="background"
-         style="background: url('https://images.cnblogs.com/cnblogs_com/jason233wang/1598461/o_19112308552293d1af25f76bc9974dd84c2e033b0eb1.jpg')no-repeat center center;
+         style="background: url('/img/bg0.jpg')no-repeat center center;
            background-size: cover;
            background-attachment: fixed;">
       <div class="full-bg-img">
@@ -120,7 +120,7 @@
               
                 <p class="mt-3">
                   <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
-                  Thursday, January 16th 2020, 10:20 pm
+                  Monday, January 27th 2020, 1:25 pm
                 </p>
               
 
@@ -129,7 +129,7 @@
                   
                   &nbsp;<i class="far fa-chart-bar"></i>
                   <span class="post-count">
-                    75 字
+                    418 字
                   </span>&nbsp;
                 
 
@@ -170,20 +170,75 @@
       <div class="py-5 z-depth-3" id="board">
         <div class="post-content mx-auto" id="post">
           <div class="markdown-body">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <h1 id="远程部署"><a href="#远程部署" class="headerlink" title="远程部署"></a>远程部署</h1><p>ssh-keygen -t rsa -C <a href="mailto:&#39;862722353@qq.com" target="_blank" rel="noopener">&#39;862722353@qq.com</a>‘   #将公钥拷贝到远程端</p>
+<p>ssh  -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>   #测试连接</p>
+<p>hexo s 本地查看</p>
+<p>hexo g</p>
+<p>hexo d</p>
+<h1 id="建立标签页"><a href="#建立标签页" class="headerlink" title="建立标签页"></a>建立标签页</h1><p>hexo n page tags</p>
+<p>index文件 加入</p>
+<p>type： “tags”</p>
+<h1 id="启用社交"><a href="#启用社交" class="headerlink" title="启用社交"></a>启用社交</h1><p>主题配置文件搜索social</p>
+<h1 id="加新文章"><a href="#加新文章" class="headerlink" title="加新文章"></a>加新文章</h1><p>hexo n  名字</p>
+<h1 id="加入打赏"><a href="#加入打赏" class="headerlink" title="加入打赏"></a>加入打赏</h1><p>主题配置文件搜索reward</p>
+<h1 id="计入公众号"><a href="#计入公众号" class="headerlink" title="计入公众号"></a>计入公众号</h1><p>主题配置文件搜索wechat</p>
+<h1 id="圆头像"><a href="#圆头像" class="headerlink" title="圆头像"></a>圆头像</h1><p>/themes/next/source/css/_common/components/sidebar目录下</p>
+<p>sidebar-author.style</p>
+<pre><code class="css">.site-author-image {
+  display: block;
+  margin: 0 auto;
+  padding: $site-author-image-padding;
+  max-width: $site-author-image-width;
+  height: $site-author-image-height;
+  border: $site-author-image-border-width solid $site-author-image-border-color;
+  border-radius: 50%;
+  transition: 2s all;
+}
+.site-author-image:hover{
+  transform:rotate(360deg);
+}
 
+.site-author-name {
+  margin: $site-author-name-margin;
+  text-align: $site-author-name-align;
+  color: $site-author-name-color;
+  font-weight: $site-author-name-weight;
+}
+
+.site-description {
+  margin-top: $site-description-margin-top;
+  text-align: $site-description-align;
+  font-size: $site-description-font-size;
+  color: $site-description-color;
+}
+</code></pre>
+<h1 id="设置阅读全文"><a href="#设置阅读全文" class="headerlink" title="设置阅读全文"></a>设置阅读全文</h1><p>主题配置文件搜索auto_excerpt</p>
+<h1 id="添加fork-github"><a href="#添加fork-github" class="headerlink" title="添加fork github"></a>添加fork github</h1><p><a href="http://tholman.com/github-corners/网址选择想要的图形代码赋值" target="_blank" rel="noopener">http://tholman.com/github-corners/网址选择想要的图形代码赋值</a></p>
+<p>找到blogs/themes/next/layout/_layout.swig文件</p>
+<p>找到23行将代码复制到</p>
+<p>headband下面</p>
+<h1 id="修改链接样式"><a href="#修改链接样式" class="headerlink" title="修改链接样式"></a>修改链接样式</h1><p>/themes/next/source/css/_common/components/post/post.style文件</p>
+<p>最后面加上以下语句</p>
+<p>.post-body p a{<br>  color: #345;<br>  border-bottom: none;<br>  &amp;:hover{<br>    color: red<br>}<br>}</p>
+<h1 id="修改文章底部的"><a href="#修改文章底部的" class="headerlink" title="修改文章底部的"></a>修改文章底部的</h1><p>/home/jason/Documents/blogs/themes/next/layout/_macro/post.swig</p>
+<p>搜索tags</p>
+<p>找到#位置添加</p>
+<p><i class="fa fa-google"></i></p>
+<h1 id="添加评论系统valine"><a href="#添加评论系统valine" class="headerlink" title="添加评论系统valine"></a>添加评论系统valine</h1><p>主题配置文件搜索valine</p>
+<p>注册learncloud</p>
+<h1 id="添加搜索"><a href="#添加搜索" class="headerlink" title="添加搜索"></a>添加搜索</h1><p>next官网教程</p>
+<h1 id="添加不蒜子统计"><a href="#添加不蒜子统计" class="headerlink" title="添加不蒜子统计"></a>添加不蒜子统计</h1><p>next官网教程</p>
+<h1 id="添加加载"><a href="#添加加载" class="headerlink" title="添加加载"></a>添加加载</h1><p>主题配置文件</p>
+<p>搜索pace</p>
+<h1 id="添加点击特效"><a href="#添加点击特效" class="headerlink" title="添加点击特效"></a>添加点击特效</h1><h1 id="去除下面强力驱动"><a href="#去除下面强力驱动" class="headerlink" title="去除下面强力驱动"></a>去除下面强力驱动</h1><p>/themes/next/layout/_partials/footer.swig文件</p>
+<p>修改</p>
+<!--
+
+–&gt;
+<h1 id="统计字数阅读时长"><a href="#统计字数阅读时长" class="headerlink" title="统计字数阅读时长"></a>统计字数阅读时长</h1><p>sudo npm install hexo-wordcount –save</p>
+<p>主题配置文件</p>
+<p>搜索post——wordcount</p>
+-->
             <hr>
           </div>
           <br>
@@ -343,7 +398,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Hello World&nbsp;",
+        "blog自定义教程&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
