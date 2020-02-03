@@ -143,6 +143,112 @@
     
     
       <div class="col-12 col-md-4 m-auto">
+        <a href="/2020/02/02/Django笔记3/" target="_self">
+          <img src="/img/bg6.jpg" srcset="/img/loading.gif" alt="Django笔记3" class="img-fluid rounded z-depth-3 index-thumbnails">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 m-auto">
+      <a href="/2020/02/02/Django笔记3/">
+        <p class="h4 index-header">Django笔记3</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">模板定义模板
+
+变量：
+
+视图传递给模板的数据，要遵循标识符规则
+
+语法：
+
+
+
+
+{{值}}
+
+
+注意：如果使用的变量不存在，则插入的是空字符串
+
+在模板中使用点语法xx.xx：代表字典查询，属性或者方法，数字索引
+
+在模板中调用对象的方法，注意，模板中不能传递参数
+
+
+
+标签
+
+语法：
+
+
+
+{% 语句 %}
+
+
+作用：在输出中创建文本；控制逻辑和循环
+条件语句
+
+{% if 表达式 %}
+语句1
+{% else %}
+语句2
+{% endif %}
+# 或者
+{% if 表达式1 %}
+语句1
+{% elif 表达式2 %}
+语句2
+{% endif %}
+
+
+循环
+
+{% for 变量 in 列表 %}
+语句
+{% endfor %}
+############################
+{% for 变量 in 列表 %}
+语句1
+{% empty %}
+语句2
+{% endfor %}
+#####################################
+{{forloop.counter}} # 循环的次数
+
+
+comment
+
+{% comment %}
+注释</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-02&nbsp;&nbsp;
+        
+        
+          <i class="iconfont icon-inbox"></i>
+          
+            <a href="/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4">好记性不如烂笔头</a>&nbsp;
+          &nbsp;
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Django">Django</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+      <div class="col-12 col-md-4 m-auto">
         <a href="/2020/01/27/hello-world/" target="_self">
           <img src="/img/bg2.jpg" srcset="/img/loading.gif" alt="blog自定义教程" class="img-fluid rounded z-depth-3 index-thumbnails">
         </a>

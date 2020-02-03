@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="description" content="花些无聊的时间；做点有趣的事">
+  <meta name="author" content="Jason">
+  <meta name="keywords" content="I came,I saw,I conquered.">
+  <title>Django笔记3 ~ Jason&#39;s修禅房</title>
+
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
+<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
+<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
+<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+
+
+  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
+
+<link rel="stylesheet" href="/css/main.css"  >
+
+
+  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+
+
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Jason's修禅房</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">Archives</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">Categories</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">Tags</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background"
+         style="background: url('/img/bg0.jpg')no-repeat center center;
+           background-size: cover;
+           background-attachment: fixed;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  Sunday, February 2nd 2020, 12:46 pm
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    1.5k 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      7 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><p><strong>定义模板</strong></p>
+<ul>
+<li><p>变量：</p>
+<ul>
+<li><p>视图传递给模板的数据，要遵循标识符规则</p>
+</li>
+<li><p>语法：</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code class="python">{{值}}
+</code></pre>
+<ul>
+<li><p>注意：如果使用的变量不存在，则插入的是空字符串</p>
+</li>
+<li><p>在模板中使用点语法<code>xx.xx</code>：代表字典查询，属性或者方法，数字索引</p>
+</li>
+<li><p>在模板中调用对象的方法，注意，模板中不能传递参数</p>
+</li>
+</ul>
+<ul>
+<li><p>标签</p>
+<ul>
+<li>语法：</li>
+</ul>
+</li>
+</ul>
+<pre><code class="python">{% 语句 %}
+</code></pre>
+<ul>
+<li>作用：在输出中创建文本；控制逻辑和循环</li>
+<li>条件语句</li>
+</ul>
+<pre><code class="python">{% if 表达式 %}
+语句1
+{% else %}
+语句2
+{% endif %}
+# 或者
+{% if 表达式1 %}
+语句1
+{% elif 表达式2 %}
+语句2
+{% endif %}
+</code></pre>
+<ul>
+<li>循环</li>
+</ul>
+<pre><code class="python">{% for 变量 in 列表 %}
+语句
+{% endfor %}
+############################
+{% for 变量 in 列表 %}
+语句1
+{% empty %}
+语句2
+{% endfor %}
+#####################################
+{{forloop.counter}} # 循环的次数
+</code></pre>
+<ul>
+<li><code>comment</code></li>
+</ul>
+<pre><code class="python">{% comment %}
+注释的内容
+{% endcomment %}
+</code></pre>
+<ul>
+<li><code>ifequal</code>等于，<code>ifnotequal</code>不等于</li>
+</ul>
+<pre><code class="python">{% ifequal 值1 值2 %}
+语句
+{% endifequal %}
+</code></pre>
+<ul>
+<li><code>include</code></li>
+</ul>
+<pre><code class="python"># 加载模板并以标签内的参数渲染
+# 格式
+{% include ‘模板目录’ 参数1 参数2 %}
+</code></pre>
+<ul>
+<li><code>url</code></li>
+</ul>
+<pre><code class="python"># 反向解析
+# 格式
+{% url 'namespace' p1 p2 %}
+</code></pre>
+<ul>
+<li><code>csrf_token</code></li>
+</ul>
+<pre><code class="python"># 用于跨站请求伪造保护
+# 格式
+{% csrf_token %}
+</code></pre>
+<ul>
+<li><code>block</code>、<code>extend</code></li>
+</ul>
+<pre><code class="python"># 用于模板的继承
+</code></pre>
+<ul>
+<li><code>autoescape</code></li>
+</ul>
+<pre><code class="python">用于html转义
+</code></pre>
+<ul>
+<li>过滤器</li>
+</ul>
+<pre><code class="python"># 作用： 在变量被显示前修改它
+语法： {{变量 | 过滤器}}
+# 示例
+{{str | upper}} #将字符串转换为大写
+{{str | upper}} #将字符串转换为小写
+# 过滤器可以传递参数，参数用引号引起来
+# 示例join将字符串用 ‘#’连接
+{{列表|join:'#'}}
+
+# 如果一个变量没有被提供，或者值为false，空，可以使用默认值
+#　格式
+{{值|default:'默认值'}}
+
+#　根据给定格式转换日期为字符串
+#　格式
+{{ date值|date:'y-m-d'}}
+
+# HTML转义
+# escape
+
+#加减乘除
+&lt;h1&gt;num = {{num}}&lt;/h1&gt;
+&lt;h1&gt;num = {{num|add:10}}&lt;/h1&gt;
+&lt;h1&gt;num = {{num|add:-5}}&lt;/h1&gt;
+&lt;!--num/1*5--&gt;
+&lt;h1&gt;num = {% num widthratio num 1 5 %}&lt;/h1&gt;
+&lt;!--num/5*1--&gt;
+&lt;h1&gt;num = {% num widthratio num 5 1 %}&lt;/h1&gt;
+{{ 值|divisiableby:2}}
+</code></pre>
+<ul>
+<li>注释</li>
+</ul>
+<pre><code class="python"># 单行注释：（在网页中显示不出来，不知道为？）
+
+# 多行注释：
+{% comment %}
+注释的内容
+{% endcomment %}
+</code></pre>
+<h2 id="反向解析"><a href="#反向解析" class="headerlink" title="反向解析"></a>反向解析</h2><pre><code class="python"># project文件目录下的urls.py文件设置
+url(r&#39;^&#39;, include(&#39;myApp.urls&#39;,namespace=&#39;app&#39;)),
+
+# app文件夹下设置urls.py文件
+url(r&#39;^good/(\d+)/(\d+)/$&#39;, views.good,name=&#39;good&#39;),
+
+# 模板
+&lt;a href = &#39;{% url 'app:good' 1 %}&#39;&gt;链接&lt;/a&gt;
+</code></pre>
+<h2 id="模板继承"><a href="#模板继承" class="headerlink" title="模板继承"></a>模板继承</h2><p><strong>作用</strong></p>
+<p>模板继承可以减少页面的内容的重复定义，实现页面的重用</p>
+<p><strong><code>block标签</code></strong></p>
+<p>在父模板中预留区域，子模板去填充</p>
+<p><strong><code>extends标签</code></strong></p>
+<p>继承模板，需要写在模板文件的第一行</p>
+<p><strong>示例</strong></p>
+<pre><code class="html">&lt;!--基础模板--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;style&gt;
+        #header{
+            width:100%;
+            height:100px;
+            background-color:red;
+        }
+        #footer{
+            width:100%;
+            height:100px;
+            background-color:blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;header&quot;&gt;header&lt;/div&gt;
+    &lt;div id=&quot;main&quot;&gt;
+        {% block main %}
+
+        {% endblock main %}
+    &lt;/div&gt;
+    &lt;div id=&quot;footer&quot;&gt;footer&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="python">&lt;!-- 子模板文件--&gt;
+{% extends 'myApp/base.html' %}
+{% block main %}
+    <h1>jason is a good man</h1>
+{% endblock main %}
+</code></pre>
+<h2 id="HTML转义"><a href="#HTML转义" class="headerlink" title="HTML转义"></a>HTML转义</h2><pre><code class="python">return render(request,&#39;myApp/index.html&#39;,{&quot;code&quot;:&quot;&lt;h1&gt;jason is a good man!&lt;/h1&gt;&quot;})
+# 在idnex.html中将接收到的code当成普通字符串渲染
+{{code}}
+
+{{code|escape}}
+# 在idnex.html中将接收到的code当成html代码渲染
+{{code|safe}}
+
+{% autoescape off %}
+{{code}}
+{% endautoescape %}
+</code></pre>
+<h2 id="CRSF（跨站请求伪造）"><a href="#CRSF（跨站请求伪造）" class="headerlink" title="CRSF（跨站请求伪造）"></a>CRSF（跨站请求伪造）</h2><p>某些恶意网站包含链接、表单、按钮、<code>js</code>，利用登录用户在浏览器中认证，从而攻击服务器</p>
+<p><strong>防止CSRF</strong></p>
+<ul>
+<li><p>在<code>setting.py</code>文件中的<code>MIDDLEWARE</code>增加<code>&#39;django.middleware.csrf.CsrfViewMiddleware&#39;</code></p>
+</li>
+<li><p>在模板的表单中加入</p>
+<pre><code class="html">{% csrf_token %}
+</code></pre>
+</li>
+</ul>
+<p><strong>验证码</strong></p>
+<ul>
+<li>在用户注册，登录页面的时候使用，为了防止暴力请求，减轻服务器的压力-</li>
+<li>防止<code>csrf</code>的一种方式</li>
+</ul>
+<pre><code class="python">def verifycode(request):
+    # 引入绘图模块
+    from PIL import Image,ImageDraw,ImageFont
+    import random
+
+    # 定义背景颜色
+    bgcolor = (random.randrange(20,100),random.randrange(20,100),random.randrange(20,100))
+    width =100
+    height=50
+    #创建一个图片矩阵
+    im = Image.new(&#39;RGB&#39;,(width,height),bgcolor)
+    #创建画笔对象
+    draw = ImageDraw.Draw(im)
+    # 调用画笔的point()函数绘制噪点
+    for i in range(0,100):
+        xy = (random.randrange(0,width),random.randrange(0,height))
+        fill = (random.randrange(0,255),255,random.randrange(0,255))
+        draw.point(xy,fill=fill)
+
+    # 定义验证码的被选值
+    str = &#39;1234567890QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm&#39;
+    # 随机选取4个值作为验证码
+    rand_str = &#39;&#39;
+    for i in range(0,4):
+        rand_str+=str[random.randrange(0,len(str))]
+    # 构造字体对象
+    font = ImageFont.truetype(r&#39;/usr/share/fonts/MyFonts/simhei.ttf&#39;,size=40)
+    # 构造字体颜色
+    fontcolor1 = (255,random.randrange(0,255),random.randrange(0,255))
+    fontcolor2 = (255,random.randrange(0,255),random.randrange(0,255))
+    fontcolor3 = (255,random.randrange(0,255),random.randrange(0,255))
+    fontcolor4 = (255,random.randrange(0,255),random.randrange(0,255))
+    # 绘制4个字
+    draw.text((5,2),rand_str[0],font=font,fill=fontcolor1)
+    draw.text((25,2),rand_str[1],font=font,fill=fontcolor2)
+    draw.text((50,2),rand_str[2],font=font,fill=fontcolor3)
+    draw.text((75,2),rand_str[3],font=font,fill=fontcolor4)
+    del draw
+    # 存入session，用于做进一步验证
+    request.session[&#39;verify&#39;] = rand_str
+    # 内存文件操作
+    import io
+    buf = io.BytesIO()
+    # 将图片保存在内存中，文件类型为png
+    im.save(buf,&#39;png&#39;)
+    # 将内存中的图片数据返回给客户端，MIME类型为图片png
+    return HttpResponse(buf.getvalue(),&#39;image/png&#39;)
+
+def verifycodefile(request):
+    f = request.session.get(&#39;flag&#39;,True)
+    str = &quot;&quot;
+    if f == False:
+        str=&quot;验证码错误&quot;
+    request.session.clear()
+    return render(request,&#39;myApp/verifycodefile.html&#39;,{&quot;flag&quot;:str})
+
+def verifycodecheck(request):
+    code1 = request.POST.get(&quot;verifycode&quot;).upper()
+    code2=request.session[&#39;verify&#39;].upper()
+    if code1==code2:
+        return render(request,&#39;myApp/success.html&#39;)
+    else:
+        request.session[&#39;flag&#39;]=False
+        return redirect(&#39;/verifycodefile/&#39;)
+</code></pre>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form action=&quot;/verifycodecheck/&quot; method=&quot;post&quot;&gt;
+        {% csrf_token %}
+        &lt;input type=&quot;text&quot; name=&quot;verifycode&quot;/&gt;
+        &lt;img src=&quot;/verifycode/&quot;&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;确定&quot;/&gt;
+        &lt;span&gt;
+            {{flag}}
+        &lt;/span&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+              <span>
+                <i class="iconfont icon-inbox"></i>
+                
+                  <a class="hover-with-bg" href="/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4">好记性不如烂笔头</a>
+                  &nbsp;
+                
+              </span>&nbsp;&nbsp;
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/Django">Django</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+
+    
+  
+    <!-- 不蒜子统计PV -->
+    
+    &nbsp;<span id="busuanzi_container_site_pv">总访问量 
+          <span id="busuanzi_value_site_pv"></span> 次</span>&nbsp;
+  
+  
+    <!-- 不蒜子统计UV -->
+    
+    &nbsp;<span id="busuanzi_container_site_uv">总访客数 
+            <span id="busuanzi_value_site_uv"></span> 人</span>&nbsp;
+  
+  <br>
+
+
+
+    
+
+
+    <!-- cnzz Analytics icon -->
+    
+
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+
+  <script src="/js/lazyload.js" ></script>
+
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+
+  <script src="/lib/smooth-scroll/smooth-scroll.min.js" ></script>
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+<!-- Plugins -->
+
+
+  
+
+  
+
+  
+
+  
+
+  <!-- cnzz Analytics -->
+  
+
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint  linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Django笔记3&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script>
+    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+      function () {
+        var element = document.createElement("a");
+        $(element).attr("data-fancybox", "images");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
