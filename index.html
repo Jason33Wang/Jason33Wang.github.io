@@ -143,6 +143,157 @@
     
     
       <div class="col-12 col-md-4 m-auto">
+        <a href="/2020/02/05/django笔记5/" target="_self">
+          <img src="/img/bg6.jpg" srcset="/img/loading.gif" alt="Django笔记5" class="img-fluid rounded z-depth-3 index-thumbnails">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 m-auto">
+      <a href="/2020/02/05/django笔记5/">
+        <p class="h4 index-header">Django笔记5</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">Djang高级扩展静态文件包括：css、js、图片、json文件、字体文件等
+配置setting.py文件
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,&#39;static&#39;)
+]
+
+或者静态引用
+{% load static from staticfiles %}
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;index&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/static/myApp/css/style.css&quot;/&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;/static/myApp/js</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-05&nbsp;&nbsp;
+        
+        
+          <i class="iconfont icon-inbox"></i>
+          
+            <a href="/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4">好记性不如烂笔头</a>&nbsp;
+          &nbsp;
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Django">Django</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+      <div class="col-12 col-md-4 m-auto">
+        <a href="/2020/02/05/django笔记4/" target="_self">
+          <img src="/img/bg6.jpg" srcset="/img/loading.gif" alt="Django笔记4" class="img-fluid rounded z-depth-3 index-thumbnails">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 m-auto">
+      <a href="/2020/02/05/django笔记4/">
+        <p class="h4 index-header">Django笔记4</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">day3 视图概述
+
+作用：视图接受web请求，并响应web请求
+
+本质：视图就是一个python函数
+
+响应：
+
+网页
+
+重定向
+错误视图
+
+
+json数据
+
+过程
+
+
+
+
+url配置配置流程
+
+设置根级url配置文件
+
+设置setting.py文件中的ROOT_URLCONF
+ROOT_URLCONF=Progject.urls
+默认实现了
+
+
+urlpatterns
+
+一个url实例的列表 
+一个url对象包括：
+正则表达式
+视图名称
+名称
+
+
+
+
+url匹配正则的注意事项
+
+如果想要从url中获得一个值，需要对正则加小括号
+匹配正则前方不需要加反斜杠
+正则前需要加r表示字符串不转义
+
+
+引入其他url配置
+
+在应用中创建urls.py文件，定义本应用的url配置，在工程urls.py文件中使用include()管理项目的urls文件。这样可以方便管理该项目下不同应用之间的url管理。
+# 在project/urls.py 文件中
+from django.conf.urls import url,include
+from django.contrib import admin
+
+</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-05&nbsp;&nbsp;
+        
+        
+          <i class="iconfont icon-inbox"></i>
+          
+            <a href="/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4">好记性不如烂笔头</a>&nbsp;
+          &nbsp;
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Django">Django</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+      <div class="col-12 col-md-4 m-auto">
         <a href="/2020/02/02/Django笔记3/" target="_self">
           <img src="/img/bg6.jpg" srcset="/img/loading.gif" alt="Django笔记3" class="img-fluid rounded z-depth-3 index-thumbnails">
         </a>

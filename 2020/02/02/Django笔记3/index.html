@@ -137,7 +137,7 @@
                   
                   &nbsp;<i class="far fa-clock"></i>
                   <span class="post-count">
-                      7 分钟
+                      6 分钟
                   </span>&nbsp;
                 
 
@@ -368,7 +368,7 @@ url(r&#39;^good/(\d+)/(\d+)/$&#39;, views.good,name=&#39;good&#39;),
 <pre><code class="python">&lt;!-- 子模板文件--&gt;
 {% extends 'myApp/base.html' %}
 {% block main %}
-    <h1>jason is a good man</h1>
+    <!--jason is a good man-->
 {% endblock main %}
 </code></pre>
 <h2 id="HTML转义"><a href="#HTML转义" class="headerlink" title="HTML转义"></a>HTML转义</h2><pre><code class="python">return render(request,&#39;myApp/index.html&#39;,{&quot;code&quot;:&quot;&lt;h1&gt;jason is a good man!&lt;/h1&gt;&quot;})

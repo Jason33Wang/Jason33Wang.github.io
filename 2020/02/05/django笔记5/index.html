@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="description" content="花些无聊的时间；做点有趣的事">
+  <meta name="author" content="Jason">
+  <meta name="keywords" content="I came,I saw,I conquered.">
+  <title>Django笔记5 ~ Jason&#39;s修禅房</title>
+
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
+<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
+<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
+<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+
+
+  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
+
+<link rel="stylesheet" href="/css/main.css"  >
+
+
+  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+
+
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Jason's修禅房</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">Archives</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">Categories</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">Tags</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background"
+         style="background: url('/img/bg0.jpg')no-repeat center center;
+           background-size: cover;
+           background-attachment: fixed;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  Wednesday, February 5th 2020, 4:27 pm
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    2k 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      9 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h1 id="Djang高级扩展"><a href="#Djang高级扩展" class="headerlink" title="Djang高级扩展"></a>Djang高级扩展</h1><h2 id="静态文件"><a href="#静态文件" class="headerlink" title="静态文件"></a>静态文件</h2><p>包括：css、js、图片、json文件、字体文件等</p>
+<p>配置setting.py文件</p>
+<pre><code class="python">STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,&#39;static&#39;)
+]
+</code></pre>
+<p>或者静态引用</p>
+<pre><code class="html">{% load static from staticfiles %}
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;index&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/static/myApp/css/style.css&quot;/&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;/static/myApp/js/hello.js&quot;&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;jason is a good man&lt;/h1&gt;
+    &lt;img src=&quot;/static/myApp/img/2.png&quot;&gt;
+    &lt;img src=&quot;{% static 'myApp/img/2.png'%}&quot;/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h2><p><strong>概述</strong></p>
+<p>一个轻量级、底层的插件、可以介入Django的请求和响应</p>
+<p><strong>本质</strong></p>
+<p>一个python类</p>
+<p><strong>方法</strong></p>
+<ul>
+<li><p><code>__init__</code>:不需要传参数，服务器响应第一个请求的时候自动调用，用于确定是否启用该中间件</p>
+</li>
+<li><p><code>process_request(self,request)</code>:在执行视图之前被调用(分配url匹配视图之前)，每个请求上都会调用。返回None或者HttpResponse</p>
+</li>
+<li><code>process_view(self,request,view_func,view_args,view_kwarfs)</code>:调用视图之前执行，每个请求都会调用。返回None或者HttpResponse</li>
+<li><code>process_template_response(self,request,response)</code>:在视图刚好执行完后调用，每个请求上都会调用。返回None或者HttpResponse。</li>
+<li><code>process_response(self,request,response)</code>:所有响应返回浏览器之前调用，每个请求上都会调用。返回HttpResponse。</li>
+<li><code>process_exception(self,request,exception)</code>:当视图跑出异常时调用，返回HttpResponse。</li>
+<li><img src="//yoursite.com/2020/02/05/django笔记5/image-20200203223510982.png" srcset="/img/loading.gif" alt="image-20200203223510982"></li>
+</ul>
+<h2 id="自定义中间件"><a href="#自定义中间件" class="headerlink" title="自定义中间件"></a>自定义中间件</h2><ul>
+<li><p>新建<code>项目/middleware/myApp</code>文件夹，在这下面自定义中间件<code>myMiddle.py</code></p>
+</li>
+<li><p>配置setting.py文件</p>
+</li>
+</ul>
+<pre><code class="python">MIDDLEWARE = [
+    &#39;middleware.myApp.myMiddle.MyMiddle&#39;
+]
+</code></pre>
+<ul>
+<li><code>myMiddle.py</code></li>
+</ul>
+<pre><code class="python">from django.utils.deprecation import MiddlewareMixin
+class MyMiddle(MiddlewareMixin):
+    def process_request(self,request):
+        print(&quot;get参数为:&quot;,request.GET.get(&quot;a&quot;))
+</code></pre>
+<h2 id="上传图片"><a href="#上传图片" class="headerlink" title="上传图片"></a>上传图片</h2><p><strong>概述</strong></p>
+<ul>
+<li>文件上传时，文件数据存储在request.FILES属性中</li>
+<li>注意：form表单要上传文件需要加属性<code>enctype=&quot;multipart/form-data&quot;</code></li>
+<li>注意：上传必须是post请求</li>
+</ul>
+<p><strong>存储路径</strong></p>
+<ul>
+<li><p>在static目录下创建upfile目录用于存储接收上传的文件</p>
+</li>
+<li><p>配置setting.py文件</p>
+</li>
+</ul>
+<pre><code class="python">MEDIA_ROOT = os.path.join(BASE_DIR,r&#39;static/upfile&#39;)
+</code></pre>
+<p><strong>代码示例</strong></p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;上传文件&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form method=&quot;post&quot; action=&quot;/savefile/&quot; enctype=&quot;multipart/form-data&quot;&gt;
+        {% csrf_token %}
+        &lt;input type=&quot;file&quot; name=&quot;file&quot;/&gt;
+        &lt;hr/&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;上传&quot;/&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="python">def upfile(request):
+    return render(request,&#39;myApp/upfile.html&#39;)
+
+from django.conf import settings
+def savefile(request):
+    if request.method==&quot;POST&quot;:
+        f = request.FILES[&quot;file&quot;]
+        # 文件在服务器端的路径
+        file_path=os.path.join(settings.MEDIA_ROOT,f.name)
+        with open(file_path,&#39;wb&#39;) as fp:
+            for info in f.chunks():
+                fp.write(info)
+        return HttpResponse(&quot;上传成功&quot;)
+
+    else:
+        return HttpResponse(&quot;上传失败&quot;)
+</code></pre>
+<h2 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h2><p><strong>Paginator对象</strong></p>
+<ul>
+<li>创建对象<ul>
+<li>格式：<code>Paginator(列表，整数)</code></li>
+<li>返回值：返回一个分页对象</li>
+</ul>
+</li>
+<li>属性<ul>
+<li>count：对象总数</li>
+<li>num_pages：页面总数</li>
+<li>page_range：页码列表，从1开始</li>
+</ul>
+</li>
+<li>方法<ul>
+<li><code>page(num)</code>：获得一个Page对象，如果提供的页码不存在会抛出<code>InvalidPage</code>异常</li>
+</ul>
+</li>
+<li>异常<ul>
+<li><code>InvalidPage</code>：当向page()传递的是一个无效的页码时抛出的异常</li>
+<li><code>PageNotInteger</code>：当向page()传递的不是一个整数时抛出</li>
+<li><code>EmptyPage</code>：当向page()传递一个有效值，但是该页面没有数据时抛出</li>
+</ul>
+</li>
+</ul>
+<p><strong>page对象</strong></p>
+<ul>
+<li>创建对象<ul>
+<li>Paginator对象的page()方法返回得到Page对象，不需要手动创建</li>
+</ul>
+</li>
+<li>属性<ul>
+<li><code>Object_list</code>：当前页上所有的数据（对象）列表</li>
+<li><code>nnumber</code>：当前页的页码值</li>
+<li><code>paginator</code>:当前page对象关联的Paginator对象</li>
+</ul>
+</li>
+<li>方法<ul>
+<li><code>has_next()</code>：判断是否有下一页，如果有返回True</li>
+<li><code>has_previous()</code>：判断是否有上一页，如果有返回True</li>
+<li><code>has_other_pages()</code>：判断是否有其他页（上一页或者下一页），如果有返回True</li>
+<li><code>next_page_number()</code>：返回下一页的页码，如果下一页不存在抛出<code>InvalidPage</code>异常</li>
+<li><code>previous_page_number()</code>：返回上一页的页码，如果上一页不存在抛出<code>InvalidPage</code>异常</li>
+<li><code>len</code>：放回当前页的数据对象个数</li>
+</ul>
+</li>
+</ul>
+<p><strong>代码示例</strong></p>
+<pre><code class="python"># 分页
+from django.core.paginator import Paginator
+def studentpage(request,pageid):
+    allList = Students.stuObj.all()
+    paginator = Paginator(allList,6)
+    page=paginator.page(pageid)
+    print(page.paginator.page_range)
+    retu
+</code></pre>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;分页显示&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ul&gt;
+        {% for stu in students%}
+        <li>
+            {{stu.sname}}--{{stu.sgrade}}
+        </li>
+        {% endfor%}
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        {% for index in students.paginator.page_range %}
+        {% if index == students.number %}
+        <li>
+            <a> {{index}} </a>
+        </li>
+        {% else %}
+        <li>
+            <a href="/studentpage/{{index}}/"> {{index}} </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h2><p><strong>示例</strong></p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;学生信息列表&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;学生信息列表&lt;/h1&gt;
+    &lt;button id=&quot;btn&quot;&gt;显示学生信息&lt;/button&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;/static/myApp/js/stu.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="js">$(document).ready(function(){
+    document.getElementById(&quot;btn&quot;).onclick=
+    function(){
+        $.ajax({
+            type:&quot;get&quot;,
+            url:&quot;/studentsinfo/&quot;,
+            dataType:&quot;json&quot;,
+            success:function(data,status){
+                console.log(data)
+                var d = data[&quot;data&quot;]
+                for(var i =0; i&lt;d.length;i++){
+                document.write(&#39;&lt;p&gt;&#39;+d[i][0]+&#39;&lt;/p&gt;&#39;)}
+                }
+        })
+    }
+})
+</code></pre>
+<pre><code class="python">def ajaxstudents(request):
+    return render(request,&quot;myApp/ajaxstudents.html&quot;)
+
+from django.http import JsonResponse
+def studentsinfo(request):
+    stus = Students.stuObj.all()
+    list=[]
+    for stu in stus:
+        list.append([stu.sname,stu.sage])
+    return JsonResponse({&quot;data&quot;:list})
+</code></pre>
+<h2 id="富文本"><a href="#富文本" class="headerlink" title="富文本"></a>富文本</h2><ul>
+<li><p>安装：<code>pip install django-tinymce</code></p>
+</li>
+<li><p>在站点中使用</p>
+<ul>
+<li>配置setting.py文件。</li>
+</ul>
+<pre><code class="python">INSTALLED_APPS = [
+    &#39;tinymce&#39;
+]
+TINYMCE_DEFAULT_CONFIG={
+    &#39;theme&#39;:&#39;advanced&#39;,
+    &#39;width&#39;:600,
+    &#39;height&#39;:400,
+}
+</code></pre>
+<ul>
+<li>增加模型文件</li>
+</ul>
+<pre><code class="python">from tinymce.models import HTMLField
+class Text(models.Model):
+    str = HTMLField
+</code></pre>
+<ul>
+<li>配置站点（admin.py文件配置）</li>
+</ul>
+<pre><code class="python">from .models import Text
+admin.site.register(Text)
+</code></pre>
+</li>
+<li><p>在自定义视图中使用</p>
+<ul>
+<li>主要展示html代码</li>
+</ul>
+</li>
+</ul>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;富文本&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;/static/tiny_mce/tiny_mce.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        tinyMCE.init({
+            &#39;mode&#39;: &#39;textareas&#39;,
+            &#39;theme&#39;:&#39;advanced&#39;,
+            &#39;width&#39;:800,
+            &#39;height&#39;:600,
+        })
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form&gt;
+        &lt;textarea name=&quot;str&quot;&gt;jason is a good man&lt;/textarea&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="celery"><a href="#celery" class="headerlink" title="celery"></a>celery</h2><p>文档地址：<code>http://docs.jinkan.org/docs/celery/</code></p>
+<p><strong>问题</strong></p>
+<ul>
+<li>用户发起request，并且要等待response返回，但是在视图中有一些耗时的操作，导致用户可能会response的返回很慢</li>
+<li>网站每隔一段时间要同步一次数据，但是http请求是需要触发的。</li>
+</ul>
+<p><strong>解决</strong></p>
+<ul>
+<li>celery解决：<ul>
+<li>将耗时的操作放到celery中执行</li>
+<li>使用celery定时执行</li>
+</ul>
+</li>
+</ul>
+<p><strong>celery</strong></p>
+<ul>
+<li>任务task：本质是一个python函数，将耗时操作封装成一个函数</li>
+<li>队列queue：将要执行的任务放到队列里</li>
+<li>工人worker;负责执行队列中的任务</li>
+<li>代理broker：负责调度，在部署环境中使用redis</li>
+</ul>
+<p><strong>安装</strong></p>
+<ul>
+<li><code>pip install celery</code></li>
+<li><code>pip install celery-with-redis</code></li>
+<li><code>pip install django-celery</code></li>
+</ul>
+<p><strong>配置settings.py</strong></p>
+<pre><code class="python">INSTALLED_APPS = [
+    &#39;djcelery&#39;
+]
+#celery
+import djcelery
+djcelery.setup_loader()#初始化
+BROKER_URL =&#39;redis://:127.0.0.1:6379/0&#39;
+CELERY_IMPORTS=(&#39;myApp.task&#39;)
+</code></pre>
+<p><strong>在应用目录下创建task.py文件</strong></p>
+<p><strong>迁移，生成celery需要的数据库表</strong></p>
+<p><code>python manage.py migrate</code></p>
+<p><strong>在工程目录下的project目录下创建celery.py的文件</strong></p>
+<pre><code class="python">from __future__ import absolute_import
+
+import os
+from celery import Celery
+from django.conf import settings
+
+os.environ.setdefault(&#39;DJANGO_SETTINGS_MODULE&#39;,&#39;whthas_home.settings&#39;)
+app=Celery(&#39;portal&#39;)
+
+app.config_from_object(&#39;django.conf:settings&#39;)
+app.autodiscover_tasks(lambda:settings.INSTALLED_APPS)
+
+@app.task(bind=True)
+def debug_task(self):
+    print(&#39;Request:{0!r}&#39;.format(self.request))
+</code></pre>
+<p><strong>在工程目录下的<code>__init__.py</code>文件添加</strong></p>
+<pre><code class="python">import pymysqlpymysql.install_as_MySQLdb()from .celery import app as celert_app
+</code></pre>
+<p><strong>在task.py文件中添加</strong></p>
+<pre><code class="python">from celery import task
+import time
+from celery import shared_task
+@shared_task
+def jason():
+    print(&quot;jason is a good man&quot;)
+    time.sleep(5)
+    print(&quot;jason is a nice man&quot;)
+</code></pre>
+<p><strong>利用delay方法执行</strong></p>
+<pre><code class="python">from .task import jason
+def celery(request):
+    jason.delay()
+    return render(request,&#39;myApp/celery.html&#39;)
+</code></pre>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+              <span>
+                <i class="iconfont icon-inbox"></i>
+                
+                  <a class="hover-with-bg" href="/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4">好记性不如烂笔头</a>
+                  &nbsp;
+                
+              </span>&nbsp;&nbsp;
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/Django">Django</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+
+    
+  
+    <!-- 不蒜子统计PV -->
+    
+    &nbsp;<span id="busuanzi_container_site_pv">总访问量 
+          <span id="busuanzi_value_site_pv"></span> 次</span>&nbsp;
+  
+  
+    <!-- 不蒜子统计UV -->
+    
+    &nbsp;<span id="busuanzi_container_site_uv">总访客数 
+            <span id="busuanzi_value_site_uv"></span> 人</span>&nbsp;
+  
+  <br>
+
+
+
+    
+
+
+    <!-- cnzz Analytics icon -->
+    
+
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+
+  <script src="/js/lazyload.js" ></script>
+
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+
+  <script src="/lib/smooth-scroll/smooth-scroll.min.js" ></script>
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+<!-- Plugins -->
+
+
+  
+
+  
+
+  
+
+  
+
+  <!-- cnzz Analytics -->
+  
+
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint  linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Django笔记5&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script>
+    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+      function () {
+        var element = document.createElement("a");
+        $(element).attr("data-fancybox", "images");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
