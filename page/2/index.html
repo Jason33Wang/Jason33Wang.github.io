@@ -16,7 +16,7 @@
   <meta name="description" content="花些无聊的时间；做点有趣的事">
   <meta name="author" content="Jason">
   <meta name="keywords" content="I came,I saw,I conquered.">
-  <title>Tags ~ Jason&#39;s修禅房</title>
+  <title>Jason&#39;s修禅房</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
@@ -37,7 +37,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 100vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -119,6 +119,10 @@
           </div>
 
           
+            <div class="scroll-down-bar">
+              <i class="fas fa-angle-down scroll-down-arrow"></i>
+            </div>
+          
         </div>
       </div>
     </div>
@@ -134,9 +138,101 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="text-center tagcloud">
-  <a href="/tags/Django/" style="font-size: 30px; color: #337ab7">Django</a> <a href="/tags/keras/" style="font-size: 15px; color: #bbe">keras</a> <a href="/tags/mysql/" style="font-size: 15px; color: #bbe">mysql</a> <a href="/tags/reinforecementLearning/" style="font-size: 15px; color: #bbe">reinforecementLearning</a> <a href="/tags/ubuntu/" style="font-size: 15px; color: #bbe">ubuntu</a> <a href="/tags/警句/" style="font-size: 15px; color: #bbe">警句</a>
-</div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+      <div class="col-12 col-md-4 m-auto">
+        <a href="/2018/09/02/mysql笔记/" target="_self">
+          <img src="/img/bg2.jpg" srcset="/img/loading.gif" alt="mysql笔记" class="img-fluid rounded z-depth-3 index-thumbnails">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 m-auto">
+      <a href="/2018/09/02/mysql笔记/">
+        <p class="h4 index-header">mysql笔记</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">mysql学习笔记sql的分类
+数据查询语言（dql ：data query language）
+代表关键字：select
+
+
+数据操作语言（dml：data manipulation language）
+代表关键字：insert，delete，update
+
+
+数据定义语言（ddl：data definition language）
+代表关键字：create，drop，alter
+
+
+事物控制语言（tcl：transactional control language）
+代表关键字：commit，rollback
+
+
+数据控制语言（dcl：data control language）
+代表关键字：grant，revoke
+
+
+
+#创建数据库
+create database fliename；
+#选择数据库
+use database_name
+#查询当前数据库
+select database();
+#查询数据版本
+select version();
+#终止当前语句
+\c
+#退出mysql
+\q,QUIT，EXIT
+#显示命令
+show databases
+show tables
+desc</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2018-09-02&nbsp;&nbsp;
+        
+        
+          <i class="iconfont icon-inbox"></i>
+          
+            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93">数据库</a>&nbsp;
+          &nbsp;
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/mysql">mysql</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <nav aria-label="index posts navigation">
+    <span class="pagination pg-blue justify-content-center mt-5" id="pagination">
+      <a class="extend prev" rel="prev" href="/"><i class="fas fa-angle-double-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByClassName("page-number")) {
+      ele.href += '#board';
+    }
+  </script>
+
+
+
               </div>
             </div>
           </div>
@@ -260,7 +356,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Tag&nbsp;",
+        "Vivre libre ou mourir&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
