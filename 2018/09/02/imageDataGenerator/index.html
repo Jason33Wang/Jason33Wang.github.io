@@ -13,27 +13,32 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+  <meta name="theme-color" content="#2f4154">
   <meta name="description" content="花些无聊的时间；做点有趣的事">
   <meta name="author" content="Jason">
   <meta name="keywords" content="I came,I saw,I conquered.">
-  <title>imageDataGenerator ~ Jason&#39;s修禅房</title>
+  <title>imageDataGenerator - Jason&#39;s修禅房</title>
 
-  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
-<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
-<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
-<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css" />
 
-
-  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
-
-<link rel="stylesheet" href="/css/main.css"  >
+<!-- 主题依赖的图标库，不要自行修改 -->
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_9n5xqdrq0nc.css">
 
 
-  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+  <link  rel="stylesheet" href="/lib/prettify/github-v2.min.css" />
 
 
-</head>
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<link rel="alternate" href="/atom.xml" title="Jason's修禅房" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -56,41 +61,46 @@
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/archives/">Archives</a>
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/categories/">Categories</a>
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/tags/">Tags</a>
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/about/">About</a>
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
           </li>
         
         
@@ -104,52 +114,48 @@
   </div>
 </nav>
 
-    <div class="view intro-2" id="background"
-         style="background: url('/img/bg2.jpg')no-repeat center center;
-           background-size: cover;
-           background-attachment: fixed;">
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/bg2.jpg') no-repeat center center;
+           background-size: cover;">
       <div class="full-bg-img">
-        <div class="mask rgba-black-light flex-center">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="container text-center white-text fadeInUp">
             <span class="h2" id="subtitle">
               
             </span>
 
             
-              <br>
               
-                <p class="mt-3">
-                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
-                  Sunday, September 2nd 2018, 5:13 pm
-                </p>
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2018-09-02 17:13">
+                    Sunday, September 2nd 2018, 5:13 pm
+                  </time>
+                </div>
               
 
-              <p>
+              <div class="mt-1">
                 
                   
-                  &nbsp;<i class="far fa-chart-bar"></i>
-                  <span class="post-count">
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
                     1.1k 字
-                  </span>&nbsp;
+                  </span>
                 
 
                 
                   
-                  &nbsp;<i class="far fa-clock"></i>
-                  <span class="post-count">
-                      4 分钟
-                  </span>&nbsp;
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    12
+                     分钟
+                  </span>
                 
 
                 
-                  <!-- 不蒜子统计文章PV -->
-                  
-                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
-                  <span id="busuanzi_container_page_pv">
-                    <span id="busuanzi_value_page_pv"></span> 次
-                  </span>&nbsp;
-                
-              </p>
+              </div>
             
           </div>
 
@@ -167,27 +173,29 @@
   <div class="row">
     <div class="d-none d-lg-block col-lg-2"></div>
     <div class="col-lg-8 nopadding-md">
-      <div class="py-5 z-depth-3" id="board">
-        <div class="post-content mx-auto" id="post">
-          <div class="markdown-body">
-            <p>在深度学习中，我们在<strong>trian</strong>我们的模型时，往往在数据方面很难找到足够的数据。而在<strong>keras</strong>中，提供了<strong>imageDataGenerator</strong></p>
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <p>在深度学习中，我们在<strong>trian</strong>我们的模型时，往往在数据方面很难找到足够的数据。而在<strong>keras</strong>中，提供了<strong>imageDataGenerator</strong></p>
 <p><strong>iamgeDataGenerator</strong>是一个生成器类，可以将我们输入的原始数据自动经过平移、旋转等操作，生成无限的差异性图片。在这里有意思的是在官方文档中，是用的无限（<strong>infinite</strong>）这个形容词。</p>
 <p>方法如下：</p>
 <p>1、实例一个生成器</p>
-<pre><code class="python">datagen = ImageDataGenerator(
+<pre class="line-numbers language-python"><code class="language-python">datagen <span class="token operator">=</span> ImageDataGenerator<span class="token punctuation">(</span>
 
-    featurewise_center=True,
+    featurewise_center<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
 
-    featurewise_std_normalization=True,
+    featurewise_std_normalization<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
 
-    rotation_range=20,
+    rotation_range<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">,</span>
 
-    width_shift_range=0.2,
+    width_shift_range<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">,</span>
 
-    height_shift_range=0.2,
+    height_shift_range<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">,</span>
 
-    horizontal_flip=True)
-</code></pre>
+    horizontal_flip<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>2、<code>.fit</code>方法</p>
 <p>该方法用来计算各种操作的统计信息。</p>
 <p>在笔者看来是类似于生成随机数，我们要生成一个seed</p>
@@ -197,8 +205,8 @@
 <p><code>datagen.flow(x_train, y_train, batch_size=32)</code></p>
 <p>4、接着就可以用生成的数据进行愉快的训练啦</p>
 <p>对于这些实时产生的数据，我们可以调用<strong>fit_generator</strong>接口，实时的利用这些数据进行训练我们的模型</p>
-<pre><code class="python">fit_generator(self, generator, steps_per_epoch, epochs=1, verbose=1, callbacks=None, validation_data=None, validation_steps=None, class_weight=None, max_q_size=10, workers=1, pickle_safe=False, initial_epoch=0)
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python">fit_generator<span class="token punctuation">(</span>self<span class="token punctuation">,</span> generator<span class="token punctuation">,</span> steps_per_epoch<span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> callbacks<span class="token operator">=</span>None<span class="token punctuation">,</span> validation_data<span class="token operator">=</span>None<span class="token punctuation">,</span> validation_steps<span class="token operator">=</span>None<span class="token punctuation">,</span> class_weight<span class="token operator">=</span>None<span class="token punctuation">,</span> max_q_size<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> workers<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> pickle_safe<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> initial_epoch<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>利用的Python的生成器，逐个生成数据的批次并进行训练。生成器与模型将并行执行以提高效率。例如，该函数允许我们在CPU上进行实时的数据提升，同时在GPU上进行模型训练</p>
 <p>函数的参数是：</p>
 <ul>
@@ -239,92 +247,111 @@
 </li>
 </ul>
 <p>同样的，我们有<strong>evaluate_generator</strong></p>
-<pre><code class="python">evaluate_generator(self, generator, steps, max_q_size=10, workers=1, pickle_safe=False)
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python">evaluate_generator<span class="token punctuation">(</span>self<span class="token punctuation">,</span> generator<span class="token punctuation">,</span> steps<span class="token punctuation">,</span> max_q_size<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> workers<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> pickle_safe<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>本函数使用一个生成器作为数据源评估模型，器生成应报道查看与test_on_batch的输入侧数据相同类型的数据。函数该参数的与fit_generator同名参数含义相同，步骤是生成器要返回数据的轮数。</p>
 <p>同样的，我们有<strong>predict_generator</strong></p>
-<pre><code class="python">predict_generator(self, generator, steps, max_q_size=10, workers=1, pickle_safe=False, verbose=0)
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python">predict_generator<span class="token punctuation">(</span>self<span class="token punctuation">,</span> generator<span class="token punctuation">,</span> steps<span class="token punctuation">,</span> max_q_size<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> workers<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> pickle_safe<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>本函数使用一个生成器作为数据源预测模型，器生成应报道查看与<strong>test_on_batch</strong>的输入侧数据相同类型的数据。函数该参数的与<strong>fit_generator</strong>同名参数含义相同，步骤是生成器要返回数据的轮数。</p>
 <p>5、我们也有另外一种训练模型的方法：</p>
-<pre><code class="python">for e in range(epochs):
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">for</span> e <span class="token keyword">in</span> range<span class="token punctuation">(</span>epochs<span class="token punctuation">)</span><span class="token punctuation">:</span>
 
-print(&#39;Epoch&#39;, e)
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Epoch'</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span>
 
-batches = 0
+batches <span class="token operator">=</span> <span class="token number">0</span>
 
-for x_batch, y_batch in datagen.flow(x_train, y_train, batch_size=32):
+<span class="token keyword">for</span> x_batch<span class="token punctuation">,</span> y_batch <span class="token keyword">in</span> datagen<span class="token punctuation">.</span>flow<span class="token punctuation">(</span>x_train<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
 
-loss = model.fit(x_batch, y_batch)
+loss <span class="token operator">=</span> model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_batch<span class="token punctuation">,</span> y_batch<span class="token punctuation">)</span>
 
-batches += 1
+batches <span class="token operator">+=</span> <span class="token number">1</span>
 
-if batches &gt;= len(x_train) / 32:
+<span class="token keyword">if</span> batches <span class="token operator">>=</span> len<span class="token punctuation">(</span>x_train<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">32</span><span class="token punctuation">:</span>
 
-# we need to break the loop by hand because
+<span class="token comment" spellcheck="true"># we need to break the loop by hand because</span>
 
-# the generator loops indefinitely
+<span class="token comment" spellcheck="true"># the generator loops indefinitely</span>
 
-break
-</code></pre>
+<span class="token keyword">break</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+            </article>
             <hr>
-          </div>
-          <br>
-          <div>
-            <p>
-            
-              <span>
-                <i class="iconfont icon-inbox"></i>
+            <div>
+              <div class="post-metas mb-3">
                 
-                  <a class="hover-with-bg" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">机器学习</a>
-                  &nbsp;
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/机器学习/">机器学习</a>
+                    
+                  </div>
                 
-              </span>&nbsp;&nbsp;
-            
-            
-              <span>
-                <i class="iconfont icon-tag"></i>
                 
-                  <a class="hover-with-bg" href="/tags/keras">keras</a>
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/keras/">keras</a>
+                    
+                  </div>
                 
-              </span>
-            
-            </p>
-            
-              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2018/09/14/用keras搭建DQN/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">用keras搭建DQN</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2018/09/02/正能量/">
+                        <span class="hidden-mobile">苟有恒，何必三更睡五更起。最无益，莫过一日曝十日寒</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
             
           </div>
         </div>
       </div>
     </div>
-    <div class="d-none d-lg-block col-lg-2 toc-container">
-      
-  <div id="toc">
-    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
-    <div id="tocbot"></div>
-  </div>
-
-    </div>
-  </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
 </div>
 
-<!-- custom -->
-
-
-<!-- Comments -->
-<div class="col-lg-7 mx-auto nopadding-md">
-  <div class="container comments mx-auto" id="comments">
+      </div>
     
   </div>
 </div>
+
+<!-- Custom -->
+
 
     
   </main>
 
   
-    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
-      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
     </a>
   
 
@@ -352,92 +379,105 @@ break
 </div>
   
 
+  
+
+  
+
   <footer class="mt-5">
   <div class="text-center py-3">
-    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
-    <i class="iconfont icon-love"></i>
-    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
-    <br>
-
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
     
-  
-    <!-- 不蒜子统计PV -->
-    
-    &nbsp;<span id="busuanzi_container_site_pv">总访问量 
-          <span id="busuanzi_value_site_pv"></span> 次</span>&nbsp;
-  
-  
-    <!-- 不蒜子统计UV -->
-    
-    &nbsp;<span id="busuanzi_container_site_uv">总访客数 
-            <span id="busuanzi_value_site_uv"></span> 人</span>&nbsp;
-  
-  <br>
-
-
 
     
 
-
-    <!-- cnzz Analytics icon -->
     
-
   </div>
 </footer>
 
 <!-- SCRIPTS -->
-<script src="/lib/jquery/jquery.min.js" ></script>
-<script src="/lib/popper/popper.min.js" ></script>
-<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
-<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
-<script src="/js/main.js" ></script>
+<div id="hitokoto" style="text-align:center">D 获取中...</div>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const hitokoto = document.getElementById('hitokoto')
+      hitokoto.innerText = data.hitokoto
+      })
+      .catch(console.error)
+</script>
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
 
 
-  <script src="/js/lazyload.js" ></script>
+  <script  src="/js/lazyload.js" ></script>
 
 
 
   
-    <script src="/lib/tocbot/tocbot.min.js" ></script>
-  
-  <script src="/js/post.js" ></script>
+  <script  src="https://cdn.staticfile.org/tocbot/4.10.0/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
 
 
 
-  <script src="/lib/smooth-scroll/smooth-scroll.min.js" ></script>
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
 
 
 
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
 
 
 <!-- Plugins -->
 
 
-  
 
-  
-
-  
-
-  
-
-  <!-- cnzz Analytics -->
-  
-
-
-
-  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script  src="https://cdn.staticfile.org/prettify/188.0.0/prettify.min.js" ></script>
   <script>
     $(document).ready(function () {
-      $('pre').addClass('prettyprint  linenums');
+      $('pre').each(function () {
+        const pre = $(this);
+        if (pre.find('code.mermaid').length > 0) {
+          return;
+        }
+        pre.addClass('prettyprint  linenums');
+      });
       prettyPrint();
     })
   </script>
 
 
 
-  <script src="/lib/typed/typed.min.js" ></script>
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
   <script>
     var typed = new Typed('#subtitle', {
       strings: [
@@ -457,11 +497,11 @@ break
 
 
 
-  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
   <script>
     anchors.options = {
       placement: "right",
-      visible: "false",
+      visible: "hover",
       
     };
     var el = "h1,h2,h3,h4,h5,h6".split(",");
@@ -474,7 +514,7 @@ break
 
 
 
-  <script src="/js/local-search.js" ></script>
+  <script  src="/js/local-search.js" ></script>
   <script>
     var path = "/local-search.xml";
     var inputArea = document.querySelector("#local-search-input");
@@ -486,17 +526,26 @@ break
 
 
 
-  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
   <script>
-    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
       function () {
-        var element = document.createElement("a");
-        $(element).attr("data-fancybox", "images");
-        $(element).attr("href", $(this).attr("src"));
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
         $(this).wrap(element);
       }
     );
   </script>
+
+
+
+
+
+
+
 
 
 

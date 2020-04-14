@@ -13,27 +13,32 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+  <meta name="theme-color" content="#2f4154">
   <meta name="description" content="花些无聊的时间；做点有趣的事">
   <meta name="author" content="Jason">
   <meta name="keywords" content="I came,I saw,I conquered.">
-  <title>mysql笔记 ~ Jason&#39;s修禅房</title>
+  <title>mysql笔记 - Jason&#39;s修禅房</title>
 
-  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
-<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
-<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
-<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css" />
 
-
-  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
-
-<link rel="stylesheet" href="/css/main.css"  >
+<!-- 主题依赖的图标库，不要自行修改 -->
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_9n5xqdrq0nc.css">
 
 
-  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+  <link  rel="stylesheet" href="/lib/prettify/github-v2.min.css" />
 
 
-</head>
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<link rel="alternate" href="/atom.xml" title="Jason's修禅房" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -56,41 +61,46 @@
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/archives/">Archives</a>
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/categories/">Categories</a>
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/tags/">Tags</a>
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/about/">About</a>
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
           </li>
         
         
@@ -104,52 +114,48 @@
   </div>
 </nav>
 
-    <div class="view intro-2" id="background"
-         style="background: url('/img/bg0.jpg')no-repeat center center;
-           background-size: cover;
-           background-attachment: fixed;">
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/bg0.jpg') no-repeat center center;
+           background-size: cover;">
       <div class="full-bg-img">
-        <div class="mask rgba-black-light flex-center">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="container text-center white-text fadeInUp">
             <span class="h2" id="subtitle">
               
             </span>
 
             
-              <br>
               
-                <p class="mt-3">
-                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
-                  Sunday, September 2nd 2018, 10:35 am
-                </p>
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2018-09-02 10:35">
+                    Sunday, September 2nd 2018, 10:35 am
+                  </time>
+                </div>
               
 
-              <p>
+              <div class="mt-1">
                 
                   
-                  &nbsp;<i class="far fa-chart-bar"></i>
-                  <span class="post-count">
-                    5.7k 字
-                  </span>&nbsp;
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
+                    5.6k 字
+                  </span>
                 
 
                 
                   
-                  &nbsp;<i class="far fa-clock"></i>
-                  <span class="post-count">
-                      23 分钟
-                  </span>&nbsp;
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    69
+                     分钟
+                  </span>
                 
 
                 
-                  <!-- 不蒜子统计文章PV -->
-                  
-                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
-                  <span id="busuanzi_container_page_pv">
-                    <span id="busuanzi_value_page_pv"></span> 次
-                  </span>&nbsp;
-                
-              </p>
+              </div>
             
           </div>
 
@@ -167,10 +173,12 @@
   <div class="row">
     <div class="d-none d-lg-block col-lg-2"></div>
     <div class="col-lg-8 nopadding-md">
-      <div class="py-5 z-depth-3" id="board">
-        <div class="post-content mx-auto" id="post">
-          <div class="markdown-body">
-            <h1 id="mysql学习笔记"><a href="#mysql学习笔记" class="headerlink" title="mysql学习笔记"></a>mysql学习笔记</h1><h1 id="sql的分类"><a href="#sql的分类" class="headerlink" title="sql的分类"></a>sql的分类</h1><ul>
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1><span id="mysql学习笔记">mysql学习笔记</span></h1><h1><span id="sql的分类">sql的分类</span></h1><ul>
 <li>数据查询语言（dql ：data query language）<ul>
 <li>代表关键字：select</li>
 </ul>
@@ -192,7 +200,7 @@
 </ul>
 </li>
 </ul>
-<pre><code class="mysql">#创建数据库
+<pre class="line-numbers language-mysql"><code class="language-mysql">#创建数据库
 create database fliename；
 #选择数据库
 use database_name
@@ -210,8 +218,8 @@ show tables
 desc tabele_name
 #查看怎么创建的某个表
 show create table 【name】
-</code></pre>
-<h1 id="查询语句"><a href="#查询语句" class="headerlink" title="查询语句"></a>查询语句</h1><pre><code class="mysql">#无所谓大小写
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1><span id="查询语句">查询语句</span></h1><pre class="line-numbers language-mysql"><code class="language-mysql">#无所谓大小写
 select 【字段，字段，字段】 from 表
 #条件查询
 select 【 】 from  表 where 表达式
@@ -223,7 +231,7 @@ select
 from
      emp
 where
-    job= &#39;manger&#39; or job=&#39;salesman&#39;；
+    job= 'manger' or job='salesman'；
 
 等同于
 select 
@@ -231,21 +239,21 @@ select
 from
     emp
 where
-    job in (&#39;manger&#39;,&#39;salesman&#39;)；
+    job in ('manger','salesman')；
 
 ######################################3
 like 用法： 其中%代表0～n个字符  _代表一个任意字符
-select ename from emp where ename like &#39;%o%&#39;  模糊查询
+select ename from emp where ename like '%o%'  模糊查询
 ###################################################
 
 
-</code></pre>
-<h1 id="升序排列，降序排列"><a href="#升序排列，降序排列" class="headerlink" title="升序排列，降序排列"></a>升序排列，降序排列</h1><pre><code class="mysql">select ename，sal from emp order by sal asc；
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1><span id="升序排列降序排列">升序排列，降序排列</span></h1><pre class="line-numbers language-mysql"><code class="language-mysql">select ename，sal from emp order by sal asc；
 #升序排列
 select ename，sal from emp order by sal desc；
 #降序排列
-</code></pre>
-<h1 id="数据处理函数-单行处理函数"><a href="#数据处理函数-单行处理函数" class="headerlink" title="数据处理函数/单行处理函数"></a>数据处理函数/单行处理函数</h1><table>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h1><span id="数据处理函数单行处理函数">数据处理函数/单行处理函数</span></h1><table>
 <thead>
 <tr>
 <th>Lower</th>
@@ -295,7 +303,7 @@ select ename，sal from emp order by sal desc；
 </tr>
 </tbody>
 </table>
-<h1 id="关于mysql中的日期处理"><a href="#关于mysql中的日期处理" class="headerlink" title="关于mysql中的日期处理"></a>关于mysql中的日期处理</h1><ul>
+<h1><span id="关于mysql中的日期处理">关于mysql中的日期处理</span></h1><ul>
 <li><p>每一个数据库处理日期的时候，采用的机制是不同的，日期处理都有自己的一套机制。所以在实际的开发中，表中的字段定义为DATA类型，这种情况很少。因为一旦使用日期类型，那么java程序将不能够通用那么在实际开发中，一般会使用”日期字符串“来表示日期</p>
 </li>
 <li><p>日期是数据库本身的特色，也是数据库本身机制中的一个重要的内容，所以还是需要掌握</p>
@@ -320,22 +328,22 @@ select ename，sal from emp order by sal desc；
 <p>​            SSS        毫秒</p>
 <p>java中将字符串转换成日期类型：</p>
 <p>​    </p>
-<pre><code class="java">SimpleDateFormat sdf = new SimpleDateFormat（&quot;yyyy-MM-dd&quot;）
-Date date = sdf.parse(&quot;1970-10-10&quot;)
-</code></pre>
+<pre class="line-numbers language-java"><code class="language-java">SimpleDateFormat sdf <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleDateFormat</span>（<span class="token string">"yyyy-MM-dd"</span>）
+Date date <span class="token operator">=</span> sdf<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">"1970-10-10"</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>MYSQL的日期格式：</p>
 <p>|  %Y  | 年   |<br>| :–: | —- |<br>|  %m  | 月   |<br>|  %d  | 日   |<br>|  %H  | 时   |<br>|  %i  | 分   |<br>|  %s  | 秒   |</p>
 </li>
 <li><p>案例：查询出1980-12-17入职的员工</p>
-<pre><code class="mysql">select ename from hirdate from emp where hirdate=&#39;1980-12-17&#39;
-#mysql默认的日期格式：%Y-%m-%d，以上的日期字符串&#39;1980-12-17&#39;正好和默认的日期格式一致，存在了自动类型转换，自动将日期字符串转换了日期类型，所以以上查询可以查询出结果。
+<pre class="line-numbers language-mysql"><code class="language-mysql">select ename from hirdate from emp where hirdate='1980-12-17'
+#mysql默认的日期格式：%Y-%m-%d，以上的日期字符串'1980-12-17'正好和默认的日期格式一致，存在了自动类型转换，自动将日期字符串转换了日期类型，所以以上查询可以查询出结果。
 
 #如果写下面语句则会报错
-select ename from hirdate from emp where hirdate=&#39;12-17-1980&#39;
+select ename from hirdate from emp where hirdate='12-17-1980'
 #想要纠正错误可以改成以下语句
-select ename from hirdate from emp where hirdate=str_to_date(&#39;12-17-1980&#39;,&#39;%m-%d-%Y&#39;)
+select ename from hirdate from emp where hirdate=str_to_date('12-17-1980','%m-%d-%Y')
 
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>date_format </p>
 <ul>
@@ -351,7 +359,7 @@ select ename from hirdate from emp where hirdate=str_to_date(&#39;12-17-1980&#39
 </ul>
 </li>
 </ul>
-<h1 id="分组函数-聚合函数-多行处理函数"><a href="#分组函数-聚合函数-多行处理函数" class="headerlink" title="分组函数/聚合函数/多行处理函数"></a>分组函数/聚合函数/多行处理函数</h1><table>
+<h1><span id="分组函数聚合函数多行处理函数">分组函数/聚合函数/多行处理函数</span></h1><table>
 <thead>
 <tr>
 <th>count</th>
@@ -378,11 +386,11 @@ select ename from hirdate from emp where hirdate=str_to_date(&#39;12-17-1980&#39
 </tbody>
 </table>
 <p>以上函数自动忽略空值，分组函数不能使用在where语句中</p>
-<h1 id="去除重复内容"><a href="#去除重复内容" class="headerlink" title="去除重复内容"></a>去除重复内容</h1><p>distinct只能放在记录最前面</p>
-<pre><code class="mysql">select distinct job from emp；
+<h1><span id="去除重复内容">去除重复内容</span></h1><p>distinct只能放在记录最前面</p>
+<pre class="line-numbers language-mysql"><code class="language-mysql">select distinct job from emp；
 select distinct deptno，job from emp；#将两个字段同时来看
-</code></pre>
-<h1 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h1><ul>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h1><span id="分组查询">分组查询</span></h1><ul>
 <li><p>group by </p>
 <ul>
 <li><p>group by 【表示通过哪个或者哪些字段进行排序】</p>
@@ -413,8 +421,8 @@ select ename,job,max(sal) from emp group by job
 </li>
 <li><p>案例：找出每个工作岗位的平均薪水，要求显示平均薪水大于1500</p>
 </li>
-<li><pre><code class="mysql">select job,avg(sal) from emp group by job having avg(sal)&gt;1500
-</code></pre>
+<li><pre class="line-numbers language-mysql"><code class="language-mysql">select job,avg(sal) from emp group by job having avg(sal)>1500
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>原则：</p>
 <ul>
@@ -446,7 +454,7 @@ select ename,job,max(sal) from emp group by job
 <p>​    6、order by            排序输出</p>
 </li>
 </ul>
-<h1 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h1><ul>
+<h1><span id="连接查询">连接查询</span></h1><ul>
 <li><p>连接查询，也可以叫跨表查询，需要关联多个表进行查询</p>
 </li>
 <li><p>链接查询根据出现的年代分类：</p>
@@ -475,45 +483,45 @@ select ename,job,max(sal) from emp group by job
 <p>案例1：查询每个员工所在的部门名称，要求最终显示员工名和对应的部门名。</p>
 <ul>
 <li><p>小知识点：在进行多表连接查询的时候，尽量给表起别名，这样效率高，可读性高。</p>
-<pre><code class="mysql">select e.ename,d.dname from emp e,dept d;
+<pre class="line-numbers language-mysql"><code class="language-mysql">select e.ename,d.dname from emp e,dept d;
 #如果不增加任何限制的话会出现笛卡尔积现象
 #注意：连接查询过程中虽然使用了限制条件，但是匹配的次数没有减少，还是相乘次数，只不过这一次显示的结果都是有效记录
 select e.ename,d.dname from emp e,dept d where e.xx = d.xx
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 <p>案例2：找出每一个员工对应的工资等级，要求显示员工名，工资，工资等级</p>
 <ul>
-<li><pre><code class="mysql">#sql99语法中的等值连接中的非等值连接
+<li><pre class="line-numbers language-mysql"><code class="language-mysql">#sql99语法中的等值连接中的非等值连接
 select e.ename,e.sal,s.grade from emp e 【inner】 join salgrade s on e.sal between s.local ans s.hisal
 #sql92语法：
 select e.ename,e.sal,s.grade from emp e ， salgrade s where e.sal between s.local ans s.hisal
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 <p>案例3：找出每一个员工的上级领导，要求显示员工名以及对应的领导名</p>
 <ul>
-<li><pre><code class="mysql">#同一张表，我们需要吧一张表看成两张表
+<li><pre class="line-numbers language-mysql"><code class="language-mysql">#同一张表，我们需要吧一张表看成两张表
 #sql99语法中内连接中的非等值连接
 select a.ename empname ,b.ename leadername from emp a 【inner】join emp b on a.mgr = b.empno;
 
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 <p>案例4：找出每一个员工对应的部门名称，要求部门名称全部显示</p>
 <ul>
-<li><pre><code class="mysql">#内连接：
+<li><pre class="line-numbers language-mysql"><code class="language-mysql">#内连接：
 #    a表和b表能够完全匹配的记录查询出来，就被称为内连接
 #外连接：
 #    a表和b表能够完全匹配的记录查询出来之外，将其中一张表的记录无条件的      完全查询出来，对方表没有匹配的记录，会自动模拟出null与之匹配，这种     查询被称为外链接。
-    外连接查询的结果条数&gt;=内连接的查询结果条数
+    外连接查询的结果条数>=内连接的查询结果条数
 #sql99语法：外连接中的右外连接【右连接】
 select e.ename,d.dname from emp e right 【outer】 join dept d on e.deptno = deptno; #outer可以省略
 #sql99语法：外连接中的左外连接【左连接】
 select e.ename,d.dname from dept d left 【outer】 join emp e on e.deptno = deptno; #outer可以省略
 #上面两种写法是相同的，任何一个右外连接都可以写成左外连接，反之同样成立
 
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>为什么inner和outer可以省略，加上去有什么好处？</p>
 <ul>
 <li>可以省略，因为区分内连接和外连接依靠的不是这些关键字，而是看sql             语句中是否存在right和left，若存在，表示一定是一个外连接，其他的都是内连接<ul>
@@ -536,7 +544,7 @@ select e.ename,d.dname from dept d left 【outer】 join emp e on e.deptno = dep
 <p>  on</p>
 <p>  ​    条件；</p>
 <p>  原理：</p>
-<h1 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h1><p>1、什么是子查询？</p>
+<h1><span id="子查询">子查询</span></h1><p>1、什么是子查询？</p>
 <ul>
 <li>select语句嵌套select语句</li>
 </ul>
@@ -550,23 +558,23 @@ select e.ename,d.dname from dept d left 【outer】 join emp e on e.deptno = dep
 <p>3、where后面添加select子查询</p>
 <p>案例：找出薪水比公司平均薪水高的员工，要求显示员工名和薪水。</p>
 <ul>
-<li><pre><code class="mysql">select ename，sal from emp where sal &gt; avg(sal)
+<li><pre class="line-numbers language-mysql"><code class="language-mysql">select ename，sal from emp where sal > avg(sal)
 #以上语句执行报错，分组函数不能直接使用在where后面
 
 #正确做法
 #第一步：找出公司的平均薪水
 #第二部：找出薪水大于平均薪水的员工信息
-select ename,sal from emp where sal &gt; (select avg(sal) from emp)
-</code></pre>
+select ename,sal from emp where sal > (select avg(sal) from emp)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 <p>4、from后面使用子查询</p>
 <p>案例：找出每个部门的平均薪水，并且要求显示平均薪水的薪水等级。</p>
 <p>第一步：找出每个部门的平均薪水</p>
-<pre><code class="mysql">select deptno, avg(sal) as avgsal from emp group by deptno;
-</code></pre>
+<pre class="line-numbers language-mysql"><code class="language-mysql">select deptno, avg(sal) as avgsal from emp group by deptno;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>第二步：将上面的临时查询结果当做临时表t，t表进行表连接，条件：t.avg(sal) between s.local and s.hisal</p>
-<pre><code class="mysql">select 
+<pre class="line-numbers language-mysql"><code class="language-mysql">select 
     t.deptno,t.avgsal,s.grade 
 from 
     (select deptno, avg(sal) as avgsal from emp group by deptno) t
@@ -575,23 +583,23 @@ join
 on 
     t.avgsal between s.local and s.hisal;
 
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>5、在select后面使用子查询【了解】</p>
-<pre><code class="mysql">select e.ename,(select d.dname from dept d where e,deptno = d.deptno) as dname from emp e;
-</code></pre>
-<h1 id="union"><a href="#union" class="headerlink" title="union"></a>union</h1><p>union可以合并集合（相加）</p>
-<pre><code class="mysql">select    ename,job from emp where job = &quot;manager&quot;
+<pre class="line-numbers language-mysql"><code class="language-mysql">select e.ename,(select d.dname from dept d where e,deptno = d.deptno) as dname from emp e;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1><span id="union">union</span></h1><p>union可以合并集合（相加）</p>
+<pre class="line-numbers language-mysql"><code class="language-mysql">select    ename,job from emp where job = "manager"
 union
-select  ename,job from emp where job = &quot;salesman&quot;
+select  ename,job from emp where job = "salesman"
 
 #等同于以下写法
-select ename,job from emp where job in [&quot;manager&quot;,&quot;salesman&quot;]
-</code></pre>
-<h1 id="limit"><a href="#limit" class="headerlink" title="limit"></a>limit</h1><ul>
+select ename,job from emp where job in ["manager","salesman"]
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1><span id="limit">limit</span></h1><ul>
 <li>limit用来获取一张表中的某部分数据</li>
 <li>limit只有在mysql数据库中存在，不通用，是mysql数据库管理系统的特色</li>
 </ul>
-<pre><code class="mysql">#案例1：找出员工表中前5条记录
+<pre class="line-numbers language-mysql"><code class="language-mysql">#案例1：找出员工表中前5条记录
 select ename from emp limit 5；
 #以上的sql语句的“limit 5”中的5表示从表中记录下标0开始，取5条等同于下面的sql语句
 select ename from emp limit 0,5；
@@ -599,11 +607,11 @@ select ename from emp limit 0,5；
 
 #案例2：找出公司中工资排名在前5名的员工
 select ename,sal from emp order by sal desc limit 5;
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>mysql中通用的分页sql语句：</li>
 </ul>
-<pre><code class="mysql">#每页显示3条记录
+<pre class="line-numbers language-mysql"><code class="language-mysql">#每页显示3条记录
 每页显示3条记录
 第1页：0,3
 第2页：3,3
@@ -615,8 +623,8 @@ select ename,sal from emp order by sal desc limit 5;
 
 select ename,sal from emp order by sal desc limit （（pageNo-1）×pagesize，pageSize）;
 
-</code></pre>
-<h1 id="表"><a href="#表" class="headerlink" title="表"></a>表</h1><ul>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1><span id="表">表</span></h1><ul>
 <li><p>创建表</p>
 <ul>
 <li>表格（table），用来存储数据，表格是一种结构化文件。</li>
@@ -624,12 +632,12 @@ select ename,sal from emp order by sal desc limit （（pageNo-1）×pagesize，
 <li>表格的字段属性包括：字段名称、字段数据类型、字段长度、字段约束</li>
 </ul>
 </li>
-<li><pre><code class="mysql">create table tableName（
+<li><pre class="line-numbers language-mysql"><code class="language-mysql">create table tableName（
     columnName dataType(length),
     columnName dataType(length)
 ）;
-set character_set_results=&#39;gbk&#39;;
-</code></pre>
+set character_set_results='gbk';
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>关于mysql数据库中的数据类型？</p>
 <ul>
@@ -671,7 +679,7 @@ set character_set_results=&#39;gbk&#39;;
 </ul>
 </li>
 </ul>
-<h1 id="insert"><a href="#insert" class="headerlink" title="insert"></a>insert</h1><ul>
+<h1><span id="insert">insert</span></h1><ul>
 <li>向表格插入数据必须是使用insert语句，这属于dml语句</li>
 <li>dml语句包括：insert，update，delete、</li>
 <li>insert语句的语法格式：<ul>
@@ -680,12 +688,12 @@ set character_set_results=&#39;gbk&#39;;
 </li>
 <li>字段和值必须一一对应，个数必须相同，数据类型必须一致。</li>
 </ul>
-<h1 id="关于sql脚本"><a href="#关于sql脚本" class="headerlink" title="关于sql脚本"></a>关于sql脚本</h1><ul>
+<h1><span id="关于sql脚本">关于sql脚本</span></h1><ul>
 <li>该文件是一个普通的文本文件，后缀名.sql，被称为sql脚本</li>
 <li>在sql脚本中有大量的sql语句，想批量的执行sql语句，可以将这些sql语句写入sql脚本文件中，直接使用source执行这个脚本，可以执行大量的sql语句</li>
 <li></li>
 </ul>
-<h1 id="增删改表结构-不是很重要-（DDL）"><a href="#增删改表结构-不是很重要-（DDL）" class="headerlink" title="增删改表结构(不是很重要)（DDL）"></a>增删改表结构(不是很重要)（DDL）</h1><pre><code class="mysql">#如需求改变，需要向t_studnts中加联系电话字段，字段名称为：contact_tel 类型为varchar（40）
+<h1><span id="增删改表结构不是很重要ddl">增删改表结构(不是很重要)（DDL）</span></h1><pre class="line-numbers language-mysql"><code class="language-mysql">#如需求改变，需要向t_studnts中加联系电话字段，字段名称为：contact_tel 类型为varchar（40）
 #增
 alter table t_student add contact_tel varchar(40)
 #将长度改为20
@@ -693,8 +701,8 @@ alter table t_student add contact_tel varchar(40)
 alter table t_student modify tel varchar(20)
 #删
 alter table t_student drop tel
-</code></pre>
-<h1 id="增删改表中的数据【insert、update、delete】"><a href="#增删改表中的数据【insert、update、delete】" class="headerlink" title="增删改表中的数据【insert、update、delete】"></a>增删改表中的数据【insert、update、delete】</h1><h2 id="update"><a href="#update" class="headerlink" title="update"></a>update</h2><ul>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1><span id="增删改表中的数据insert-update-delete">增删改表中的数据【insert、update、delete】</span></h1><h2><span id="update">update</span></h2><ul>
 <li><p>update语句的语法格式：</p>
 <ul>
 <li>update tablename set 字段名 = 字段值，字段名 = 字段值，where 条件；</li>
@@ -702,18 +710,18 @@ alter table t_student drop tel
 </li>
 <li><p>注意：update语句没有条件，会将一张表中所有的数据全部更新</p>
 </li>
-<li><pre><code class="mysql">#将no=3的记录name修改为zhangsan，email修改为zhangsan@bjpowernode.com
-update t_student set name=&#39;zhangsan&#39;,email =&#39;zhangsan@bjpowernode.com&#39; where no = 3;
+<li><pre class="line-numbers language-mysql"><code class="language-mysql">#将no=3的记录name修改为zhangsan，email修改为zhangsan@bjpowernode.com
+update t_student set name='zhangsan',email ='zhangsan@bjpowernode.com' where no = 3;
 #将所有的name都修改为lisi
-update t_student set name = &#39;lisi&#39;;
+update t_student set name = 'lisi';
 #将emp_bak中的所有的名字中含有o的员工名修改为zhangsan
-update emp_bak set ename = &#39;zhangsan&#39; where ename like &#39;%o%&#39;;
+update emp_bak set ename = 'zhangsan' where ename like '%o%';
 #将emp_bak表中所有工作岗位是manager和salesman的员工工资上调10%
-update emp_bak set sal=sal*1.1 where job = &#39;manager&#39; or job = &#39;salesman&#39;
-</code></pre>
+update emp_bak set sal=sal*1.1 where job = 'manager' or job = 'salesman'
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
-<h2 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h2><ul>
+<h2><span id="delete">delete</span></h2><ul>
 <li><p>delete 语句的语法格式：</p>
 <ul>
 <li>delete from tablename where 条件</li>
@@ -721,15 +729,15 @@ update emp_bak set sal=sal*1.1 where job = &#39;manager&#39; or job = &#39;sales
 </li>
 <li><p>注意：若没有条件限制，会将这种表中所有的记录全部删除</p>
 </li>
-<li><pre><code class="mysql">#删除学号=3的学生
+<li><pre class="line-numbers language-mysql"><code class="language-mysql">#删除学号=3的学生
 delete from t_student where no = 3
 #删除所有记录
 delete from t_student
 
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
-<h1 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h1><ul>
+<h1><span id="约束">约束</span></h1><ul>
 <li><p>什么是约束，为什么要使用约束？</p>
 <ul>
 <li>约束对应的英语单词：constraint</li>
@@ -752,12 +760,12 @@ delete from t_student
 </li>
 <li><p>创建表，给字段添加非空约束【创建用户表，用户名不能为空】</p>
 </li>
-<li><pre><code class="mysql">create table t_user(
+<li><pre class="line-numbers language-mysql"><code class="language-mysql">create table t_user(
     id int(10),
     name varchar(32) not null not null,
     email varchar(128)
 );
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 </li>
@@ -765,7 +773,7 @@ delete from t_student
 <ul>
 <li><p>unique约束的字段具有唯一性，不可重复</p>
 </li>
-<li><pre><code class="mysql">#创建用户，保证邮箱地址唯一
+<li><pre class="line-numbers language-mysql"><code class="language-mysql">#创建用户，保证邮箱地址唯一
 #列级约束
 create table t_user(
     id int(10),
@@ -800,9 +808,9 @@ create table t_user(
 use information_schema;
 show tables;
 #其中有个表叫table_constraint的表专门用来存储约束信息的
-select constraint_name from table_constraints where table_name=&#39;t_user&#39;;
+select constraint_name from table_constraints where table_name='t_user';
 
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 </li>
@@ -826,7 +834,7 @@ select constraint_name from table_constraints where table_name=&#39;t_user&#39;;
 </li>
 <li><p>给一个字段添加主键约束，被称为单一主键。</p>
 </li>
-<li><pre><code class="mysql"> #单一主键
+<li><pre class="line-numbers language-mysql"><code class="language-mysql"> #单一主键
  #列表定义方式
    drop table if exist t_user;
    create table t_user( 
@@ -841,7 +849,7 @@ select constraint_name from table_constraints where table_name=&#39;t_user&#39;;
     name varchar(32)，
     primary key（id）
    )
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre><code>
 </code></pre></li>
 <li></li>
@@ -863,12 +871,12 @@ select constraint_name from table_constraints where table_name=&#39;t_user&#39;;
 </li>
 <li><p>在mysql数据库管理系统中提供了一个自增的数字，专门用来自动生成主键值。主键值不需要用户维护，也不需要用户提供了，自动生成的。这个自增的数字默认从1开始，以1递增：1、 2、 3、 …….</p>
 <ul>
-<li><pre><code class="mysql">drop table if exist t_uesr;
+<li><pre class="line-numbers language-mysql"><code class="language-mysql">drop table if exist t_uesr;
 create table t_user(
     id int(10) primary key auto_increment,
     name varchar(32)
 )
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <code>`</code></li>
 </ul>
 <p><code>`</code></p>
@@ -923,9 +931,9 @@ create table t_user(
 <p>注：外键值可以为null。</p>
 <p>注：外键字段去引用一张表的某一个字段的时候，被引用的字段必须具有unique约束。</p>
 <p>注：有了外键引用之后，表分为父表和子表，以上父表是：班级表，子表是：学生表。创建表先创建父表，在创建子表，删除数据的时候，先删除子表中的数据，后删除父表中的数据。插入数据的时候先插入父表中的数据，再插入子表中的数据</p>
-<pre><code class="mysql">
-insert into t_student(sno,sname,classno) value(1,&#39;&#39;,100);
-insert into t_student(sno,sname,classno) value(1,&#39;&#39;,100);drop table if exists t_student;
+<pre class="line-numbers language-mysql"><code class="language-mysql">
+insert into t_student(sno,sname,classno) value(1,'',100);
+insert into t_student(sno,sname,classno) value(1,'',100);drop table if exists t_student;
 drop table if exists t_class;
 create table t_class(
     cno int(3) primary key,
@@ -937,24 +945,24 @@ create table t_students(
     classno int(3),
     constraint t_student_classno_fk foreign key(classno) reference t_class(cno)
 );
-insert into t_class(cno,cname) value(100,&#39;高三一班&#39;)；
-insert into t_class(cno,cname) value(200,&#39;高三二班&#39;)；
-insert into t_class(cno,cname) value(300,&#39;高三三班&#39;)；
-insert into t_student(sno,sname,classno) value(1,&#39;jack&#39;,100);
-insert into t_student(sno,sname,classno) value(2,&#39;tom&#39;,100);
-insert into t_student(sno,sname,classno) value(3,&#39;lucy&#39;,200);
-insert into t_student(sno,sname,classno) value(4,&#39;king&#39;,200);
-insert into t_student(sno,sname,classno) value(5,&#39;wang&#39;,300);
-insert into t_student(sno,sname,classno) value(6,&#39;lisi&#39;,300);
+insert into t_class(cno,cname) value(100,'高三一班')；
+insert into t_class(cno,cname) value(200,'高三二班')；
+insert into t_class(cno,cname) value(300,'高三三班')；
+insert into t_student(sno,sname,classno) value(1,'jack',100);
+insert into t_student(sno,sname,classno) value(2,'tom',100);
+insert into t_student(sno,sname,classno) value(3,'lucy',200);
+insert into t_student(sno,sname,classno) value(4,'king',200);
+insert into t_student(sno,sname,classno) value(5,'wang',300);
+insert into t_student(sno,sname,classno) value(6,'lisi',300);
 select * from t_studengt;
 select * from t_class;
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>重点：典型的一对多的设计模式，在多的一方加外键。</p>
 </li>
 </ul>
 </li>
 </ul>
-<h1 id="级联更新和经联删除"><a href="#级联更新和经联删除" class="headerlink" title="级联更新和经联删除"></a>级联更新和经联删除</h1><ul>
+<h1><span id="级联更新和经联删除">级联更新和经联删除</span></h1><ul>
 <li>添加级联更新和级联删除的时候需要在外键约束后面添加</li>
 <li>在删除父表中的数据时，级联删除子表中的数据 on delete cascade<ul>
 <li>删除外键约束<ul>
@@ -981,63 +989,82 @@ select * from t_class;
 <li>以上的级联更新和级联删除谨慎使用，因为级联操作会将数据改变或者删除【数据无价】</li>
 </ul>
 
+            </article>
             <hr>
-          </div>
-          <br>
-          <div>
-            <p>
-            
-              <span>
-                <i class="iconfont icon-inbox"></i>
+            <div>
+              <div class="post-metas mb-3">
                 
-                  <a class="hover-with-bg" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93">数据库</a>
-                  &nbsp;
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/数据库/">数据库</a>
+                    
+                  </div>
                 
-              </span>&nbsp;&nbsp;
-            
-            
-              <span>
-                <i class="iconfont icon-tag"></i>
                 
-                  <a class="hover-with-bg" href="/tags/mysql">mysql</a>
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/mysql/">mysql</a>
+                    
+                  </div>
                 
-              </span>
-            
-            </p>
-            
-              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2018/09/02/正能量/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">苟有恒，何必三更睡五更起。最无益，莫过一日曝十日寒</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2018/08/02/hello-world/">
+                        <span class="hidden-mobile">blog初级自定义自定义教程</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
             
           </div>
         </div>
       </div>
     </div>
-    <div class="d-none d-lg-block col-lg-2 toc-container">
-      
-  <div id="toc">
-    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
-    <div id="tocbot"></div>
-  </div>
-
-    </div>
-  </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
 </div>
 
-<!-- custom -->
-
-
-<!-- Comments -->
-<div class="col-lg-7 mx-auto nopadding-md">
-  <div class="container comments mx-auto" id="comments">
+      </div>
     
   </div>
 </div>
+
+<!-- Custom -->
+
 
     
   </main>
 
   
-    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
-      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
     </a>
   
 
@@ -1065,92 +1092,105 @@ select * from t_class;
 </div>
   
 
+  
+
+  
+
   <footer class="mt-5">
   <div class="text-center py-3">
-    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
-    <i class="iconfont icon-love"></i>
-    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
-    <br>
-
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
     
-  
-    <!-- 不蒜子统计PV -->
-    
-    &nbsp;<span id="busuanzi_container_site_pv">总访问量 
-          <span id="busuanzi_value_site_pv"></span> 次</span>&nbsp;
-  
-  
-    <!-- 不蒜子统计UV -->
-    
-    &nbsp;<span id="busuanzi_container_site_uv">总访客数 
-            <span id="busuanzi_value_site_uv"></span> 人</span>&nbsp;
-  
-  <br>
-
-
 
     
 
-
-    <!-- cnzz Analytics icon -->
     
-
   </div>
 </footer>
 
 <!-- SCRIPTS -->
-<script src="/lib/jquery/jquery.min.js" ></script>
-<script src="/lib/popper/popper.min.js" ></script>
-<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
-<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
-<script src="/js/main.js" ></script>
+<div id="hitokoto" style="text-align:center">D 获取中...</div>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const hitokoto = document.getElementById('hitokoto')
+      hitokoto.innerText = data.hitokoto
+      })
+      .catch(console.error)
+</script>
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
 
 
-  <script src="/js/lazyload.js" ></script>
+  <script  src="/js/lazyload.js" ></script>
 
 
 
   
-    <script src="/lib/tocbot/tocbot.min.js" ></script>
-  
-  <script src="/js/post.js" ></script>
+  <script  src="https://cdn.staticfile.org/tocbot/4.10.0/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
 
 
 
-  <script src="/lib/smooth-scroll/smooth-scroll.min.js" ></script>
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
 
 
 
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
 
 
 <!-- Plugins -->
 
 
-  
 
-  
-
-  
-
-  
-
-  <!-- cnzz Analytics -->
-  
-
-
-
-  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script  src="https://cdn.staticfile.org/prettify/188.0.0/prettify.min.js" ></script>
   <script>
     $(document).ready(function () {
-      $('pre').addClass('prettyprint  linenums');
+      $('pre').each(function () {
+        const pre = $(this);
+        if (pre.find('code.mermaid').length > 0) {
+          return;
+        }
+        pre.addClass('prettyprint  linenums');
+      });
       prettyPrint();
     })
   </script>
 
 
 
-  <script src="/lib/typed/typed.min.js" ></script>
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
   <script>
     var typed = new Typed('#subtitle', {
       strings: [
@@ -1170,11 +1210,11 @@ select * from t_class;
 
 
 
-  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
   <script>
     anchors.options = {
       placement: "right",
-      visible: "false",
+      visible: "hover",
       
     };
     var el = "h1,h2,h3,h4,h5,h6".split(",");
@@ -1187,7 +1227,7 @@ select * from t_class;
 
 
 
-  <script src="/js/local-search.js" ></script>
+  <script  src="/js/local-search.js" ></script>
   <script>
     var path = "/local-search.xml";
     var inputArea = document.querySelector("#local-search-input");
@@ -1199,17 +1239,26 @@ select * from t_class;
 
 
 
-  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
   <script>
-    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
       function () {
-        var element = document.createElement("a");
-        $(element).attr("data-fancybox", "images");
-        $(element).attr("href", $(this).attr("src"));
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
         $(this).wrap(element);
       }
     );
   </script>
+
+
+
+
+
+
+
 
 
 

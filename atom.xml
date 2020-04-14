@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jason&#39;s修禅房</title>
+  
+  <subtitle>跟着党走,幸福我有</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-04-14T12:35:30.264Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Jason</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浊以静之徐清 安以动之徐生</title>
+    <link href="http://yoursite.com/2020/04/14/%E7%BD%AE%E9%A1%B6/"/>
+    <id>http://yoursite.com/2020/04/14/%E7%BD%AE%E9%A1%B6/</id>
+    <published>2020-04-14T12:00:38.000Z</published>
+    <updated>2020-04-14T12:35:30.264Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1&gt;&lt;span id=&quot;希望让你感受到生活的美好&quot;&gt;希望让你感受到生活的美好&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/img/bg19.jpg&quot; srcset=&quot;/img/loading.gif&quot; alt=&quot;bg19&quot;&gt;&lt;/p&gt;
+&lt;iframe
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="心灵鸡汤" scheme="http://yoursite.com/tags/%E5%BF%83%E7%81%B5%E9%B8%A1%E6%B1%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Trojan配置</title>
+    <link href="http://yoursite.com/2020/03/26/Trojan%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2020/03/26/Trojan%E9%85%8D%E7%BD%AE/</id>
+    <published>2020-03-26T02:29:57.000Z</published>
+    <updated>2020-04-14T12:41:16.100Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;h1&gt;&lt;span id=&quot;科学上网&quot;&gt;科学上网&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;需要一下步骤:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;vps&lt;/li&gt;
+&lt;li&gt;namesilo 买一个自己的域名&lt;/li&gt;
+&lt;li&gt;cloud DNS解析&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="好记性不如烂笔头" scheme="http://yoursite.com/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
+    
+    
+      <category term="ubunt" scheme="http://yoursite.com/tags/ubunt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django笔记5</title>
+    <link href="http://yoursite.com/2020/02/05/django%E7%AC%94%E8%AE%B05/"/>
+    <id>http://yoursite.com/2020/02/05/django%E7%AC%94%E8%AE%B05/</id>
+    <published>2020-02-05T08:27:17.000Z</published>
+    <updated>2020-04-14T12:10:44.349Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1&gt;&lt;span id=&quot;djang高级扩展&quot;&gt;Djang高级扩展&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="好记性不如烂笔头" scheme="http://yoursite.com/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
+    
+    
+      <category term="Django" scheme="http://yoursite.com/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django笔记4</title>
+    <link href="http://yoursite.com/2020/02/05/django%E7%AC%94%E8%AE%B04/"/>
+    <id>http://yoursite.com/2020/02/05/django%E7%AC%94%E8%AE%B04/</id>
+    <published>2020-02-05T08:26:41.000Z</published>
+    <updated>2020-04-14T12:10:30.382Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1&gt;&lt;span id=&quot;day3-视图&quot;&gt;day3 视图&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="好记性不如烂笔头" scheme="http://yoursite.com/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
+    
+    
+      <category term="Django" scheme="http://yoursite.com/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django笔记3</title>
+    <link href="http://yoursite.com/2020/02/02/Django%E7%AC%94%E8%AE%B03/"/>
+    <id>http://yoursite.com/2020/02/02/Django%E7%AC%94%E8%AE%B03/</id>
+    <published>2020-02-02T04:46:08.000Z</published>
+    <updated>2020-03-30T10:27:48.361Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="好记性不如烂笔头" scheme="http://yoursite.com/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
+    
+    
+      <category term="Django" scheme="http://yoursite.com/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django笔记2</title>
+    <link href="http://yoursite.com/2020/01/27/Django%E7%AC%94%E8%AE%B02/"/>
+    <id>http://yoursite.com/2020/01/27/Django%E7%AC%94%E8%AE%B02/</id>
+    <published>2020-01-27T04:46:08.000Z</published>
+    <updated>2020-03-30T10:27:48.361Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;#Django笔记2&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2020年正月初三小记&lt;/p&gt;
+&lt;p&gt;今天早晨传来消息，篮球传奇球员科比意外去世。虽然我不是什么篮球迷，但也熟悉他的传奇人生。2020年刚开始，它似乎就开始小孩似地，不顾他人感受地、不停地宣告它的不平凡。让本应该
+        
+      
+    
+    </summary>
+    
+    
+      <category term="好记性不如烂笔头" scheme="http://yoursite.com/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
+    
+    
+      <category term="Django" scheme="http://yoursite.com/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django笔记1</title>
+    <link href="http://yoursite.com/2020/01/16/Django%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2020/01/16/Django%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-01-16T11:43:52.000Z</published>
+    <updated>2020-03-30T10:27:48.365Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2&gt;&lt;span id=&quot;1-day&quot;&gt;1 day&lt;/span&gt;&lt;/h2&gt;&lt;h3&gt;&lt;span id=&quot;了解小知识&quot;&gt;了解小知识&lt;/span&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;了解
+        
+      
+    
+    </summary>
+    
+    
+      <category term="好记性不如烂笔头，web" scheme="http://yoursite.com/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4%EF%BC%8Cweb/"/>
+    
+    
+      <category term="Django" scheme="http://yoursite.com/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用keras搭建DQN</title>
+    <link href="http://yoursite.com/2018/09/14/%E7%94%A8keras%E6%90%AD%E5%BB%BADQN/"/>
+    <id>http://yoursite.com/2018/09/14/%E7%94%A8keras%E6%90%AD%E5%BB%BADQN/</id>
+    <published>2018-09-14T12:25:30.000Z</published>
+    <updated>2020-03-30T10:27:48.377Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;dqn总结：&lt;br&gt;最近时间虽然一直看这个dqn代码，虽然看懂了，但是思路却一直不明确，无法自己复写出自己的代码，所以就想写一篇博客来整理一下思路。如果这篇文章写完了，应该思路就清晰了。&lt;/p&gt;
+&lt;p&gt;本文主要是看了莫烦的教学视频，在视频中，老师（尊称一声老师O(∩_∩)O
+        
+      
+    
+    </summary>
+    
+    
+      <category term="日志" scheme="http://yoursite.com/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="reinforecementLearning" scheme="http://yoursite.com/tags/reinforecementLearning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>imageDataGenerator</title>
+    <link href="http://yoursite.com/2018/09/02/imageDataGenerator/"/>
+    <id>http://yoursite.com/2018/09/02/imageDataGenerator/</id>
+    <published>2018-09-02T09:13:55.000Z</published>
+    <updated>2020-03-30T10:27:48.373Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在深度学习中，我们在&lt;strong&gt;trian&lt;/strong&gt;我们的模型时，往往在数据方面很难找到足够的数据。而在&lt;strong&gt;keras&lt;/strong&gt;中，提供了&lt;strong&gt;imageDataGenerator&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;i
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="keras" scheme="http://yoursite.com/tags/keras/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>苟有恒，何必三更睡五更起。最无益，莫过一日曝十日寒</title>
+    <link href="http://yoursite.com/2018/09/02/%E6%AD%A3%E8%83%BD%E9%87%8F/"/>
+    <id>http://yoursite.com/2018/09/02/%E6%AD%A3%E8%83%BD%E9%87%8F/</id>
+    <published>2018-09-02T08:48:36.000Z</published>
+    <updated>2020-03-30T10:27:48.373Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;#看到的好的句子就记下来激励自己&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+      <category term="警句" scheme="http://yoursite.com/categories/%E8%AD%A6%E5%8F%A5/"/>
+    
+    
+      <category term="警句" scheme="http://yoursite.com/tags/%E8%AD%A6%E5%8F%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql笔记</title>
+    <link href="http://yoursite.com/2018/09/02/mysql%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2018/09/02/mysql%E7%AC%94%E8%AE%B0/</id>
+    <published>2018-09-02T02:35:42.000Z</published>
+    <updated>2020-03-30T10:27:48.373Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1&gt;&lt;span id=&quot;mysql学习笔记&quot;&gt;mysql学习笔记&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;span id=&quot;sql的分类&quot;&gt;sql的分类&lt;/span&gt;&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;数据查询语言（dql ：data query
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据库" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>blog初级自定义自定义教程</title>
+    <link href="http://yoursite.com/2018/08/02/hello-world/"/>
+    <id>http://yoursite.com/2018/08/02/hello-world/</id>
+    <published>2018-08-02T04:46:08.000Z</published>
+    <updated>2020-04-14T11:56:06.527Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1&gt;&lt;span id=&quot;远程部署&quot;&gt;远程部署&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;ssh-keygen -t rsa -C &lt;a href=&quot;mailto:&amp;#39;862722353@qq.com&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>

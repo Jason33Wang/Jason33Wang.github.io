@@ -13,27 +13,32 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+  <meta name="theme-color" content="#2f4154">
   <meta name="description" content="花些无聊的时间；做点有趣的事">
   <meta name="author" content="Jason">
   <meta name="keywords" content="I came,I saw,I conquered.">
-  <title>Django笔记2 ~ Jason&#39;s修禅房</title>
+  <title>Django笔记2 - Jason&#39;s修禅房</title>
 
-  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
-<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
-<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
-<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css" />
 
-
-  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
-
-<link rel="stylesheet" href="/css/main.css"  >
+<!-- 主题依赖的图标库，不要自行修改 -->
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_9n5xqdrq0nc.css">
 
 
-  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+  <link  rel="stylesheet" href="/lib/prettify/github-v2.min.css" />
 
 
-</head>
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<link rel="alternate" href="/atom.xml" title="Jason's修禅房" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -56,41 +61,46 @@
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/archives/">Archives</a>
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/categories/">Categories</a>
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/tags/">Tags</a>
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
           </li>
         
           
           
           
-          
           <li class="nav-item">
-            <a class="nav-link" href="/about/">About</a>
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
           </li>
         
         
@@ -104,52 +114,48 @@
   </div>
 </nav>
 
-    <div class="view intro-2" id="background"
-         style="background: url('/img/bg0.jpg')no-repeat center center;
-           background-size: cover;
-           background-attachment: fixed;">
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/bg0.jpg') no-repeat center center;
+           background-size: cover;">
       <div class="full-bg-img">
-        <div class="mask rgba-black-light flex-center">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="container text-center white-text fadeInUp">
             <span class="h2" id="subtitle">
               
             </span>
 
             
-              <br>
               
-                <p class="mt-3">
-                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
-                  Monday, January 27th 2020, 12:46 pm
-                </p>
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2020-01-27 12:46">
+                    Monday, January 27th 2020, 12:46 pm
+                  </time>
+                </div>
               
 
-              <p>
+              <div class="mt-1">
                 
                   
-                  &nbsp;<i class="far fa-chart-bar"></i>
-                  <span class="post-count">
-                    3k 字
-                  </span>&nbsp;
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
+                    2.9k 字
+                  </span>
                 
 
                 
                   
-                  &nbsp;<i class="far fa-clock"></i>
-                  <span class="post-count">
-                      11 分钟
-                  </span>&nbsp;
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    34
+                     分钟
+                  </span>
                 
 
                 
-                  <!-- 不蒜子统计文章PV -->
-                  
-                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
-                  <span id="busuanzi_container_page_pv">
-                    <span id="busuanzi_value_page_pv"></span> 次
-                  </span>&nbsp;
-                
-              </p>
+              </div>
             
           </div>
 
@@ -167,16 +173,18 @@
   <div class="row">
     <div class="d-none d-lg-block col-lg-2"></div>
     <div class="col-lg-8 nopadding-md">
-      <div class="py-5 z-depth-3" id="board">
-        <div class="post-content mx-auto" id="post">
-          <div class="markdown-body">
-            <p>#Django笔记2</p>
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <p>#Django笔记2</p>
 <blockquote>
 <p>2020年正月初三小记</p>
 <p>今天早晨传来消息，篮球传奇球员科比意外去世。虽然我不是什么篮球迷，但也熟悉他的传奇人生。2020年刚开始，它似乎就开始小孩似地，不顾他人感受地、不停地宣告它的不平凡。让本应该全国欢庆的春节变得沉默起来。先有武汉肺炎肆虐搞得全国闭门不出，人心惶惶（尤其是笔者我在武汉上学）；后有紫金王朝球迷的默哀；</p>
 <p>可是怎么办了？生活还是得继续；做好自己的；灾难终究汇过去；</p>
 </blockquote>
-<h1 id="2day-模型"><a href="#2day-模型" class="headerlink" title="2day 模型"></a>2day 模型</h1><p><em>搬轮子过程</em></p>
+<h1><span id="2day-模型">2day 模型</span></h1><p><em>搬轮子过程</em></p>
 <p><em>1、在setting.py里修改数据库名</em></p>
 <p><em>2、在setting.py里修改数据库密码</em></p>
 <p><em>3、删除迁移文件</em></p>
@@ -187,34 +195,34 @@
 <blockquote>
 <p>Django对各种数据库提供了很好的支持，Django为这些数据库提供了统一的调用API，可以根据不同的业务需求选择不同的数据库</p>
 </blockquote>
-<h4 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h4><ul>
+<h4><span id="开发流程">开发流程</span></h4><ul>
 <li>配置数据库</li>
 <li>定义模型类（一个模型类都在数据库中对应一张数据表）</li>
 <li>生成迁移文件</li>
 <li>执行迁移生成数据表</li>
 <li>使用模型类进行增删改查</li>
 </ul>
-<h4 id="配置数据库"><a href="#配置数据库" class="headerlink" title="配置数据库"></a>配置数据库</h4><ul>
+<h4><span id="配置数据库">配置数据库</span></h4><ul>
 <li><p>修改工程目录下的<code>__init__.py</code>文件</p>
-<pre><code class="python">import pymysql
-pymysql.install_as_MySQLdb()
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> pymysql
+pymysql<span class="token punctuation">.</span>install_as_MySQLdb<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 <li><p>修改setting.py文件</p>
-<pre><code class="python">DATABASES = {
-    &#39;default&#39;: {
-        &#39;ENGINE&#39;: &#39;django.db.backends.mysql&#39;,
-        &#39;NAME&#39;: &#39;forDjango&#39;,
-        &#39;USER&#39;: &#39;root&#39;,
-        &#39;PASSWORD&#39;: &#39;qq123&#39;,
-        &#39;HOST&#39;: &#39;localhost&#39;,
-        &#39;PORT&#39;: &#39;3306&#39;,
-    }
-}
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python">DATABASES <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'default'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">'ENGINE'</span><span class="token punctuation">:</span> <span class="token string">'django.db.backends.mysql'</span><span class="token punctuation">,</span>
+        <span class="token string">'NAME'</span><span class="token punctuation">:</span> <span class="token string">'forDjango'</span><span class="token punctuation">,</span>
+        <span class="token string">'USER'</span><span class="token punctuation">:</span> <span class="token string">'root'</span><span class="token punctuation">,</span>
+        <span class="token string">'PASSWORD'</span><span class="token punctuation">:</span> <span class="token string">'qq123'</span><span class="token punctuation">,</span>
+        <span class="token string">'HOST'</span><span class="token punctuation">:</span> <span class="token string">'localhost'</span><span class="token punctuation">,</span>
+        <span class="token string">'PORT'</span><span class="token punctuation">:</span> <span class="token string">'3306'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
-<h4 id="ORM"><a href="#ORM" class="headerlink" title="ORM"></a>ORM</h4><blockquote>
+<h4><span id="orm">ORM</span></h4><blockquote>
 <p>对象-关系-映射</p>
 <p>Django—ORM—各种数据库</p>
 </blockquote>
@@ -226,7 +234,7 @@ pymysql.install_as_MySQLdb()
 </ul>
 </li>
 </ul>
-<h4 id="定义模型"><a href="#定义模型" class="headerlink" title="定义模型"></a>定义模型</h4><ul>
+<h4><span id="定义模型">定义模型</span></h4><ul>
 <li><p>模型、属性、表、字段间的关系</p>
 </li>
 <li><p>定义属性：详情请见定义属性部分</p>
@@ -234,17 +242,17 @@ pymysql.install_as_MySQLdb()
 <li><p>穿件模型类</p>
 </li>
 <li><p>元选项（在模型类中定义meta类，用于设置元信息）</p>
-<pre><code class="python">class Meta:
-    # 定义数据表名，推荐使用小写字母，数据表名默认为项目小写_类名小写
-    db_table=&quot;students&quot;
-    # 对象的默认排序字段，获取对象的列表时使用
-    ordering=[&#39;id&#39;] #对id字段升序排列 
-    #ordering=[&#39;-id&#39;]# 对id字降序排列
-    #注意：排序会增加数据库的开销
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Meta</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true"># 定义数据表名，推荐使用小写字母，数据表名默认为项目小写_类名小写</span>
+    db_table<span class="token operator">=</span><span class="token string">"students"</span>
+    <span class="token comment" spellcheck="true"># 对象的默认排序字段，获取对象的列表时使用</span>
+    ordering<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true">#对id字段升序排列 </span>
+    <span class="token comment" spellcheck="true">#ordering=['-id']# 对id字降序排列</span>
+    <span class="token comment" spellcheck="true">#注意：排序会增加数据库的开销</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
-<h4 id="定义属性"><a href="#定义属性" class="headerlink" title="定义属性"></a>定义属性</h4><p>概述</p>
+<h4><span id="定义属性">定义属性</span></h4><p>概述</p>
 <ul>
 <li>django根据属性确定一下信息<ul>
 <li>当前选择的数据库支持字段的类型</li>
@@ -408,17 +416,17 @@ pymysql.install_as_MySQLdb()
 </ul>
 </li>
 </ul>
-<h4 id="模型成员"><a href="#模型成员" class="headerlink" title="模型成员"></a>模型成员</h4><blockquote>
+<h4><span id="模型成员">模型成员</span></h4><blockquote>
 <ul>
 <li><p>类属性</p>
 <ul>
 <li><p>Object  ： 是manger类型的对象，作用是与数据库进行交互；当定义模型类时没有指定管理器，则Django为模型创建一个名为Objects 的管理器</p>
 </li>
 <li><p>自定义模型管理器</p>
-<pre><code class="python">#在模型类中定义
-stuObj = models.Manager()
-# 当为模型指定模型管理器，Django就不在为模型类生成Objects模型管理器了
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true">#在模型类中定义</span>
+stuObj <span class="token operator">=</span> models<span class="token punctuation">.</span>Manager<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 当为模型指定模型管理器，Django就不在为模型类生成Objects模型管理器了</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>自定义管理器Manger类</p>
 <ul>
@@ -429,13 +437,13 @@ stuObj = models.Manager()
 <li><p>向管理器类中添加额外的方法</p>
 </li>
 <li><p>修改管理器返回的原始查询集（例如重写<code>get_queryset()方法</code>实现数据软删除）</p>
-<pre><code class="python">class StudentsManager(models.Manager):
-   def get_queryset(self):
-       return super(StudentsManager,self).get_queryset().filter(isDelete=False)
-class Students(models.Model):
-   stuObj = StudentsManager()
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">StudentsManager</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Manager<span class="token punctuation">)</span><span class="token punctuation">:</span>
+   <span class="token keyword">def</span> <span class="token function">get_queryset</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+       <span class="token keyword">return</span> super<span class="token punctuation">(</span>StudentsManager<span class="token punctuation">,</span>self<span class="token punctuation">)</span><span class="token punctuation">.</span>get_queryset<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>filter<span class="token punctuation">(</span>isDelete<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">Students</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+   stuObj <span class="token operator">=</span> StudentsManager<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 </li>
@@ -454,25 +462,25 @@ class Students(models.Model):
 <li><p>方法</p>
 <ul>
 <li><p>在模型类中增加一个类方法</p>
-<pre><code class="python">class Students(models.Model):
-  stuObj = StudentsManager()
-  sname = models.CharField(max_length=20)
-  sgender = models.BooleanField(default=True)
-  sage = models.IntegerField()
-  scontend = models.CharField(max_length=20)
-  isDelete = models.BooleanField(default=False)
-  sgrade = models.ForeignKey(&quot;Grades&quot;)
-  def __str__(self):
-      return self.sname
-  # class Meta:
-  #     db_table=&quot;students&quot;
-  #     ordering=[&#39;id&#39;]
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Students</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  stuObj <span class="token operator">=</span> StudentsManager<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  sname <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
+  sgender <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+  sage <span class="token operator">=</span> models<span class="token punctuation">.</span>IntegerField<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  scontend <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
+  isDelete <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+  sgrade <span class="token operator">=</span> models<span class="token punctuation">.</span>ForeignKey<span class="token punctuation">(</span><span class="token string">"Grades"</span><span class="token punctuation">)</span>
+  <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+      <span class="token keyword">return</span> self<span class="token punctuation">.</span>sname
+  <span class="token comment" spellcheck="true"># class Meta:</span>
+  <span class="token comment" spellcheck="true">#     db_table="students"</span>
+  <span class="token comment" spellcheck="true">#     ordering=['id']</span>
   @classmethod
-  def createStudent(cls,name,age,gender,contend,grade,isD=False):
-      student = cls(sname=name,sage=age,sgender=gender,scontend=contend,
-                  sgrade=grade,isDelete=isD)
-      return student
-</code></pre>
+  <span class="token keyword">def</span> <span class="token function">createStudent</span><span class="token punctuation">(</span>cls<span class="token punctuation">,</span>name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>gender<span class="token punctuation">,</span>contend<span class="token punctuation">,</span>grade<span class="token punctuation">,</span>isD<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+      student <span class="token operator">=</span> cls<span class="token punctuation">(</span>sname<span class="token operator">=</span>name<span class="token punctuation">,</span>sage<span class="token operator">=</span>age<span class="token punctuation">,</span>sgender<span class="token operator">=</span>gender<span class="token punctuation">,</span>scontend<span class="token operator">=</span>contend<span class="token punctuation">,</span>
+                  sgrade<span class="token operator">=</span>grade<span class="token punctuation">,</span>isDelete<span class="token operator">=</span>isD<span class="token punctuation">)</span>
+      <span class="token keyword">return</span> student
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 </li>
@@ -481,22 +489,22 @@ class Students(models.Model):
 </ul>
 <ul>
 <li><p>在定义管理器中添加一个方法</p>
-<pre><code class="python">class StudentsManager(models.Manager):
-    def get_queryset(self):
-        return super(StudentsManager,self).get_queryset().filter(isDelete=False)
-    def createstudents(self,name,age,gender,contend,grade,isD=False):
-        stu = self.model()
-        stu.sname = name
-        stu.sage = age
-        stu.agender = gender
-        stu.scontend = contend
-        stu.grade = grade
-        return stu
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">StudentsManager</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Manager<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">get_queryset</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> super<span class="token punctuation">(</span>StudentsManager<span class="token punctuation">,</span>self<span class="token punctuation">)</span><span class="token punctuation">.</span>get_queryset<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>filter<span class="token punctuation">(</span>isDelete<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">createstudents</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>gender<span class="token punctuation">,</span>contend<span class="token punctuation">,</span>grade<span class="token punctuation">,</span>isD<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        stu <span class="token operator">=</span> self<span class="token punctuation">.</span>model<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        stu<span class="token punctuation">.</span>sname <span class="token operator">=</span> name
+        stu<span class="token punctuation">.</span>sage <span class="token operator">=</span> age
+        stu<span class="token punctuation">.</span>agender <span class="token operator">=</span> gender
+        stu<span class="token punctuation">.</span>scontend <span class="token operator">=</span> contend
+        stu<span class="token punctuation">.</span>grade <span class="token operator">=</span> grade
+        <span class="token keyword">return</span> stu
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 </blockquote>
-<h4 id="模型查询"><a href="#模型查询" class="headerlink" title="模型查询"></a>模型查询</h4><blockquote>
+<h4><span id="模型查询">模型查询</span></h4><blockquote>
 <ul>
 <li><p>概述</p>
 <ul>
@@ -546,8 +554,8 @@ class Students(models.Model):
 <li><p>限制查询集</p>
 <ul>
 <li><p>查询集返回列表，可以使用下标方法进行限制，等同于sql中的limit语句。<strong>下标不能使负数</strong></p>
-<pre><code class="python">studentsList = Student.object.all()[0:5]
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python">studentsList <span class="token operator">=</span> Student<span class="token punctuation">.</span>object<span class="token punctuation">.</span>all<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 </ul>
 </li>
@@ -584,19 +592,19 @@ class Students(models.Model):
 </ul>
 </li>
 <li><p><code>contains</code>:是否包含，大小写敏感</p>
-<pre><code class="python">studentsList = Students.object.filter(sname__contains=&#39;孙&#39;)
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python">studentsList <span class="token operator">=</span> Students<span class="token punctuation">.</span>object<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>sname__contains<span class="token operator">=</span><span class="token string">'孙'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p><code>startwith</code>、<code>endwith</code></p>
 <ul>
 <li><p>以value开头或结尾，大小写敏感</p>
-<pre><code class="python">def studentsearch(request):
-    #包含条件匹配
-    # studentsList = Students.objects.filter(sname__contains=&#39;孙&#39;)
-    #起始匹配
-    studentsList = Students.stuObj.filter(sname__startswith=&#39;j&#39;)
-    return render(request,&#39;myApp/students.html&#39;,{&quot;students&quot;:studentsList})
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">studentsearch</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true">#包含条件匹配</span>
+    <span class="token comment" spellcheck="true"># studentsList = Students.objects.filter(sname__contains='孙')</span>
+    <span class="token comment" spellcheck="true">#起始匹配</span>
+    studentsList <span class="token operator">=</span> Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>sname__startswith<span class="token operator">=</span><span class="token string">'j'</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span><span class="token string">'myApp/students.html'</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">"students"</span><span class="token punctuation">:</span>studentsList<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 </li>
@@ -605,21 +613,21 @@ class Students(models.Model):
 <li><p><code>isnull</code>和<code>isnotnull</code>：是否为空</p>
 </li>
 <li><p><code>in</code>：是否包含在范围内</p>
-<pre><code class="python">Students.stuObj.filter(pk__in=[2,4,6,8])
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python">Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>pk__in<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p><code>gt</code>、<code>gte</code>、<code>lt</code>、<code>lte</code> 大于；大于等于；小于；小于等于</p>
-<pre><code class="python">studentsList = Students.stuObj,filter(sage__gt=30)
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python">studentsList <span class="token operator">=</span> Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">,</span>filter<span class="token punctuation">(</span>sage__gt<span class="token operator">=</span><span class="token number">30</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p><code>year、month、day、week_day、hour、minute、second</code></p>
-<pre><code class="python">StudentsList = Students.stuObj.filter(lastTime__year=2017)
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python">StudentsList <span class="token operator">=</span> Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>lastTime__year<span class="token operator">=</span><span class="token number">2017</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>跨关联查询 </p>
-<pre><code class="python">查询包含学生jason的班级（跨表查询）
-grade = Grades.objects.filter(students__contend__contains=&#39;jason&#39;)
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python">查询包含学生jason的班级（跨表查询）
+grade <span class="token operator">=</span> Grades<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>students__contend__contains<span class="token operator">=</span><span class="token string">'jason'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 </ul>
 </li>
@@ -643,99 +651,118 @@ grade = Grades.objects.filter(students__contend__contains=&#39;jason&#39;)
 <li><p><code>Min</code></p>
 </li>
 <li><p><code>Sum</code></p>
-<pre><code class="python">from django.db.model import Max
-maxAge=Students.stuObj.aggregate(Max(&#39;sage&#39;))
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>db<span class="token punctuation">.</span>model <span class="token keyword">import</span> Max
+maxAge<span class="token operator">=</span>Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">.</span>aggregate<span class="token punctuation">(</span>Max<span class="token punctuation">(</span><span class="token string">'sage'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 </ul>
 </li>
 <li><p>F 对象</p>
 <ul>
 <li><p>可以使用模型的A属性与B属性进行比较</p>
-<pre><code class="python">from django.db.models import F,Q
-    def grades(request):
-        g=Grades.objects.filter(ggirlnum__gt=F(&#39;gboynum&#39;))
-        print(g)
-        return HttpResponse(&quot;OOOOOo&quot;)    
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>db<span class="token punctuation">.</span>models <span class="token keyword">import</span> F<span class="token punctuation">,</span>Q
+    <span class="token keyword">def</span> <span class="token function">grades</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        g<span class="token operator">=</span>Grades<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>ggirlnum__gt<span class="token operator">=</span>F<span class="token punctuation">(</span><span class="token string">'gboynum'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">"OOOOOo"</span><span class="token punctuation">)</span>    
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>支持F对象的算数运算</p>
-<pre><code class="python">g=Grades.objects.filter(ggirlnum__gt=F(&#39;gboynum&#39;)+20)
-</code></pre>
+<pre class="line-numbers language-python"><code class="language-python">g<span class="token operator">=</span>Grades<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>ggirlnum__gt<span class="token operator">=</span>F<span class="token punctuation">(</span><span class="token string">'gboynum'</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 </ul>
 </li>
 <li><p>Q对象</p>
 <ul>
 <li><p>概述: 过滤器方法中的关键子参数，默认条件为<code>And</code>模式。因此使用Q对象解决该问题，实现<code>or</code>查询</p>
-<pre><code class="python">StudentsList=Students.stuObj.filter(Q(pk__lte=3)|Q(sage__gt=50))
-#`～`表示取非
-StudentsList=Students.stuObj.filter(～Q(pk__lte=3))
+<pre class="line-numbers language-python"><code class="language-python">StudentsList<span class="token operator">=</span>Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>Q<span class="token punctuation">(</span>pk__lte<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">|</span>Q<span class="token punctuation">(</span>sage__gt<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#`～`表示取非</span>
+StudentsList<span class="token operator">=</span>Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>～Q<span class="token punctuation">(</span>pk__lte<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 </li>
 </ul>
 </blockquote>
 
+            </article>
             <hr>
-          </div>
-          <br>
-          <div>
-            <p>
-            
-              <span>
-                <i class="iconfont icon-inbox"></i>
+            <div>
+              <div class="post-metas mb-3">
                 
-                  <a class="hover-with-bg" href="/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4">好记性不如烂笔头</a>
-                  &nbsp;
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/好记性不如烂笔头/">好记性不如烂笔头</a>
+                    
+                  </div>
                 
-              </span>&nbsp;&nbsp;
-            
-            
-              <span>
-                <i class="iconfont icon-tag"></i>
                 
-                  <a class="hover-with-bg" href="/tags/Django">Django</a>
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Django/">Django</a>
+                    
+                  </div>
                 
-              </span>
-            
-            </p>
-            
-              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/02/02/Django笔记3/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Django笔记3</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/01/16/Django笔记/">
+                        <span class="hidden-mobile">Django笔记1</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
             
           </div>
         </div>
       </div>
     </div>
-    <div class="d-none d-lg-block col-lg-2 toc-container">
-      
-  <div id="toc">
-    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
-    <div id="tocbot"></div>
-  </div>
-
-    </div>
-  </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
 </div>
 
-<!-- custom -->
-
-
-<!-- Comments -->
-<div class="col-lg-7 mx-auto nopadding-md">
-  <div class="container comments mx-auto" id="comments">
+      </div>
     
   </div>
 </div>
+
+<!-- Custom -->
+
 
     
   </main>
 
   
-    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
-      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
     </a>
   
 
@@ -763,92 +790,105 @@ StudentsList=Students.stuObj.filter(～Q(pk__lte=3))
 </div>
   
 
+  
+
+  
+
   <footer class="mt-5">
   <div class="text-center py-3">
-    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
-    <i class="iconfont icon-love"></i>
-    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
-    <br>
-
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
     
-  
-    <!-- 不蒜子统计PV -->
-    
-    &nbsp;<span id="busuanzi_container_site_pv">总访问量 
-          <span id="busuanzi_value_site_pv"></span> 次</span>&nbsp;
-  
-  
-    <!-- 不蒜子统计UV -->
-    
-    &nbsp;<span id="busuanzi_container_site_uv">总访客数 
-            <span id="busuanzi_value_site_uv"></span> 人</span>&nbsp;
-  
-  <br>
-
-
 
     
 
-
-    <!-- cnzz Analytics icon -->
     
-
   </div>
 </footer>
 
 <!-- SCRIPTS -->
-<script src="/lib/jquery/jquery.min.js" ></script>
-<script src="/lib/popper/popper.min.js" ></script>
-<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
-<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
-<script src="/js/main.js" ></script>
+<div id="hitokoto" style="text-align:center">D 获取中...</div>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const hitokoto = document.getElementById('hitokoto')
+      hitokoto.innerText = data.hitokoto
+      })
+      .catch(console.error)
+</script>
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
 
 
-  <script src="/js/lazyload.js" ></script>
+  <script  src="/js/lazyload.js" ></script>
 
 
 
   
-    <script src="/lib/tocbot/tocbot.min.js" ></script>
-  
-  <script src="/js/post.js" ></script>
+  <script  src="https://cdn.staticfile.org/tocbot/4.10.0/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
 
 
 
-  <script src="/lib/smooth-scroll/smooth-scroll.min.js" ></script>
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
 
 
 
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
 
 
 <!-- Plugins -->
 
 
-  
 
-  
-
-  
-
-  
-
-  <!-- cnzz Analytics -->
-  
-
-
-
-  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script  src="https://cdn.staticfile.org/prettify/188.0.0/prettify.min.js" ></script>
   <script>
     $(document).ready(function () {
-      $('pre').addClass('prettyprint  linenums');
+      $('pre').each(function () {
+        const pre = $(this);
+        if (pre.find('code.mermaid').length > 0) {
+          return;
+        }
+        pre.addClass('prettyprint  linenums');
+      });
       prettyPrint();
     })
   </script>
 
 
 
-  <script src="/lib/typed/typed.min.js" ></script>
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
   <script>
     var typed = new Typed('#subtitle', {
       strings: [
@@ -868,11 +908,11 @@ StudentsList=Students.stuObj.filter(～Q(pk__lte=3))
 
 
 
-  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
   <script>
     anchors.options = {
       placement: "right",
-      visible: "false",
+      visible: "hover",
       
     };
     var el = "h1,h2,h3,h4,h5,h6".split(",");
@@ -885,7 +925,7 @@ StudentsList=Students.stuObj.filter(～Q(pk__lte=3))
 
 
 
-  <script src="/js/local-search.js" ></script>
+  <script  src="/js/local-search.js" ></script>
   <script>
     var path = "/local-search.xml";
     var inputArea = document.querySelector("#local-search-input");
@@ -897,17 +937,26 @@ StudentsList=Students.stuObj.filter(～Q(pk__lte=3))
 
 
 
-  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
   <script>
-    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
       function () {
-        var element = document.createElement("a");
-        $(element).attr("data-fancybox", "images");
-        $(element).attr("href", $(this).attr("src"));
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
         $(this).wrap(element);
       }
     );
   </script>
+
+
+
+
+
+
+
 
 
 
