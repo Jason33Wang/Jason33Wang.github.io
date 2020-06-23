@@ -203,12 +203,14 @@
 <li>使用模型类进行增删改查</li>
 </ul>
 <h4><span id="配置数据库">配置数据库</span></h4><ul>
-<li><p>修改工程目录下的<code>__init__.py</code>文件</p>
+<li>修改工程目录下的<code>__init__.py</code>文件</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> pymysql
 pymysql<span class="token punctuation">.</span>install_as_MySQLdb<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
-<li><p>修改setting.py文件</p>
+<ul>
+<li>修改setting.py文件</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python">DATABASES <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token string">'default'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
         <span class="token string">'ENGINE'</span><span class="token punctuation">:</span> <span class="token string">'django.db.backends.mysql'</span><span class="token punctuation">,</span>
@@ -220,8 +222,6 @@ pymysql<span class="token punctuation">.</span>install_as_MySQLdb<span class="to
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
 <h4><span id="orm">ORM</span></h4><blockquote>
 <p>对象-关系-映射</p>
 <p>Django—ORM—各种数据库</p>
@@ -235,13 +235,11 @@ pymysql<span class="token punctuation">.</span>install_as_MySQLdb<span class="to
 </li>
 </ul>
 <h4><span id="定义模型">定义模型</span></h4><ul>
-<li><p>模型、属性、表、字段间的关系</p>
-</li>
-<li><p>定义属性：详情请见定义属性部分</p>
-</li>
-<li><p>穿件模型类</p>
-</li>
-<li><p>元选项（在模型类中定义meta类，用于设置元信息）</p>
+<li>模型、属性、表、字段间的关系</li>
+<li>定义属性：详情请见定义属性部分</li>
+<li>穿件模型类</li>
+<li>元选项（在模型类中定义meta类，用于设置元信息）</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Meta</span><span class="token punctuation">:</span>
     <span class="token comment" spellcheck="true"># 定义数据表名，推荐使用小写字母，数据表名默认为项目小写_类名小写</span>
     db_table<span class="token operator">=</span><span class="token string">"students"</span>
@@ -250,8 +248,6 @@ pymysql<span class="token punctuation">.</span>install_as_MySQLdb<span class="to
     <span class="token comment" spellcheck="true">#ordering=['-id']# 对id字降序排列</span>
     <span class="token comment" spellcheck="true">#注意：排序会增加数据库的开销</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
 <h4><span id="定义属性">定义属性</span></h4><p>概述</p>
 <ul>
 <li>django根据属性确定一下信息<ul>
@@ -434,25 +430,25 @@ stuObj <span class="token operator">=</span> models<span class="token punctuatio
 </li>
 <li><p>作用</p>
 <ul>
-<li><p>向管理器类中添加额外的方法</p>
+<li>向管理器类中添加额外的方法</li>
+</ul>
 </li>
-<li><p>修改管理器返回的原始查询集（例如重写<code>get_queryset()方法</code>实现数据软删除）</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">StudentsManager</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Manager<span class="token punctuation">)</span><span class="token punctuation">:</span>
-   <span class="token keyword">def</span> <span class="token function">get_queryset</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-       <span class="token keyword">return</span> super<span class="token punctuation">(</span>StudentsManager<span class="token punctuation">,</span>self<span class="token punctuation">)</span><span class="token punctuation">.</span>get_queryset<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>filter<span class="token punctuation">(</span>isDelete<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
-<span class="token keyword">class</span> <span class="token class-name">Students</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
-   stuObj <span class="token operator">=</span> StudentsManager<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</ul>
+</li>
+</ul>
+</li>
+<li>修改管理器返回的原始查询集（例如重写<code>get_queryset()方法</code>实现数据软删除）</li>
+</ul>
+<pre class="line-numbers language-python"><code class="language-python">   <span class="token keyword">class</span> <span class="token class-name">StudentsManager</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Manager<span class="token punctuation">)</span><span class="token punctuation">:</span>
+       <span class="token keyword">def</span> <span class="token function">get_queryset</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+           <span class="token keyword">return</span> super<span class="token punctuation">(</span>StudentsManager<span class="token punctuation">,</span>self<span class="token punctuation">)</span><span class="token punctuation">.</span>get_queryset<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>filter<span class="token punctuation">(</span>isDelete<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+   <span class="token keyword">class</span> <span class="token class-name">Students</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+       stuObj <span class="token operator">=</span> StudentsManager<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>创建对象</p>
 <ul>
+<li><p>创建对象</p>
+</li>
 <li><p>目的 向数据库中添加数据</p>
 </li>
 <li><p>当创建对象时，django不会对数据库进行读写操作，当调用save()方法时才与数据库交互，将对象保存到数据表中</p>
@@ -461,45 +457,42 @@ stuObj <span class="token operator">=</span> models<span class="token punctuatio
 </li>
 <li><p>方法</p>
 <ul>
-<li><p>在模型类中增加一个类方法</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Students</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
-  stuObj <span class="token operator">=</span> StudentsManager<span class="token punctuation">(</span><span class="token punctuation">)</span>
-  sname <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
-  sgender <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-  sage <span class="token operator">=</span> models<span class="token punctuation">.</span>IntegerField<span class="token punctuation">(</span><span class="token punctuation">)</span>
-  scontend <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
-  isDelete <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
-  sgrade <span class="token operator">=</span> models<span class="token punctuation">.</span>ForeignKey<span class="token punctuation">(</span><span class="token string">"Grades"</span><span class="token punctuation">)</span>
-  <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-      <span class="token keyword">return</span> self<span class="token punctuation">.</span>sname
-  <span class="token comment" spellcheck="true"># class Meta:</span>
-  <span class="token comment" spellcheck="true">#     db_table="students"</span>
-  <span class="token comment" spellcheck="true">#     ordering=['id']</span>
-  @classmethod
-  <span class="token keyword">def</span> <span class="token function">createStudent</span><span class="token punctuation">(</span>cls<span class="token punctuation">,</span>name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>gender<span class="token punctuation">,</span>contend<span class="token punctuation">,</span>grade<span class="token punctuation">,</span>isD<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-      student <span class="token operator">=</span> cls<span class="token punctuation">(</span>sname<span class="token operator">=</span>name<span class="token punctuation">,</span>sage<span class="token operator">=</span>age<span class="token punctuation">,</span>sgender<span class="token operator">=</span>gender<span class="token punctuation">,</span>scontend<span class="token operator">=</span>contend<span class="token punctuation">,</span>
-                  sgrade<span class="token operator">=</span>grade<span class="token punctuation">,</span>isDelete<span class="token operator">=</span>isD<span class="token punctuation">)</span>
-      <span class="token keyword">return</span> student
+<li>在模型类中增加一个类方法</li>
+</ul>
+<pre class="line-numbers language-python"><code class="language-python"> <span class="token keyword">class</span> <span class="token class-name">Students</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+     stuObj <span class="token operator">=</span> StudentsManager<span class="token punctuation">(</span><span class="token punctuation">)</span>
+     sname <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
+     sgender <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+     sage <span class="token operator">=</span> models<span class="token punctuation">.</span>IntegerField<span class="token punctuation">(</span><span class="token punctuation">)</span>
+     scontend <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
+     isDelete <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+     sgrade <span class="token operator">=</span> models<span class="token punctuation">.</span>ForeignKey<span class="token punctuation">(</span><span class="token string">"Grades"</span><span class="token punctuation">)</span>
+     <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+         <span class="token keyword">return</span> self<span class="token punctuation">.</span>sname
+     <span class="token comment" spellcheck="true"># class Meta:</span>
+     <span class="token comment" spellcheck="true">#     db_table="students"</span>
+     <span class="token comment" spellcheck="true">#     ordering=['id']</span>
+     @classmethod
+     <span class="token keyword">def</span> <span class="token function">createStudent</span><span class="token punctuation">(</span>cls<span class="token punctuation">,</span>name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>gender<span class="token punctuation">,</span>contend<span class="token punctuation">,</span>grade<span class="token punctuation">,</span>isD<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+         student <span class="token operator">=</span> cls<span class="token punctuation">(</span>sname<span class="token operator">=</span>name<span class="token punctuation">,</span>sage<span class="token operator">=</span>age<span class="token punctuation">,</span>sgender<span class="token operator">=</span>gender<span class="token punctuation">,</span>scontend<span class="token operator">=</span>contend<span class="token punctuation">,</span>
+                     sgrade<span class="token operator">=</span>grade<span class="token punctuation">,</span>isDelete<span class="token operator">=</span>isD<span class="token punctuation">)</span>
+         <span class="token keyword">return</span> student
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-</li>
-</ul>
 </li>
 </ul>
 <ul>
 <li><p>在定义管理器中添加一个方法</p>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">StudentsManager</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Manager<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">get_queryset</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> super<span class="token punctuation">(</span>StudentsManager<span class="token punctuation">,</span>self<span class="token punctuation">)</span><span class="token punctuation">.</span>get_queryset<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>filter<span class="token punctuation">(</span>isDelete<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
-    <span class="token keyword">def</span> <span class="token function">createstudents</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>gender<span class="token punctuation">,</span>contend<span class="token punctuation">,</span>grade<span class="token punctuation">,</span>isD<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        stu <span class="token operator">=</span> self<span class="token punctuation">.</span>model<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        stu<span class="token punctuation">.</span>sname <span class="token operator">=</span> name
-        stu<span class="token punctuation">.</span>sage <span class="token operator">=</span> age
-        stu<span class="token punctuation">.</span>agender <span class="token operator">=</span> gender
-        stu<span class="token punctuation">.</span>scontend <span class="token operator">=</span> contend
-        stu<span class="token punctuation">.</span>grade <span class="token operator">=</span> grade
-        <span class="token keyword">return</span> stu
+  <span class="token keyword">def</span> <span class="token function">get_queryset</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+      <span class="token keyword">return</span> super<span class="token punctuation">(</span>StudentsManager<span class="token punctuation">,</span>self<span class="token punctuation">)</span><span class="token punctuation">.</span>get_queryset<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>filter<span class="token punctuation">(</span>isDelete<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+  <span class="token keyword">def</span> <span class="token function">createstudents</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>gender<span class="token punctuation">,</span>contend<span class="token punctuation">,</span>grade<span class="token punctuation">,</span>isD<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+      stu <span class="token operator">=</span> self<span class="token punctuation">.</span>model<span class="token punctuation">(</span><span class="token punctuation">)</span>
+      stu<span class="token punctuation">.</span>sname <span class="token operator">=</span> name
+      stu<span class="token punctuation">.</span>sage <span class="token operator">=</span> age
+      stu<span class="token punctuation">.</span>agender <span class="token operator">=</span> gender
+      stu<span class="token punctuation">.</span>scontend <span class="token operator">=</span> contend
+      stu<span class="token punctuation">.</span>grade <span class="token operator">=</span> grade
+      <span class="token keyword">return</span> stu
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
@@ -553,11 +546,10 @@ stuObj <span class="token operator">=</span> models<span class="token punctuatio
 </li>
 <li><p>限制查询集</p>
 <ul>
-<li><p>查询集返回列表，可以使用下标方法进行限制，等同于sql中的limit语句。<strong>下标不能使负数</strong></p>
+<li>查询集返回列表，可以使用下标方法进行限制，等同于sql中的limit语句。<strong>下标不能使负数</strong></li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python">studentsList <span class="token operator">=</span> Student<span class="token punctuation">.</span>object<span class="token punctuation">.</span>all<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-</ul>
 </li>
 </ul>
 </li>
@@ -591,80 +583,84 @@ stuObj <span class="token operator">=</span> models<span class="token punctuatio
 <li><code>filter(isDelete=False)</code></li>
 </ul>
 </li>
-<li><p><code>contains</code>:是否包含，大小写敏感</p>
-<pre class="line-numbers language-python"><code class="language-python">studentsList <span class="token operator">=</span> Students<span class="token punctuation">.</span>object<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>sname__contains<span class="token operator">=</span><span class="token string">'孙'</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p><code>startwith</code>、<code>endwith</code></p>
-<ul>
-<li><p>以value开头或结尾，大小写敏感</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">studentsearch</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment" spellcheck="true">#包含条件匹配</span>
-    <span class="token comment" spellcheck="true"># studentsList = Students.objects.filter(sname__contains='孙')</span>
-    <span class="token comment" spellcheck="true">#起始匹配</span>
-    studentsList <span class="token operator">=</span> Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>sname__startswith<span class="token operator">=</span><span class="token string">'j'</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span><span class="token string">'myApp/students.html'</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">"students"</span><span class="token punctuation">:</span>studentsList<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
 </ul>
 </li>
+<li><code>contains</code>:是否包含，大小写敏感</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-python"><code class="language-python">   studentsList <span class="token operator">=</span> Students<span class="token punctuation">.</span>object<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>sname__contains<span class="token operator">=</span><span class="token string">'孙'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li><p><code>startwith</code>、<code>endwith</code></p>
+<ul>
+<li>以value开头或结尾，大小写敏感</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-python"><code class="language-python">   <span class="token keyword">def</span> <span class="token function">studentsearch</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+       <span class="token comment" spellcheck="true">#包含条件匹配</span>
+       <span class="token comment" spellcheck="true"># studentsList = Students.objects.filter(sname__contains='孙')</span>
+       <span class="token comment" spellcheck="true">#起始匹配</span>
+       studentsList <span class="token operator">=</span> Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>sname__startswith<span class="token operator">=</span><span class="token string">'j'</span><span class="token punctuation">)</span>
+       <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span><span class="token string">'myApp/students.html'</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">"students"</span><span class="token punctuation">:</span>studentsList<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
 <li><p>以上四个在前面加上<code>i</code>，就表示不区分大小写：<code>iextract</code>、<code>icontains</code>、<code>istartwith</code>、<code>iendwith</code></p>
 </li>
 <li><p><code>isnull</code>和<code>isnotnull</code>：是否为空</p>
 </li>
 <li><p><code>in</code>：是否包含在范围内</p>
-<pre class="line-numbers language-python"><code class="language-python">Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>pk__in<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<pre class="line-numbers language-python"><code class="language-python">   Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>pk__in<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p><code>gt</code>、<code>gte</code>、<code>lt</code>、<code>lte</code> 大于；大于等于；小于；小于等于</p>
-<pre class="line-numbers language-python"><code class="language-python">studentsList <span class="token operator">=</span> Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">,</span>filter<span class="token punctuation">(</span>sage__gt<span class="token operator">=</span><span class="token number">30</span><span class="token punctuation">)</span>
+<pre class="line-numbers language-python"><code class="language-python">   studentsList <span class="token operator">=</span> Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">,</span>filter<span class="token punctuation">(</span>sage__gt<span class="token operator">=</span><span class="token number">30</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p><code>year、month、day、week_day、hour、minute、second</code></p>
-<pre class="line-numbers language-python"><code class="language-python">StudentsList <span class="token operator">=</span> Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>lastTime__year<span class="token operator">=</span><span class="token number">2017</span><span class="token punctuation">)</span>
+<pre class="line-numbers language-python"><code class="language-python">   StudentsList <span class="token operator">=</span> Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>lastTime__year<span class="token operator">=</span><span class="token number">2017</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>跨关联查询 </p>
-<pre class="line-numbers language-python"><code class="language-python">查询包含学生jason的班级（跨表查询）
-grade <span class="token operator">=</span> Grades<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>students__contend__contains<span class="token operator">=</span><span class="token string">'jason'</span><span class="token punctuation">)</span>
+<pre class="line-numbers language-python"><code class="language-python">   查询包含学生jason的班级（跨表查询）
+   grade <span class="token operator">=</span> Grades<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>students__contend__contains<span class="token operator">=</span><span class="token string">'jason'</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 </ul>
-</li>
+<ul>
+<li><p>查询快捷</p>
+<ul>
+<li><code>pk</code>代表主键</li>
 </ul>
 </li>
-</ul>
-<pre><code> - 查询快捷
-
-   - `pk`代表主键
-</code></pre><ul>
 <li><p>聚合函数</p>
 <ul>
-<li><p>使用<code>agggregate()</code>函数返回聚合函数的值</p>
-</li>
-<li><p><code>Avg</code></p>
-</li>
-<li><p><code>Count</code></p>
-</li>
-<li><p><code>Max</code></p>
-</li>
-<li><p><code>Min</code></p>
-</li>
-<li><p><code>Sum</code></p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>db<span class="token punctuation">.</span>model <span class="token keyword">import</span> Max
-maxAge<span class="token operator">=</span>Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">.</span>aggregate<span class="token punctuation">(</span>Max<span class="token punctuation">(</span><span class="token string">'sage'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
+<li>使用<code>agggregate()</code>函数返回聚合函数的值</li>
 </ul>
 </li>
+<li><code>Avg</code><ul>
+<li><code>Count</code></li>
+</ul>
+</li>
+<li><code>Max</code><ul>
+<li><code>Min</code></li>
+</ul>
+</li>
+<li><code>Sum</code></li>
+</ul>
+<pre class="line-numbers language-python"><code class="language-python">  <span class="token keyword">from</span> django<span class="token punctuation">.</span>db<span class="token punctuation">.</span>model <span class="token keyword">import</span> Max
+maxAge<span class="token operator">=</span>Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">.</span>aggregate<span class="token punctuation">(</span>Max<span class="token punctuation">(</span><span class="token string">'sage'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ul>
 <li><p>F 对象</p>
 <ul>
 <li><p>可以使用模型的A属性与B属性进行比较</p>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>db<span class="token punctuation">.</span>models <span class="token keyword">import</span> F<span class="token punctuation">,</span>Q
-    <span class="token keyword">def</span> <span class="token function">grades</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        g<span class="token operator">=</span>Grades<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>ggirlnum__gt<span class="token operator">=</span>F<span class="token punctuation">(</span><span class="token string">'gboynum'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span>
-        <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">"OOOOOo"</span><span class="token punctuation">)</span>    
+  <span class="token keyword">def</span> <span class="token function">grades</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+     g<span class="token operator">=</span>Grades<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>ggirlnum__gt<span class="token operator">=</span>F<span class="token punctuation">(</span><span class="token string">'gboynum'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token keyword">print</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span>
+     <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">"OOOOOo"</span><span class="token punctuation">)</span>    
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>支持F对象的算数运算</p>
@@ -672,17 +668,15 @@ maxAge<span class="token operator">=</span>Students<span class="token punctuatio
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 </ul>
-</li>
+<ul>
 <li><p>Q对象</p>
 <ul>
-<li><p>概述: 过滤器方法中的关键子参数，默认条件为<code>And</code>模式。因此使用Q对象解决该问题，实现<code>or</code>查询</p>
-<pre class="line-numbers language-python"><code class="language-python">StudentsList<span class="token operator">=</span>Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>Q<span class="token punctuation">(</span>pk__lte<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">|</span>Q<span class="token punctuation">(</span>sage__gt<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">#`～`表示取非</span>
-StudentsList<span class="token operator">=</span>Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>～Q<span class="token punctuation">(</span>pk__lte<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<li>概述: 过滤器方法中的关键子参数，默认条件为<code>And</code>模式。因此使用Q对象解决该问题，实现<code>or</code>查询</li>
+</ul>
+<p><code>`</code>python<br>StudentsList=Students.stuObj.filter(Q(pk__lte=3)|Q(sage__gt=50))<br>#<code>～</code>表示取非<br>StudentsList=Students.stuObj.filter(～Q(pk__lte=3))</p>
 </li>
 </ul>
+<p><code>`</code></p>
 </li>
 </ul>
 </blockquote>

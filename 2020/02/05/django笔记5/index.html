@@ -216,7 +216,7 @@
 <li><code>process_template_response(self,request,response)</code>:在视图刚好执行完后调用，每个请求上都会调用。返回None或者HttpResponse。</li>
 <li><code>process_response(self,request,response)</code>:所有响应返回浏览器之前调用，每个请求上都会调用。返回HttpResponse。</li>
 <li><code>process_exception(self,request,exception)</code>:当视图跑出异常时调用，返回HttpResponse。</li>
-<li><img src="//yoursite.com/2020/02/05/django笔记5/image-20200203223510982.png" srcset="/img/loading.gif" alt="image-20200203223510982"></li>
+<li><img src="/img/django笔记5/image-20200203223510982.png" srcset="/img/loading.gif" alt="image-20200203223510982"></li>
 </ul>
 <h2><span id="自定义中间件">自定义中间件</span></h2><ul>
 <li><p>新建<code>项目/middleware/myApp</code>文件夹，在这下面自定义中间件<code>myMiddle.py</code></p>
@@ -421,6 +421,8 @@
 <ul>
 <li>配置setting.py文件。</li>
 </ul>
+</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python">INSTALLED_APPS <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token string">'tinymce'</span>
 <span class="token punctuation">]</span>
@@ -443,7 +445,7 @@ TINYMCE_DEFAULT_CONFIG<span class="token operator">=</span><span class="token pu
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Text
 admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Text<span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
+<ul>
 <li><p>在自定义视图中使用</p>
 <ul>
 <li>主要展示html代码</li>
@@ -578,9 +580,9 @@ app<span class="token punctuation">.</span>autodiscover_tasks<span class="token 
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2020/03/26/Trojan配置/">
+                      <a href="/2020/02/24/dataFrame常用操作集合/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Trojan配置</span>
+                        <span class="hidden-mobile">dataFrame常用操作集合</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     

@@ -194,7 +194,7 @@
 <li><p><code>django-admin startproject project01</code></p>
 </li>
 <li><p><code>tree . /F</code></p>
-<p><img src="//yoursite.com/2020/01/16/Django笔记/image-20191229154035290.png" srcset="/img/loading.gif" alt="image-20191229154035290"></p>
+<p><img src="/img/Django笔记/image-20191229154035290.png" srcset="/img/loading.gif" alt="image-20191229154035290"></p>
 </li>
 <li><p>manage.py 是一个命令行工具，可以使我们用多种方式对django项目进行交互</p>
 </li>
@@ -237,18 +237,18 @@
 </li>
 <li><p>配置mysql</p>
 <ul>
-<li><p>python3 安装的pymysql</p>
+<li>python3 安装的pymysql</li>
+</ul>
 </li>
-<li><p>在 init文件中 写入下面两行代码</p>
+<li>在 init文件中 写入下面两行代码</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> pymysql
 pymysql<span class="token punctuation">.</span>install_as_MySQLdb<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
-<li><p>创建一个数据库</p>
-</li>
+<ul>
+<li>创建一个数据库</li>
 <li><p>配置</p>
-</li>
-<li><pre class="line-numbers language-python"><code class="language-python">DATABASES <span class="token operator">=</span> <span class="token punctuation">{</span>
+<pre class="line-numbers language-python"><code class="language-python">DATABASES <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token string">'default'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
         <span class="token string">'ENGINE'</span><span class="token punctuation">:</span> <span class="token string">'django.db.backends.mysql'</span><span class="token punctuation">,</span>
         <span class="token string">'NAME'</span><span class="token punctuation">:</span> <span class="token string">'forDjango'</span><span class="token punctuation">,</span>
@@ -261,15 +261,13 @@ pymysql<span class="token punctuation">.</span>install_as_MySQLdb<span class="to
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
-</li>
-</ul>
 <h4><span id="创建应用">创建应用</span></h4><ul>
 <li><p>在一个项目中可以创建多个应用，每个应用进行一种业务处理</p>
 </li>
 <li><p>打开终端，进入project01目录</p>
 </li>
 <li><p><code>python manage.py startapp myApp</code></p>
-<p><img src="//yoursite.com/2020/01/16/Django笔记/image-20191229161301835.png" srcset="/img/loading.gif" alt="image-20191229161301835"></p>
+<p><img src="/img/Django笔记/image-20191229161301835.png" srcset="/img/loading.gif" alt="image-20191229161301835"></p>
 </li>
 <li><p>myApp目录说明</p>
 <ul>
@@ -280,59 +278,55 @@ pymysql<span class="token punctuation">.</span>install_as_MySQLdb<span class="to
 </li>
 </ul>
 <h4><span id="激活应用">激活应用</span></h4><ul>
-<li><p>在<code>setting.py</code>文件中，将myApp应用加入到INSTALLED_APP中</p>
-</li>
-<li><pre class="line-numbers language-python"><code class="language-python">INSTALLED_APPS <span class="token operator">=</span> <span class="token punctuation">[</span>
-    <span class="token string">'django.contrib.admin'</span><span class="token punctuation">,</span>
-    <span class="token string">'django.contrib.auth'</span><span class="token punctuation">,</span>
-    <span class="token string">'django.contrib.contenttypes'</span><span class="token punctuation">,</span>
-    <span class="token string">'django.contrib.sessions'</span><span class="token punctuation">,</span>
-    <span class="token string">'django.contrib.messages'</span><span class="token punctuation">,</span>
-    <span class="token string">'django.contrib.staticfiles'</span><span class="token punctuation">,</span>
-    <span class="token string">'myAPP'</span><span class="token punctuation">,</span>
-<span class="token punctuation">]</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
+<li>在<code>setting.py</code>文件中，将myApp应用加入到INSTALLED_APP中</li>
 </ul>
+<pre class="line-numbers language-python"><code class="language-python">  INSTALLED_APPS <span class="token operator">=</span> <span class="token punctuation">[</span>
+      <span class="token string">'django.contrib.admin'</span><span class="token punctuation">,</span>
+      <span class="token string">'django.contrib.auth'</span><span class="token punctuation">,</span>
+      <span class="token string">'django.contrib.contenttypes'</span><span class="token punctuation">,</span>
+      <span class="token string">'django.contrib.sessions'</span><span class="token punctuation">,</span>
+      <span class="token string">'django.contrib.messages'</span><span class="token punctuation">,</span>
+      <span class="token string">'django.contrib.staticfiles'</span><span class="token punctuation">,</span>
+      <span class="token string">'myAPP'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4><span id="定义模型">定义模型</span></h4><ul>
 <li><p>一个数据表就对应一个模型</p>
 </li>
 <li><p>在<code>models.py</code>中定义模型</p>
 <ul>
-<li><p>引入<code>from django.db import models</code></p>
-</li>
-<li><p>模型类型要继承models.Model类</p>
-</li>
-<li><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
-
-<span class="token comment" spellcheck="true"># Create your models here.</span>
-
-<span class="token keyword">class</span> <span class="token class-name">Grades</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    gname <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
-    gdate <span class="token operator">=</span> models<span class="token punctuation">.</span>DateField<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    ggirlnum <span class="token operator">=</span> models<span class="token punctuation">.</span>IntegerField<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    gboynum <span class="token operator">=</span> models<span class="token punctuation">.</span>IntegerField<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    isDelete <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
-
-<span class="token keyword">class</span> <span class="token class-name">Students</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    sname <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
-    sgender <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-    sage <span class="token operator">=</span> models<span class="token punctuation">.</span>IntegerField<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    scontend <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
-    isDelete <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
-    sgrade <span class="token operator">=</span> models<span class="token punctuation">.</span>ForeignKey<span class="token punctuation">(</span><span class="token string">"Grades"</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
+<li>引入<code>from django.db import models</code></li>
 </ul>
 </li>
-<li><p>说明： 不需要定义主键， 在生成时自动添加，并且值为自动增加</p>
-</li>
+<li>模型类型要继承models.Model类</li>
+</ul>
+<pre class="line-numbers language-python"><code class="language-python">  <span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
+
+  <span class="token comment" spellcheck="true"># Create your models here.</span>
+
+  <span class="token keyword">class</span> <span class="token class-name">Grades</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+      gname <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
+      gdate <span class="token operator">=</span> models<span class="token punctuation">.</span>DateField<span class="token punctuation">(</span><span class="token punctuation">)</span>
+      ggirlnum <span class="token operator">=</span> models<span class="token punctuation">.</span>IntegerField<span class="token punctuation">(</span><span class="token punctuation">)</span>
+      gboynum <span class="token operator">=</span> models<span class="token punctuation">.</span>IntegerField<span class="token punctuation">(</span><span class="token punctuation">)</span>
+      isDelete <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">class</span> <span class="token class-name">Students</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+      sname <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
+      sgender <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+      sage <span class="token operator">=</span> models<span class="token punctuation">.</span>IntegerField<span class="token punctuation">(</span><span class="token punctuation">)</span>
+      scontend <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
+      isDelete <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+      sgrade <span class="token operator">=</span> models<span class="token punctuation">.</span>ForeignKey<span class="token punctuation">(</span><span class="token string">"Grades"</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>说明： 不需要定义主键， 在生成时自动添加，并且值为自动增加</li>
 </ul>
 <h4><span id="在数据库中生成数据表">在数据库中生成数据表</span></h4><ul>
 <li><p>生成迁移文件</p>
 <ul>
 <li><p><code>python manage.py makemigrations</code></p>
-<p><img src="//yoursite.com/2020/01/16/Django笔记/image-20191229163651715.png" srcset="/img/loading.gif" alt="image-20191229163651715"></p>
+<p><img src="/img/Django笔记/image-20191229163651715.png" srcset="/img/loading.gif" alt="image-20191229163651715"></p>
 </li>
 <li><p>在migration目录下生成了以迁移文件，此时数据库中还有生成数据表</p>
 </li>
@@ -341,8 +335,8 @@ pymysql<span class="token punctuation">.</span>install_as_MySQLdb<span class="to
 <li><p>执行迁移（相当于执行了sql语句）</p>
 <ul>
 <li><p><code>python manage.py migrate</code></p>
-<p><img src="//yoursite.com/2020/01/16/Django笔记/image-20191229164023734.png" srcset="/img/loading.gif" alt="image-20191229164023734"></p>
-<p><img src="//yoursite.com/2020/01/16/Django笔记/image-20191229164123022.png" srcset="/img/loading.gif" alt="image-20191229164123022"></p>
+<p><img src="/img/Django笔记/image-20191229164023734.png" srcset="/img/loading.gif" alt="image-20191229164023734"></p>
+<p><img src="/img/Django笔记/image-20191229164123022.png" srcset="/img/loading.gif" alt="image-20191229164123022"></p>
 </li>
 <li><p>数据表已经生成，</p>
 </li>
@@ -350,23 +344,20 @@ pymysql<span class="token punctuation">.</span>install_as_MySQLdb<span class="to
 </li>
 </ul>
 <h4><span id="测试数据操作">测试数据操作</span></h4><ul>
-<li><p>进入到<code>python mange.py shell</code></p>
-</li>
-<li><p>引入包 </p>
-<ul>
-<li><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> myApp<span class="token punctuation">.</span>models <span class="token keyword">import</span> Grades<span class="token punctuation">,</span>Students
-<span class="token keyword">from</span> django<span class="token punctuation">.</span>utils improt timezone
-<span class="token keyword">from</span> datetime <span class="token keyword">import</span> <span class="token operator">*</span>
-Grades<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>all<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 类名.object.all()查询该表所有数据</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
+<li>进入到<code>python mange.py shell</code></li>
+<li>引入包 </li>
 </ul>
-</li>
+<pre class="line-numbers language-python"><code class="language-python">  <span class="token keyword">from</span> myApp<span class="token punctuation">.</span>models <span class="token keyword">import</span> Grades<span class="token punctuation">,</span>Students
+  <span class="token keyword">from</span> django<span class="token punctuation">.</span>utils improt timezone
+  <span class="token keyword">from</span> datetime <span class="token keyword">import</span> <span class="token operator">*</span>
+  Grades<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>all<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 类名.object.all()查询该表所有数据</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
 <li><p>添加数据</p>
 <ul>
-<li><p>本质：创建一个模型的实例</p>
-</li>
-<li><pre class="line-numbers language-python"><code class="language-python">grade1<span class="token operator">=</span>Grade<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<li>本质：创建一个模型的实例</li>
+</ul>
+<pre class="line-numbers language-python"><code class="language-python">grade1<span class="token operator">=</span>Grade<span class="token punctuation">(</span><span class="token punctuation">)</span>
 grade1<span class="token punctuation">.</span>gname <span class="token operator">=</span><span class="token string">'python04'</span>
 grade1<span class="token punctuation">.</span>gdate<span class="token operator">=</span>datetime<span class="token punctuation">(</span>year<span class="token operator">=</span><span class="token number">2017</span><span class="token punctuation">,</span>month<span class="token operator">=</span><span class="token number">7</span><span class="token punctuation">,</span>day<span class="token operator">=</span><span class="token number">17</span><span class="token punctuation">)</span>
 grade1<span class="token punctuation">.</span>ggirlnum<span class="token operator">=</span><span class="token number">2</span>
@@ -377,46 +368,38 @@ grade1<span class="token punctuation">.</span>save<span class="token punctuation
 </li>
 <li><p>为了方便查看数据可以mdoel.py中Grade类中重写<code>__str__</code>函数</p>
 </li>
-<li><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">return</span> <span class="token string">"%s-%d-%d"</span> <span class="token operator">%</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>gname<span class="token punctuation">,</span> self<span class="token punctuation">.</span>ggirlnum<span class="token punctuation">,</span> self<span class="token punctuation">.</span>gboynum<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
 </ul>
-</li>
-<li><p>查看某个对象</p>
+<pre class="line-numbers language-python"><code class="language-python">  <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+      <span class="token keyword">return</span> <span class="token string">"%s-%d-%d"</span> <span class="token operator">%</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>gname<span class="token punctuation">,</span> self<span class="token punctuation">.</span>ggirlnum<span class="token punctuation">,</span> self<span class="token punctuation">.</span>gboynum<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ul>
-<li><pre class="line-numbers language-python"><code class="language-python">Grade<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span>pk<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">#类名.objects.get(pk=2)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
+<li>查看某个对象</li>
 </ul>
-</li>
+<pre class="line-numbers language-python"><code class="language-python">    Grade<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span>pk<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">#类名.objects.get(pk=2)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ul>
 <li><p>修改数据</p>
-<ul>
-<li><pre class="line-numbers language-python"><code class="language-python">对象名<span class="token punctuation">.</span>属性<span class="token operator">=</span>新值
-对象名<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="line-numbers language-python"><code class="language-python">  对象名<span class="token punctuation">.</span>属性<span class="token operator">=</span>新值
+  对象名<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
-</ul>
 </li>
 <li><p>删除数据</p>
-<ul>
-<li><pre class="line-numbers language-python"><code class="language-python">对象名<span class="token punctuation">.</span>delete<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="line-numbers language-python"><code class="language-python">  对象名<span class="token punctuation">.</span>delete<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
-</ul>
-</li>
 <li><p>关联对象</p>
-<ul>
-<li><pre class="line-numbers language-python"><code class="language-python">stu <span class="token operator">=</span> Student<span class="token punctuation">(</span><span class="token punctuation">)</span>
-stu<span class="token punctuation">.</span>sname<span class="token operator">=</span><span class="token string">"jason"</span>
-stu<span class="token punctuation">.</span>sgender<span class="token operator">=</span><span class="token boolean">True</span>
-stu<span class="token punctuation">.</span>sage<span class="token operator">=</span><span class="token number">22</span>
-stu<span class="token punctuation">.</span>scontend<span class="token operator">=</span><span class="token string">'i am jason'</span>
-stu<span class="token punctuation">.</span>sgrade <span class="token operator">=</span> garade1  <span class="token comment" spellcheck="true">#关联数据库，生成外键</span>
-stu<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
+</ul>
+<pre class="line-numbers language-python"><code class="language-python">  stu <span class="token operator">=</span> Student<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  stu<span class="token punctuation">.</span>sname<span class="token operator">=</span><span class="token string">"jason"</span>
+  stu<span class="token punctuation">.</span>sgender<span class="token operator">=</span><span class="token boolean">True</span>
+  stu<span class="token punctuation">.</span>sage<span class="token operator">=</span><span class="token number">22</span>
+  stu<span class="token punctuation">.</span>scontend<span class="token operator">=</span><span class="token string">'i am jason'</span>
+  stu<span class="token punctuation">.</span>sgrade <span class="token operator">=</span> garade1  <span class="token comment" spellcheck="true">#关联数据库，生成外键</span>
+  stu<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
 <li><p>获得关联对象的集合</p>
 <ul>
 <li>需求：获取pyhton04班级的所有学生</li>
@@ -424,14 +407,11 @@ stu<span class="token punctuation">.</span>save<span class="token punctuation">(
 <li>grade1.students_set.all()</li>
 </ul>
 </li>
-<li><p>创建关联对象</p>
+<li>创建关联对象</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python">stu <span class="token operator">=</span> grade1<span class="token punctuation">.</span>students_set<span class="token punctuation">.</span>create<span class="token punctuation">(</span>sname<span class="token operator">=</span>u<span class="token string">'曾志伟'</span>，sgender<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>scontend<span class="token operator">=</span>u<span class="token string">'我叫曾志伟'</span>，sage<span class="token operator">=</span><span class="token number">45</span><span class="token punctuation">)</span>
 <span class="token comment" spellcheck="true">#不需要save（）</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
-</ul>
-</li>
-</ul>
 <h4><span id="启动服务器">启动服务器</span></h4><ul>
 <li>格式<ul>
 <li><code>python manage.py runserver ip:port</code></li>
@@ -467,13 +447,17 @@ stu<span class="token punctuation">.</span>save<span class="token punctuation">(
 </li>
 <li><p>管理数据表</p>
 <ul>
-<li><p>修改myApp目录下的admin.py文件</p>
+<li>修改myApp目录下的admin.py文件</li>
+</ul>
+</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Grades<span class="token punctuation">,</span>Students
 admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Grades<span class="token punctuation">)</span>
 admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Students<span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>自定义管理页面</p>
+<ul>
+<li>自定义管理页面</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">GradeAdmin</span><span class="token punctuation">(</span>admin<span class="token punctuation">.</span>ModelAdmin<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token comment" spellcheck="true"># 列表页属性</span>
     <span class="token comment" spellcheck="true">#显示字段</span>
@@ -497,20 +481,22 @@ admin<span class="token punctuation">.</span>site<span class="token punctuation"
 admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Grades<span class="token punctuation">,</span>GradeAdmin<span class="token punctuation">)</span>
 admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Students<span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
+<ul>
 <li><p>关联对象</p>
 <ul>
-<li><p>需求：在创建一个班级时可以直接添加几个学生</p>
+<li>需求：在创建一个班级时可以直接添加几个学生</li>
+</ul>
+</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">StudentInfo</span><span class="token punctuation">(</span>admin<span class="token punctuation">.</span>TabularInline<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true">#还有一个StackedInline</span>
     model <span class="token operator">=</span> Students
     extra <span class="token operator">=</span><span class="token number">2</span>
 <span class="token keyword">class</span> <span class="token class-name">GradeAdmin</span><span class="token punctuation">(</span>admin<span class="token punctuation">.</span>ModelAdmin<span class="token punctuation">)</span><span class="token punctuation">:</span>
     inlines <span class="token operator">=</span> <span class="token punctuation">[</span>StudentInfo<span class="token punctuation">]</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
+<ul>
+<li>布尔值显示问题</li>
 </ul>
-</li>
-<li><p>布尔值显示问题</p>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">StudentsAdmin</span><span class="token punctuation">(</span>admin<span class="token punctuation">.</span>ModelAdmin<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">gender</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">if</span> self<span class="token punctuation">.</span>sgender<span class="token punctuation">:</span>
@@ -520,18 +506,17 @@ admin<span class="token punctuation">.</span>site<span class="token punctuation"
     <span class="token comment" spellcheck="true">#设置页面列的名称</span>
     gender<span class="token punctuation">.</span>short_description <span class="token operator">=</span> <span class="token string">"性别"</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>执行动作在页面位置问题</p>
+<ul>
+<li>执行动作在页面位置问题</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python">actions_on_top <span class="token operator">=</span> <span class="token boolean">False</span>
 actions_on_bottom <span class="token operator">=</span> <span class="token boolean">True</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
+<ul>
 <li><p>使用装饰器来进行注册</p>
 </li>
 <li><pre class="line-numbers language-python"><code class="language-python">@admin<span class="token punctuation">.</span>register<span class="token punctuation">(</span>类名<span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-</ul>
 </li>
 </ul>
 <h3><span id="视图的基本使用">视图的基本使用</span></h3><blockquote>
@@ -543,7 +528,8 @@ actions_on_bottom <span class="token operator">=</span> <span class="token boole
     <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">"jason is a good man"</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h4><span id="配置url控制器">配置URL控制器</span></h4><ul>
-<li><p>修改project目录下的urls.py文件</p>
+<li>修改project目录下的urls.py文件</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>conf<span class="token punctuation">.</span>urls <span class="token keyword">import</span> url<span class="token punctuation">,</span>include
 <span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
 
@@ -552,16 +538,15 @@ urlpatterns <span class="token operator">=</span> <span class="token punctuation
     url<span class="token punctuation">(</span>r<span class="token string">'^'</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span><span class="token string">'myApp.urls'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>在myApp应用目录下创建一个urls.py文件</p>
+<ul>
+<li>在myApp应用目录下创建一个urls.py文件</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>conf<span class="token punctuation">.</span>urls <span class="token keyword">import</span> url
 <span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views
 urlpatterns<span class="token operator">=</span><span class="token punctuation">[</span>
     url<span class="token punctuation">(</span>r<span class="token string">'^$'</span><span class="token punctuation">,</span>views<span class="token punctuation">.</span>index<span class="token punctuation">)</span>
 <span class="token punctuation">]</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
 <h3><span id="模板的基本使用">模板的基本使用</span></h3><blockquote>
 <p>模板是HTML页面，可以根据视图中传递过来的数据进行填充</p>
 </blockquote>
@@ -570,7 +555,10 @@ urlpatterns<span class="token operator">=</span><span class="token punctuation">
 </li>
 <li><p>配置模板路径</p>
 <ul>
-<li><p>修改setting.py文件下的templates</p>
+<li>修改setting.py文件下的templates</li>
+</ul>
+</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python">TEMPLATES <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span>
         <span class="token string">'BACKEND'</span><span class="token punctuation">:</span> <span class="token string">'django.template.backends.django.DjangoTemplates'</span><span class="token punctuation">,</span>
@@ -588,23 +576,24 @@ urlpatterns<span class="token operator">=</span><span class="token punctuation">
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-</li>
+<ul>
 <li><p>定义两个模板</p>
 <ul>
-<li><p>在templates/myApp/目录下定义两个模板（grades.html文件和students.html）</p>
+<li>在templates/myApp/目录下定义两个模板（grades.html文件和students.html）</li>
+</ul>
 </li>
-<li><p>模板语法</p>
+<li>模板语法</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token punctuation">{</span><span class="token punctuation">{</span>输出值，可以是变量，也可以是对象属性<span class="token punctuation">}</span><span class="token punctuation">}</span>
 <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">%</span>执行代码段<span class="token operator">%</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
-</ul>
-</li>
+<ul>
 <li><p><code>http://127.0.0.1:8000/grades/</code></p>
 <ul>
-<li><p>写grades.html模板</p>
+<li>写grades.html模板</li>
+</ul>
+</li>
+</ul>
 <pre class="line-numbers language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
@@ -616,36 +605,39 @@ urlpatterns<span class="token operator">=</span><span class="token punctuation">
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
     <span class="token comment" spellcheck="true">&lt;!--[python04, python05,python06]--></span>
     {%for grade in grades%}
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{grade.gname}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
-        {%endfor%}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{grade.gname}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    {%endfor%}
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>去视图中写函数，用来响应http请求即调用模板</p>
+<ul>
+<li>去视图中写函数，用来响应http请求即调用模板</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">grades</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token comment" spellcheck="true">#去模板中取数据</span>
     gradesList <span class="token operator">=</span> Grades<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>all<span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token comment" spellcheck="true">#将数据传递给模板，模板在渲染页面，将渲染好的页面返回浏览器</span>
     <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span><span class="token string">'myApp/grades.html'</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">"grades"</span><span class="token punctuation">:</span>gradesList<span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>要去myAPP中的urls.py 加入模板</p>
+<ul>
+<li>要去myAPP中的urls.py 加入模板</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python">urlpatterns<span class="token operator">=</span><span class="token punctuation">[</span>
     url<span class="token punctuation">(</span>r<span class="token string">'^$'</span><span class="token punctuation">,</span>views<span class="token punctuation">.</span>index<span class="token punctuation">)</span><span class="token punctuation">,</span>
     url<span class="token punctuation">(</span>r<span class="token string">'^grades/$'</span><span class="token punctuation">,</span>views<span class="token punctuation">.</span>grades<span class="token punctuation">)</span>
 <span class="token punctuation">]</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-</li>
+<ul>
 <li><p>点击班级，显示对应班级的所有学生</p>
 <ul>
-<li><p>修改模板</p>
+<li>修改模板</li>
+</ul>
+</li>
+</ul>
 <pre class="line-numbers language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
@@ -657,18 +649,19 @@ urlpatterns<span class="token operator">=</span><span class="token punctuation">
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
     <span class="token comment" spellcheck="true">&lt;!--[python04, python05,python06]--></span>
     {%for grade in grades%}
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
-            <span class="token comment" spellcheck="true">&lt;!--主要是加入了href，--></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{grade.id}}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{grade.gname}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
-        {%endfor%}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+        <span class="token comment" spellcheck="true">&lt;!--主要是加入了href，--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{grade.id}}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{grade.gname}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    {%endfor%}
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>定义视图</p>
+<ul>
+<li>定义视图</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>shortcuts <span class="token keyword">import</span> render
 
 <span class="token comment" spellcheck="true"># Create your views here.</span>
@@ -694,8 +687,9 @@ urlpatterns<span class="token operator">=</span><span class="token punctuation">
     studentsLsit <span class="token operator">=</span> grade<span class="token punctuation">.</span>students_set<span class="token punctuation">.</span>all<span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'myApp/students.html'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">"students"</span><span class="token punctuation">:</span> studentsLsit<span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>配置url</p>
+<ul>
+<li>配置url</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>conf<span class="token punctuation">.</span>urls <span class="token keyword">import</span> url
 <span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views
 urlpatterns<span class="token operator">=</span><span class="token punctuation">[</span>
@@ -705,10 +699,6 @@ urlpatterns<span class="token operator">=</span><span class="token punctuation">
     url<span class="token punctuation">(</span>r<span class="token string">'^grades/(\d+)$'</span><span class="token punctuation">,</span>views<span class="token punctuation">.</span>gradestudents<span class="token punctuation">)</span>
 <span class="token punctuation">]</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-</li>
-</ul>
 
             </article>
             <hr>
@@ -749,8 +739,8 @@ urlpatterns<span class="token operator">=</span><span class="token punctuation">
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2018/09/14/用keras搭建DQN/">
-                        <span class="hidden-mobile">用keras搭建DQN</span>
+                      <a href="/2019/12/11/关于Sklearn的归一化函数MinMaxScalar探讨/">
+                        <span class="hidden-mobile">关于Sklearn的归一化函数MinMaxScalar探讨</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

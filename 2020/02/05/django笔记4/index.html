@@ -197,7 +197,7 @@
 <li><p>过程</p>
 </li>
 </ul>
-<p><img src="//yoursite.com/2020/02/05/django笔记4/image-20200129123737853.png" srcset="/img/loading.gif" alt="image-20200129123737853"></p>
+<p><img src="/img/django笔记4/image-20200129123737853.png" srcset="/img/loading.gif" alt="image-20200129123737853"></p>
 </blockquote>
 <h2><span id="url配置">url配置</span></h2><p>配置流程</p>
 <ul>
@@ -228,7 +228,10 @@
 </li>
 <li><p>引入其他url配置</p>
 <ul>
-<li><p>在应用中创建<code>urls.py</code>文件，定义本应用的url配置，在工程<code>urls.py</code>文件中使用<code>include()</code>管理项目的urls文件。这样可以方便管理该项目下不同应用之间的url管理。</p>
+<li>在应用中创建<code>urls.py</code>文件，定义本应用的url配置，在工程<code>urls.py</code>文件中使用<code>include()</code>管理项目的urls文件。这样可以方便管理该项目下不同应用之间的url管理。</li>
+</ul>
+</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 在project/urls.py 文件中</span>
 <span class="token keyword">from</span> django<span class="token punctuation">.</span>conf<span class="token punctuation">.</span>urls <span class="token keyword">import</span> url<span class="token punctuation">,</span>include
 <span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
@@ -245,9 +248,7 @@ urlpatterns<span class="token operator">=</span><span class="token punctuation">
     url<span class="token punctuation">(</span>r<span class="token string">'^$'</span><span class="token punctuation">,</span>views<span class="token punctuation">.</span>index，name<span class="token operator">=</span><span class="token string">'index'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-</li>
+<ul>
 <li><p>url的反向解析</p>
 <ul>
 <li>概述：如果在视图、模板中使用了硬编码链接，在url配置发生改变时，相应的url路径都需要进行修改</li>
@@ -269,10 +270,12 @@ urlpatterns<span class="token operator">=</span><span class="token punctuation">
 </ul>
 </li>
 <li><p>错误视图</p>
+<p><code>404</code>视图：<code>url</code>匹配不成功时返回该错误</p>
 <ul>
-<li><p><code>404</code>视图：<code>url</code>匹配不成功时返回该错误</p>
-<ul>
-<li><p>可以在<code>templates</code>目录下定义<code>404.html</code></p>
+<li>可以在<code>templates</code>目录下定义<code>404.html</code></li>
+</ul>
+</li>
+</ul>
 <pre class="line-numbers language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
@@ -287,21 +290,14 @@ urlpatterns<span class="token operator">=</span><span class="token punctuation">
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><code>request_path</code>：导致错误的网址</li>
+<li>配置<code>setting.py</code>文件</li>
 </ul>
-</li>
-<li><p>配置<code>setting.py</code>文件</p>
 <pre class="line-numbers language-python"><code class="language-python">DEBUG <span class="token operator">=</span> <span class="token boolean">False</span> <span class="token comment" spellcheck="true">#等于True，永远都不会调用404界面</span>
 ALLOWED_HOSTS <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'*'</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true">#允许任何用户访问</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
-</ul>
-</li>
-<li><p><code>500</code>视图：在视图代码中出现错误（服务器内部错误）</p>
-</li>
-<li><p><code>400</code>视图：错误出现于客户操作错误</p>
-</li>
-</ul>
-</li>
+<ul>
+<li><code>500</code>视图：在视图代码中出现错误（服务器内部错误）</li>
+<li><code>400</code>视图：错误出现于客户操作错误</li>
 </ul>
 <h2><span id="httprequest对象">HttpRequest对象</span></h2><p><strong>概述：</strong></p>
 <ul>
@@ -338,32 +334,27 @@ ALLOWED_HOSTS <span class="token operator">=</span> <span class="token punctuati
 </ul>
 <p><strong>GET属性</strong></p>
 <p>获取浏览器传递过来给服务器的数据</p>
-<ul>
-<li><pre class="line-numbers language-html"><code class="language-html">http://127.0.0.1:8000/get1?a=1&amp;b=2&amp;c=3
+<pre class="line-numbers language-html"><code class="language-html">  http://127.0.0.1:8000/get1?a=1&amp;b=2&amp;c=3
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get1</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    a<span class="token operator">=</span> request<span class="token punctuation">.</span>GET<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span>
-    b<span class="token operator">=</span> request<span class="token punctuation">.</span>GET<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">)</span>
-    c<span class="token operator">=</span> request<span class="token punctuation">.</span>GET<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'c'</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span>a<span class="token operator">+</span><span class="token string">" "</span><span class="token operator">+</span>b<span class="token operator">+</span><span class="token string">" "</span><span class="token operator">+</span>c<span class="token punctuation">)</span>
+<pre class="line-numbers language-python"><code class="language-python">  <span class="token keyword">def</span> <span class="token function">get1</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+      a<span class="token operator">=</span> request<span class="token punctuation">.</span>GET<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span>
+      b<span class="token operator">=</span> request<span class="token punctuation">.</span>GET<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">)</span>
+      c<span class="token operator">=</span> request<span class="token punctuation">.</span>GET<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'c'</span><span class="token punctuation">)</span>
+      <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span>a<span class="token operator">+</span><span class="token string">" "</span><span class="token operator">+</span>b<span class="token operator">+</span><span class="token string">" "</span><span class="token operator">+</span>c<span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-<ul>
-<li><pre class="line-numbers language-html"><code class="language-html">http://127.0.0.1:8000/get2?a=1&amp;a=2&amp;c=3
+<pre class="line-numbers language-html"><code class="language-html">  http://127.0.0.1:8000/get2?a=1&amp;a=2&amp;c=3
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get2</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    a<span class="token operator">=</span> request<span class="token punctuation">.</span>GET<span class="token punctuation">.</span>getlist<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span>
-    a1 <span class="token operator">=</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-    a2 <span class="token operator">=</span>a<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
-    c<span class="token operator">=</span> request<span class="token punctuation">.</span>GET<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'c'</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span>a1<span class="token operator">+</span><span class="token string">" "</span><span class="token operator">+</span>a2<span class="token operator">+</span><span class="token string">" "</span><span class="token operator">+</span>c<span class="token punctuation">)</span>
+<pre class="line-numbers language-python"><code class="language-python">  <span class="token keyword">def</span> <span class="token function">get2</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+      a<span class="token operator">=</span> request<span class="token punctuation">.</span>GET<span class="token punctuation">.</span>getlist<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span>
+      a1 <span class="token operator">=</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+      a2 <span class="token operator">=</span>a<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+      c<span class="token operator">=</span> request<span class="token punctuation">.</span>GET<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'c'</span><span class="token punctuation">)</span>
+      <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span>a1<span class="token operator">+</span><span class="token string">" "</span><span class="token operator">+</span>a2<span class="token operator">+</span><span class="token string">" "</span><span class="token operator">+</span>c<span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
 <p><strong>POST属性</strong></p>
 <ul>
-<li><p>使用表单提交post请求</p>
+<li>使用表单提交post请求</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">register</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
     name <span class="token operator">=</span> request<span class="token punctuation">.</span>POST<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span>
     gender <span class="token operator">=</span> request<span class="token punctuation">.</span>POST<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">"gender"</span><span class="token punctuation">)</span>
@@ -372,8 +363,6 @@ ALLOWED_HOSTS <span class="token operator">=</span> <span class="token punctuati
     <span class="token keyword">print</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>gender<span class="token punctuation">,</span>age<span class="token punctuation">,</span>hobby<span class="token punctuation">)</span>
     <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">"注册成功"</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
 <h2><span id="httpresponse对象">HttpResponse对象</span></h2><p><strong>概述</strong></p>
 <ul>
 <li>作用：给浏览器返回数据</li>
@@ -387,10 +376,13 @@ ALLOWED_HOSTS <span class="token operator">=</span> <span class="token punctuati
 <ul>
 <li><p>使用<code>render</code>方法</p>
 <ul>
-<li><p>原型：<code>render(requesr,templateName,{context})</code></p>
+<li>原型：<code>render(requesr,templateName,{context})</code></li>
+</ul>
+</li>
+</ul>
 </li>
 <li><p>作用：结合数据和模板，返回完整的HTML界面</p>
-</li>
+<ul>
 <li><p>参数</p>
 <ul>
 <li><code>request</code>：请求体对象</li>
@@ -398,7 +390,10 @@ ALLOWED_HOSTS <span class="token operator">=</span> <span class="token punctuati
 <li><code>context</code>：传递给需要渲染在模板上的数据</li>
 </ul>
 </li>
-<li><p>实例</p>
+<li>实例</li>
+</ul>
+</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">studentsearch</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token comment" spellcheck="true">#包含条件匹配</span>
     <span class="token comment" spellcheck="true"># studentsList = Students.objects.filter(sname__contains='孙')</span>
@@ -406,12 +401,6 @@ ALLOWED_HOSTS <span class="token operator">=</span> <span class="token punctuati
     studentsList <span class="token operator">=</span> Students<span class="token punctuation">.</span>stuObj<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>sname__startswith<span class="token operator">=</span><span class="token string">'j'</span><span class="token punctuation">)</span>
     <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span><span class="token string">'myApp/students.html'</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">"students"</span><span class="token punctuation">:</span>studentsList<span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 <p><strong>属性</strong></p>
 <ul>
 <li><code>content</code>：表示返回内容</li>
@@ -480,12 +469,14 @@ ALLOWED_HOSTS <span class="token operator">=</span> <span class="token punctuati
 <ul>
 <li>在<code>settings.py</code>文件中</li>
 </ul>
+</li>
+</ul>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># INSTALLED_APPS选项</span>
 INSTALLED_APPS <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'django.contrib.sessions'</span><span class="token punctuation">]</span>
 <span class="token comment" spellcheck="true"># IDDLEWARE选项</span>
 MIDDLEWARE <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'django.contrib.sessions.middleware.SessionMiddleware'</span><span class="token punctuation">]</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
+<ul>
 <li><p>使用<code>session</code></p>
 <ul>
 <li>启用<code>session</code>后，每个<code>HttpRequest</code>对象都有一个<code>session</code>属性，就是一个类似字典的对象</li>
@@ -544,23 +535,12 @@ MIDDLEWARE <span class="token operator">=</span> <span class="token punctuation"
 <li>首先要安装redis并开启redis服务</li>
 <li><code>pip install django-redis-sessions</code></li>
 </ul>
+</li>
+</ul>
 <p><code>`</code>python<br>SESSION_ENGINE=’redis_sessions.session’<br>SESSION_REDIS_HOST=’local_host’<br>SESSION_REDIS_PORT=6379<br>SESSION_REDIS_DB=0<br>SESSION_REDIS_PASSWORD=’qq123’<br>SESSION_REDIS_PREFIX=’session’</p>
 </li>
 </ul>
-</li>
-</ul>
-<pre><code>#或者
-   SESSION_ENGINE = &#39;redis_sessions.session&#39;
-   SESSION_REDIS = {
-       &#39;host&#39;: &#39;localhost&#39;,
-       &#39;port&#39;: 6379,
-       &#39;db&#39;: 0,
-       &#39;password&#39;: &#39;password&#39;,
-       &#39;prefix&#39;: &#39;session&#39;,
-       &#39;socket_timeout&#39;: 1
-   }
-```
-</code></pre><p>#</p>
+<p>  #或者<br>     SESSION_ENGINE = ‘redis_sessions.session’<br>     SESSION_REDIS = {<br>         ‘host’: ‘localhost’,<br>         ‘port’: 6379,<br>         ‘db’: 0,<br>         ‘password’: ‘password’,<br>         ‘prefix’: ‘session’,<br>         ‘socket_timeout’: 1<br>     }<br>  <code>`</code></p>
 
             </article>
             <hr>

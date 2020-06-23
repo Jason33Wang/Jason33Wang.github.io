@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="花些无聊的时间；做点有趣的事">
+  <meta name="author" content="Jason">
+  <meta name="keywords" content="I came,I saw,I conquered.">
+  <title>Jason&#39;s修禅房</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css" />
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_9n5xqdrq0nc.css">
+
+
+  <link  rel="stylesheet" href="/lib/prettify/github-v2.min.css" />
+
+
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<link rel="alternate" href="/atom.xml" title="Jason's修禅房" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Jason's修禅房</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              Categories</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              Tags</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/bg0.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/01/27/Django笔记2/" target="_self">
+          <img src="/img/bg5.jpg" srcset="/img/loading.gif" alt="Django笔记2">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a class="index-header" href="/2020/01/27/Django笔记2/">Django笔记2</a>
+
+      <a href="/2020/01/27/Django笔记2/" class="index-excerpt">
+        
+        
+          
+        
+        <div>#Django笔记2
+
+2020年正月初三小记
+今天早晨传来消息，篮球传奇球员科比意外去世。虽然我不是什么篮球迷，但也熟悉他的传奇人生。2020年刚开始，它似乎就开始小孩似地，不顾他人感受地、不停地宣告它的不平凡。让本应该全国欢庆的春节变得沉默起来。先有武汉肺炎肆虐搞得全国闭门不出，人心惶惶（尤其是笔者我在武汉上学）；后有紫金王朝球迷的默哀；
+可是怎么办了？生活还是得继续；做好自己的；灾难终究汇过</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-01-27
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/好记性不如烂笔头/">好记性不如烂笔头</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Django/">Django</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/01/16/Django笔记/" target="_self">
+          <img src="/img/bg0.jpg" srcset="/img/loading.gif" alt="Django笔记1">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a class="index-header" href="/2020/01/16/Django笔记/">Django笔记1</a>
+
+      <a href="/2020/01/16/Django笔记/" class="index-excerpt">
+        
+        
+          
+        
+        <div>1 day了解小知识
+了解 djngo设计模式（MVC，MTV）
+
+安装django（1.11.4）
+pip install Django==1.11.4
+
+
+创建项目
+在合适位置创建一个目录
+/home/jason/Doucements/code/forDjango/
+
+在目录位置打开终端
+
+django-admin startproject project01
+
+tree . /F
+
+
+man</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-01-16
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/好记性不如烂笔头，web/">好记性不如烂笔头，web</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Django/">Django</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/12/11/关于Sklearn的归一化函数MinMaxScalar探讨/" target="_self">
+          <img src="/img/bg21.jpg" srcset="/img/loading.gif" alt="关于Sklearn的归一化函数MinMaxScalar探讨">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a class="index-header" href="/2019/12/11/关于Sklearn的归一化函数MinMaxScalar探讨/">关于Sklearn的归一化函数MinMaxScalar探讨</a>
+
+      <a href="/2019/12/11/关于Sklearn的归一化函数MinMaxScalar探讨/" class="index-excerpt">
+        
+        
+          
+        
+        <div>@TOC
+引言由于目前网上似乎没有博客详细介绍Sklearn的归一化函数MinMaxScalar到底是如何实现数据归一化的，而笔者也不确定生成的scalar的对象能不能完成数据单一映射而对实验结果的精度造成影响，于是有了此篇文章。本文通过生成的格式化数据，对MinMaxScalar函数的处理机制进行了探讨和介绍。通过这篇文章，你可能会发现该函数的机制似乎和你想的不一样（手动滑稽）
+正文实验一
+第一</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2019-12-11
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Sklearn/">Sklearn</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/12/09/pytorch自学踩坑记录（一）/" target="_self">
+          <img src="/img/bg20.jpg" srcset="/img/loading.gif" alt="pytorch自学踩坑记录（一）">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a class="index-header" href="/2019/12/09/pytorch自学踩坑记录（一）/">pytorch自学踩坑记录（一）</a>
+
+      <a href="/2019/12/09/pytorch自学踩坑记录（一）/" class="index-excerpt">
+        
+        
+          
+        
+        <div>
+教程《深度学习框架pytorch快速开发与实践》邢梦来编著出版社 电子工业出版社买的应该是正版书，但是书中太多错误了，甚至很多低级的排版错误和打印错误。对于现在出版社的质量把关感到无语。
+
+原文打印lossprint(('epoch [%d/%d],step [%d/%d],loss: %.4f'%(epoch+1,num_epochs,i+1,
+                        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2019-12-09
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/踩坑记录/">踩坑记录</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/06/25/tf-app-flags-FLAGS报错解决方法/" target="_self">
+          <img src="/img/bg19.jpg" srcset="/img/loading.gif" alt="tf.app.flags.FLAGS报错解决方法">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a class="index-header" href="/2019/06/25/tf-app-flags-FLAGS报错解决方法/">tf.app.flags.FLAGS报错解决方法</a>
+
+      <a href="/2019/06/25/tf-app-flags-FLAGS报错解决方法/" class="index-excerpt">
+        
+        
+          
+        
+        <div>tf.app.flags.FLAGS报错解决方法在tensorflow中，tf.app.flags.FLAGS已经转移到tf.flags.FLAGS路径下以前可以像下面一样直接创建参数并进行赋值demo_flags=tf.app.flags.FLAGS
+demo.xxxx=xxxxxxx
+
+更新后需要用函数进行定义之后才能直接赋值,例子如下demo_flags=tf.flags.FLAGS
+＃　参</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2019-06-25
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/踩坑记录/">踩坑记录</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/06/18/excel文件按时间将大文件转换成小文件/" target="_self">
+          <img src="/img/bg18.jpg" srcset="/img/loading.gif" alt="excel文件按时间将大文件转换成小文件">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a class="index-header" href="/2019/06/18/excel文件按时间将大文件转换成小文件/">excel文件按时间将大文件转换成小文件</a>
+
+      <a href="/2019/06/18/excel文件按时间将大文件转换成小文件/" class="index-excerpt">
+        
+        
+          
+        
+        <div>将excel大文件按时间整理成小文件data= pd.read_excel("放入自己文件路径")
+#定义起始时间和结束时间
+starttime=datetime.datetime(2018,1,1,0,0,0)
+endtime=datetime.datetime(2018,1,2,0,0,0)
+print(starttime)
+#存储路径
+dir="/home/jason/PycharmProj</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2019-06-18
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/脚本/">脚本</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/03/27/ubuntu16-0安装basemap报错解决方案/" target="_self">
+          <img src="/img/bg17.jpg" srcset="/img/loading.gif" alt="ubuntu16.0安装basemap报错解决方案">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a class="index-header" href="/2019/03/27/ubuntu16-0安装basemap报错解决方案/">ubuntu16.0安装basemap报错解决方案</a>
+
+      <a href="/2019/03/27/ubuntu16-0安装basemap报错解决方案/" class="index-excerpt">
+        
+        
+          
+        
+        <div>basemap安装报错解决方案为了使用basemap，需要我们安装basemap和pyproj两个包。其中可以用pip安装pyproj这个包，但是安装basemap这个子包会报错。因此需要在pypi上下载源包进行安装。pypi的basemap下载地址安装方法大家都知道的：切换到下载路径，pip install 包名
+如果出现以下错误是因为没有安装geos环境。需要我们下载安装geos。github</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2019-03-27
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/踩坑记录/">踩坑记录</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/03/13/强化学习调试经验（二）/" target="_self">
+          <img src="/img/bg16.jpg" srcset="/img/loading.gif" alt="强化学习调试经验（二）">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a class="index-header" href="/2019/03/13/强化学习调试经验（二）/">强化学习调试经验（二）</a>
+
+      <a href="/2019/03/13/强化学习调试经验（二）/" class="index-excerpt">
+        
+        
+          
+        
+        <div>坑一有点荒唐的是，对于训练一个强化学习的模型，我们往往需要用到随机数以此来实现随机探索。而有相关实验证明，随机数种子会影响整个网络模型的收敛。在使用同样的超参数和网络模型下，采用不同的随机数种子进行独立实验，你会惊讶的发现，只有70%左右的实验会效果较好，而其余的训练会挂掉。
+坑二在进行强化学习时，对于输入向量我们需要进行归一化，否则在AC算法中，有可能会出现值溢出（造成网络输出为nan值）的现象</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2019-03-13
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/强化学习/">强化学习</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/02/28/强化学习调试经验（一）/" target="_self">
+          <img src="/img/bg16.jpg" srcset="/img/loading.gif" alt="强化学习调试经验（一）">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a class="index-header" href="/2019/02/28/强化学习调试经验（一）/">强化学习调试经验（一）</a>
+
+      <a href="/2019/02/28/强化学习调试经验（一）/" class="index-excerpt">
+        
+        
+          
+        
+        <div>强化学习的调试经验积累在训练一个强化学习的模型时，特别是这个模型是基于PG算法的时候，我注意到，在构建网络模型时，我们初始化参数会极大的影响整个网络的收敛情况。对于一个policy gradient算法，其网络最后层一般是softmax函数，因此输出的policy是一个不同action下的对应概率分布。可以参考以下代码。
+l1 = tf.layers.dense(
+    inputs=self.</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2019-02-28
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/强化学习/">强化学习</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/09/14/用keras搭建DQN/" target="_self">
+          <img src="/img/bg3.jpg" srcset="/img/loading.gif" alt="用keras搭建DQN">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a class="index-header" href="/2018/09/14/用keras搭建DQN/">用keras搭建DQN</a>
+
+      <a href="/2018/09/14/用keras搭建DQN/" class="index-excerpt">
+        
+        
+          
+        
+        <div>dqn总结：最近时间虽然一直看这个dqn代码，虽然看懂了，但是思路却一直不明确，无法自己复写出自己的代码，所以就想写一篇博客来整理一下思路。如果这篇文章写完了，应该思路就清晰了。
+本文主要是看了莫烦的教学视频，在视频中，老师（尊称一声老师O(∩_∩)O哈哈~）是用tensoflow1.2来搭建框架的。本人在看懂了代码后，认为DQN中采用了两个模型，此时用tensorflow来完成这些网络的灵活搭建</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2018-09-14
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/日志/">日志</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/reinforecementLearning/">reinforecementLearning</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/2/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<div id="hitokoto" style="text-align:center">D 获取中...</div>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const hitokoto = document.getElementById('hitokoto')
+      hitokoto.innerText = data.hitokoto
+      })
+      .catch(console.error)
+</script>
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
+
+
+  <script  src="/js/lazyload.js" ></script>
+
+
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "跟着党走,幸福我有&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript">
+      //定义获取词语下标
+      var a_idx = 0;
+      jQuery(document).ready(function ($) {
+        //点击body时触发事件
+        $("body").click(function (e) {
+          //需要显示的词语
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+          //设置词语给span标签
+          var $i = $("<span/>").text(a[a_idx]);
+          //下标等于原来下标+1  余 词语总数
+          a_idx = (a_idx + 1) % a.length;
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+          //获取x和y的指针坐标
+          var x = e.pageX, y = e.pageY;
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+          $i.css({
+            "z-index": 999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": rand_color()
+          });
+          // 随机颜色
+          function rand_color() {
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+          }
+          //在body添加这个标签
+          $("body").append($i);
+          //animate() 方法执行 CSS 属性集的自定义动画。
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+          //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+          $i.animate({
+            //将原来的位置向上移动180
+            "top": y - 180,
+            "opacity": 0
+            //1500动画的速度
+          }, 1500, function () {
+            //时间到了自动删除
+            $i.remove();
+          });
+        });
+      })
+      ;
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-11T13:03:25.002Z</updated>
+  <updated>2020-06-23T09:07:47.646Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,132 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安装ale_python_interface报错</title>
+    <link href="http://yoursite.com/2020/06/23/%E5%AE%89%E8%A3%85ale-python-interface%E6%8A%A5%E9%94%99/"/>
+    <id>http://yoursite.com/2020/06/23/%E5%AE%89%E8%A3%85ale-python-interface%E6%8A%A5%E9%94%99/</id>
+    <published>2020-06-23T09:06:35.000Z</published>
+    <updated>2020-06-23T09:07:47.646Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;最近在调试代码时，需要用到一个街机环境的包，叫做ale_python_interface。&lt;br&gt;安装这个包一直报错。最重要的的是无论是度娘还是google都搜索不到解决办法。真是烦了好几天啊！！！&lt;br&gt;本来不想安装这个鬼东西了，结果几乎大部分关于atari游戏的强化学习
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Wed Nov 14 2018 20:50:34 GMT+0800 (GMT+08:00)" scheme="http://yoursite.com/tags/Wed-Nov-14-2018-20-50-34-GMT-0800-GMT-08-00/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>推荐一个ubuntu下的shell插件terminator集成第三方插件</title>
+    <link href="http://yoursite.com/2020/06/18/%E6%8E%A8%E8%8D%90%E4%B8%80%E4%B8%AAubuntu%E4%B8%8B%E7%9A%84shell%E6%8F%92%E4%BB%B6terminator%E9%9B%86%E6%88%90%E7%AC%AC%E4%B8%89%E6%96%B9%E6%8F%92%E4%BB%B6/"/>
+    <id>http://yoursite.com/2020/06/18/%E6%8E%A8%E8%8D%90%E4%B8%80%E4%B8%AAubuntu%E4%B8%8B%E7%9A%84shell%E6%8F%92%E4%BB%B6terminator%E9%9B%86%E6%88%90%E7%AC%AC%E4%B8%89%E6%96%B9%E6%8F%92%E4%BB%B6/</id>
+    <published>2020-06-18T09:48:19.000Z</published>
+    <updated>2020-06-23T09:38:26.268Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1&gt;&lt;span id=&quot;前言&quot;&gt;前言&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;今日不仅仅是介绍ubuntu环境下的无敌shell插件terminator。而是更加推荐该插件的第三方改进版本，真的无敌强啊，谁用谁知道。截图如下：&lt;/p&gt;
+&lt;h3&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="工作效率" scheme="http://yoursite.com/tags/%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu切换java版本问题</title>
+    <link href="http://yoursite.com/2020/06/18/ubuntu%E5%88%87%E6%8D%A2java%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2020/06/18/ubuntu%E5%88%87%E6%8D%A2java%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98/</id>
+    <published>2020-06-18T09:29:51.000Z</published>
+    <updated>2020-06-23T09:37:28.906Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Java杂项" scheme="http://yoursite.com/tags/Java%E6%9D%82%E9%A1%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javaweb建站</title>
+    <link href="http://yoursite.com/2020/06/17/javaweb%E5%BB%BA%E7%AB%99/"/>
+    <id>http://yoursite.com/2020/06/17/javaweb%E5%BB%BA%E7%AB%99/</id>
+    <published>2020-06-17T05:08:00.000Z</published>
+    <updated>2020-06-17T08:58:24.112Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1&gt;&lt;span id=&quot;利用sprintboot开发个人博客系统&quot;&gt;利用sprintboot开发个人博客系统&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="springboot" scheme="http://yoursite.com/tags/springboot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法</title>
+    <link href="http://yoursite.com/2020/06/11/%E7%AE%97%E6%B3%95/"/>
+    <id>http://yoursite.com/2020/06/11/%E7%AE%97%E6%B3%95/</id>
+    <published>2020-06-11T14:38:54.000Z</published>
+    <updated>2020-06-11T14:40:50.297Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1&gt;&lt;span id=&quot;算法&quot;&gt;算法&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span id=&quot;双指针法&quot;&gt;双指针法&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;当我们需要枚举数组中的两个元素时，如果我们发现随着第一个元素的递增，第二个元素是递减的，那么就可以使用双指针的方法，将枚举的时间复杂度从
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="工作" scheme="http://yoursite.com/tags/%E5%B7%A5%E4%BD%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>我的糟糕面试经历</title>
@@ -42,6 +168,83 @@
   </entry>
   
   <entry>
+    <title>windows构建RVO2（一个避碰框架需要的包）报错</title>
+    <link href="http://yoursite.com/2020/06/05/windows%E6%9E%84%E5%BB%BARVO2%EF%BC%88%E4%B8%80%E4%B8%AA%E9%81%BF%E7%A2%B0%E6%A1%86%E6%9E%B6%E9%9C%80%E8%A6%81%E7%9A%84%E5%8C%85%EF%BC%89%E6%8A%A5%E9%94%99/"/>
+    <id>http://yoursite.com/2020/06/05/windows%E6%9E%84%E5%BB%BARVO2%EF%BC%88%E4%B8%80%E4%B8%AA%E9%81%BF%E7%A2%B0%E6%A1%86%E6%9E%B6%E9%9C%80%E8%A6%81%E7%9A%84%E5%8C%85%EF%BC%89%E6%8A%A5%E9%94%99/</id>
+    <published>2020-06-05T15:40:23.000Z</published>
+    <updated>2020-06-23T09:36:07.521Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;windows10 执行&lt;code&gt;python setup.py build&lt;/code&gt;构建rvo2报错如下：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;PS
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="踩坑" scheme="http://yoursite.com/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英文论文阅读神器</title>
+    <link href="http://yoursite.com/2020/05/27/%E8%8B%B1%E6%96%87%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%A5%9E%E5%99%A8/"/>
+    <id>http://yoursite.com/2020/05/27/%E8%8B%B1%E6%96%87%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%A5%9E%E5%99%A8/</id>
+    <published>2020-05-27T08:34:30.000Z</published>
+    <updated>2020-06-23T09:35:06.862Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;给&lt;a href=&quot;https://copytranslator.github.io/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="工作效率" scheme="http://yoursite.com/tags/%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python生态初识</title>
+    <link href="http://yoursite.com/2020/05/20/python%E7%94%9F%E6%80%81%E5%88%9D%E8%AF%86/"/>
+    <id>http://yoursite.com/2020/05/20/python%E7%94%9F%E6%80%81%E5%88%9D%E8%AF%86/</id>
+    <published>2020-05-20T11:01:30.000Z</published>
+    <updated>2020-06-23T09:33:53.425Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a href=&quot;python生态初识&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;&lt;span id=&quot;pycharm专业版初探&quot;&gt;pycharm专业版初探&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>浊以静之徐清 安以动之徐生</title>
     <link href="http://yoursite.com/2020/04/14/%E7%BD%AE%E9%A1%B6/"/>
     <id>http://yoursite.com/2020/04/14/%E7%BD%AE%E9%A1%B6/</id>
@@ -64,6 +267,56 @@
     
     
       <category term="心灵鸡汤" scheme="http://yoursite.com/tags/%E5%BF%83%E7%81%B5%E9%B8%A1%E6%B1%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu异常升级，登录后进入不了桌面</title>
+    <link href="http://yoursite.com/2020/03/27/ubuntu%E5%BC%82%E5%B8%B8%E5%8D%87%E7%BA%A7%EF%BC%8C%E7%99%BB%E5%BD%95%E5%90%8E%E8%BF%9B%E5%85%A5%E4%B8%8D%E4%BA%86%E6%A1%8C%E9%9D%A2/"/>
+    <id>http://yoursite.com/2020/03/27/ubuntu%E5%BC%82%E5%B8%B8%E5%8D%87%E7%BA%A7%EF%BC%8C%E7%99%BB%E5%BD%95%E5%90%8E%E8%BF%9B%E5%85%A5%E4%B8%8D%E4%BA%86%E6%A1%8C%E9%9D%A2/</id>
+    <published>2020-03-27T03:21:01.000Z</published>
+    <updated>2020-06-23T09:30:46.640Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1&gt;&lt;span id=&quot;现象&quot;&gt;现象&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux杂项" scheme="http://yoursite.com/tags/Linux%E6%9D%82%E9%A1%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu文件管理器打不开:</title>
+    <link href="http://yoursite.com/2020/03/27/ubuntu%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E6%89%93%E4%B8%8D%E5%BC%80/"/>
+    <id>http://yoursite.com/2020/03/27/ubuntu%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E6%89%93%E4%B8%8D%E5%BC%80/</id>
+    <published>2020-03-27T02:39:33.000Z</published>
+    <updated>2020-06-23T09:29:37.354Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux杂项" scheme="http://yoursite.com/tags/Linux%E6%9D%82%E9%A1%B9/"/>
     
   </entry>
   
@@ -102,11 +355,115 @@
   </entry>
   
   <entry>
+    <title>social-gan可视化</title>
+    <link href="http://yoursite.com/2020/03/19/social-gan%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    <id>http://yoursite.com/2020/03/19/social-gan%E5%8F%AF%E8%A7%86%E5%8C%96/</id>
+    <published>2020-03-19T05:47:27.000Z</published>
+    <updated>2020-06-23T09:27:55.695Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="深度学习" scheme="http://yoursite.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>matplotlib画会动的椭圆</title>
+    <link href="http://yoursite.com/2020/03/19/matplotlib%E7%94%BB%E4%BC%9A%E5%8A%A8%E7%9A%84%E6%A4%AD%E5%9C%86/"/>
+    <id>http://yoursite.com/2020/03/19/matplotlib%E7%94%BB%E4%BC%9A%E5%8A%A8%E7%9A%84%E6%A4%AD%E5%9C%86/</id>
+    <published>2020-03-19T05:25:00.000Z</published>
+    <updated>2020-06-23T09:26:36.669Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;&lt;em&gt;最近需要绘制会动的椭圆，去可视化一些结果。在实现的过程中遇到了一些问题，记录一下自己的实现方法&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h1&gt;&lt;span id=&quot;实现结果&quot;&gt;实现结果&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Matplotlib" scheme="http://yoursite.com/tags/Matplotlib/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cajviewer的linux折腾和吐槽</title>
+    <link href="http://yoursite.com/2020/03/13/cajviewer%E7%9A%84linux%E6%8A%98%E8%85%BE%E5%92%8C%E5%90%90%E6%A7%BD/"/>
+    <id>http://yoursite.com/2020/03/13/cajviewer%E7%9A%84linux%E6%8A%98%E8%85%BE%E5%92%8C%E5%90%90%E6%A7%BD/</id>
+    <published>2020-03-13T04:23:16.000Z</published>
+    <updated>2020-06-23T09:24:48.400Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;无营养的吐糟，只为求道友或者贵人，能够帮助小弟或者共渡难关&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux杂项" scheme="http://yoursite.com/tags/Linux%E6%9D%82%E9%A1%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>dataFrame常用操作集合</title>
+    <link href="http://yoursite.com/2020/02/24/dataFrame%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E9%9B%86%E5%90%88/"/>
+    <id>http://yoursite.com/2020/02/24/dataFrame%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E9%9B%86%E5%90%88/</id>
+    <published>2020-02-24T03:41:30.000Z</published>
+    <updated>2020-06-23T09:23:02.771Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@[toc]&lt;br&gt;&lt;strong&gt;由于工作原因，经常会写脚本用到dataFrame去完成一些数据操作，但是有些方法总是忘记，每次百度还很难通过关键字搜到我想要的东西，所以索性开一篇博客，整合记录一下自己常用操作。dataFrame数据的操作方式很灵活，该文章仅仅记录一些常
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Pandas" scheme="http://yoursite.com/tags/Pandas/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Django笔记5</title>
     <link href="http://yoursite.com/2020/02/05/django%E7%AC%94%E8%AE%B05/"/>
     <id>http://yoursite.com/2020/02/05/django%E7%AC%94%E8%AE%B05/</id>
     <published>2020-02-05T08:27:17.000Z</published>
-    <updated>2020-04-14T12:10:44.349Z</updated>
+    <updated>2020-06-23T09:59:28.825Z</updated>
     
     <summary type="html">
     
@@ -133,7 +490,7 @@
     <link href="http://yoursite.com/2020/02/05/django%E7%AC%94%E8%AE%B04/"/>
     <id>http://yoursite.com/2020/02/05/django%E7%AC%94%E8%AE%B04/</id>
     <published>2020-02-05T08:26:41.000Z</published>
-    <updated>2020-04-14T12:10:30.382Z</updated>
+    <updated>2020-06-23T10:00:44.156Z</updated>
     
     <summary type="html">
     
@@ -179,201 +536,6 @@
     
     
       <category term="Django" scheme="http://yoursite.com/tags/Django/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Django笔记2</title>
-    <link href="http://yoursite.com/2020/01/27/Django%E7%AC%94%E8%AE%B02/"/>
-    <id>http://yoursite.com/2020/01/27/Django%E7%AC%94%E8%AE%B02/</id>
-    <published>2020-01-27T04:46:08.000Z</published>
-    <updated>2020-03-30T10:27:48.361Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;#Django笔记2&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;2020年正月初三小记&lt;/p&gt;
-&lt;p&gt;今天早晨传来消息，篮球传奇球员科比意外去世。虽然我不是什么篮球迷，但也熟悉他的传奇人生。2020年刚开始，它似乎就开始小孩似地，不顾他人感受地、不停地宣告它的不平凡。让本应该
-        
-      
-    
-    </summary>
-    
-    
-      <category term="好记性不如烂笔头" scheme="http://yoursite.com/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
-    
-    
-      <category term="Django" scheme="http://yoursite.com/tags/Django/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Django笔记1</title>
-    <link href="http://yoursite.com/2020/01/16/Django%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2020/01/16/Django%E7%AC%94%E8%AE%B0/</id>
-    <published>2020-01-16T11:43:52.000Z</published>
-    <updated>2020-03-30T10:27:48.365Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2&gt;&lt;span id=&quot;1-day&quot;&gt;1 day&lt;/span&gt;&lt;/h2&gt;&lt;h3&gt;&lt;span id=&quot;了解小知识&quot;&gt;了解小知识&lt;/span&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;了解
-        
-      
-    
-    </summary>
-    
-    
-      <category term="好记性不如烂笔头，web" scheme="http://yoursite.com/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4%EF%BC%8Cweb/"/>
-    
-    
-      <category term="Django" scheme="http://yoursite.com/tags/Django/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用keras搭建DQN</title>
-    <link href="http://yoursite.com/2018/09/14/%E7%94%A8keras%E6%90%AD%E5%BB%BADQN/"/>
-    <id>http://yoursite.com/2018/09/14/%E7%94%A8keras%E6%90%AD%E5%BB%BADQN/</id>
-    <published>2018-09-14T12:25:30.000Z</published>
-    <updated>2020-03-30T10:27:48.377Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;dqn总结：&lt;br&gt;最近时间虽然一直看这个dqn代码，虽然看懂了，但是思路却一直不明确，无法自己复写出自己的代码，所以就想写一篇博客来整理一下思路。如果这篇文章写完了，应该思路就清晰了。&lt;/p&gt;
-&lt;p&gt;本文主要是看了莫烦的教学视频，在视频中，老师（尊称一声老师O(∩_∩)O
-        
-      
-    
-    </summary>
-    
-    
-      <category term="日志" scheme="http://yoursite.com/categories/%E6%97%A5%E5%BF%97/"/>
-    
-    
-      <category term="reinforecementLearning" scheme="http://yoursite.com/tags/reinforecementLearning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>imageDataGenerator</title>
-    <link href="http://yoursite.com/2018/09/02/imageDataGenerator/"/>
-    <id>http://yoursite.com/2018/09/02/imageDataGenerator/</id>
-    <published>2018-09-02T09:13:55.000Z</published>
-    <updated>2020-03-30T10:27:48.373Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;在深度学习中，我们在&lt;strong&gt;trian&lt;/strong&gt;我们的模型时，往往在数据方面很难找到足够的数据。而在&lt;strong&gt;keras&lt;/strong&gt;中，提供了&lt;strong&gt;imageDataGenerator&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;i
-        
-      
-    
-    </summary>
-    
-    
-      <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="keras" scheme="http://yoursite.com/tags/keras/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>苟有恒，何必三更睡五更起。最无益，莫过一日曝十日寒</title>
-    <link href="http://yoursite.com/2018/09/02/%E6%AD%A3%E8%83%BD%E9%87%8F/"/>
-    <id>http://yoursite.com/2018/09/02/%E6%AD%A3%E8%83%BD%E9%87%8F/</id>
-    <published>2018-09-02T08:48:36.000Z</published>
-    <updated>2020-03-30T10:27:48.373Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;#看到的好的句子就记下来激励自己&lt;/p&gt;
-
-        
-      
-    
-    </summary>
-    
-    
-      <category term="警句" scheme="http://yoursite.com/categories/%E8%AD%A6%E5%8F%A5/"/>
-    
-    
-      <category term="警句" scheme="http://yoursite.com/tags/%E8%AD%A6%E5%8F%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mysql笔记</title>
-    <link href="http://yoursite.com/2018/09/02/mysql%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2018/09/02/mysql%E7%AC%94%E8%AE%B0/</id>
-    <published>2018-09-02T02:35:42.000Z</published>
-    <updated>2020-03-30T10:27:48.373Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1&gt;&lt;span id=&quot;mysql学习笔记&quot;&gt;mysql学习笔记&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;span id=&quot;sql的分类&quot;&gt;sql的分类&lt;/span&gt;&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;数据查询语言（dql ：data query
-        
-      
-    
-    </summary>
-    
-    
-      <category term="数据库" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>blog初级自定义自定义教程</title>
-    <link href="http://yoursite.com/2018/08/02/hello-world/"/>
-    <id>http://yoursite.com/2018/08/02/hello-world/</id>
-    <published>2018-08-02T04:46:08.000Z</published>
-    <updated>2020-04-14T11:56:06.527Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1&gt;&lt;span id=&quot;远程部署&quot;&gt;远程部署&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;ssh-keygen -t rsa -C &lt;a href=&quot;mailto:&amp;#39;862722353@qq.com&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
   </entry>
   
